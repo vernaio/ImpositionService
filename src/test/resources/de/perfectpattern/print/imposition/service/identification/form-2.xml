@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spoV3:gangJobEvent-Root xmlns:spoV3="http://www.perfectpattern.de/sPrint.one.v3.api" xmlns:comV1="http://www.perfectpattern.de/commons.v1.api" _type="GangJobEvent" href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3" customData="" sourceRef="" description="" id="a5be0b88-c31a-42fd-9525-df908fea6bf3" label="1" approvalSetRef="" deviceRef="pd1" duration="667500" latestEndTime="1558008000000" plannedDuration="667500" startTime="1557907047712" state="PROPOSAL">
+  <spoV3:gangJob alternativeMediasDescription="Bilderdruck matt 130g 880x630 mm Breitbahn (m1)" factionRefs="928495-650" quantity="1000" referenceQuantity="1000" workStyle="PERFECTING">
+    <spoV3:media customData="eyJwcmljZVBlclNoZWV0IjowLjA1NjIxNjE2LCJhdXRvR2VuZXJhdGVMYWJlbCI6dHJ1ZSwiYXV0b0dlbmVyYXRlQ2F0ZWdvcmllcyI6dHJ1ZSwidmVyc2lvbiI6IjkifQ==" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/medias/id=m1" description="" id="m1" label="Bilderdruck matt 130g 880x630 mm Breitbahn" active="true" dryingDuration="0" grade="1" grainDirection="Y" mediaType="SHEET" model="" producer="" purpose="Bilderdruck" series="" surface="matt" thickness="130" weight="130">
+      <spoV3:categories>
+        <spoV3:category>Bilderdruck_matt_130g</spoV3:category>
+        <spoV3:category>Bilderdruck_matt_130g_880x630-mm</spoV3:category>
+        <spoV3:category>Bilderdruck_130g</spoV3:category>
+      </spoV3:categories>
+      <spoV3:format height="630000" width="880000"/>
+    </spoV3:media>
+    <spoV3:printingDeviceType customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206" description="Bogenmaschine offset 8 Farben mit Wende" id="0F8AD8D2-4B03-45C0-B1A3-2D7603A92206" label="8 Farben Bogen mit Wende" allowsMultiplePrintRuns="true" jpgImage="" method="OFFSET" model="" needsColorGradient="false" producer="" series="" websiteUrl="">
+      <spoV3:units>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=EF15785F-56E2-402B-A88E-57A0737B17AA" description="" id="EF15785F-56E2-402B-A88E-57A0737B17AA" label="" index="0" flippingStyle="TUMBLE" isManual="true" _type="FlippingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=89633147-5A00-4290-B650-725D6330D8D3" description="" id="89633147-5A00-4290-B650-725D6330D8D3" label="" index="1" flippingStyle="TURN" isManual="true" _type="FlippingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=15A0FB42-81E1-46CA-BEAA-E10BF4C4525C" description="" id="15A0FB42-81E1-46CA-BEAA-E10BF4C4525C" label="" index="2" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=8C78BB55-E1CC-40BC-A34F-176A8A6EE60C" description="" id="8C78BB55-E1CC-40BC-A34F-176A8A6EE60C" label="" index="3" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46" description="" id="79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46" label="" index="4" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=F0CD29BC-7317-44BE-AC05-81B3D03E0256" description="" id="F0CD29BC-7317-44BE-AC05-81B3D03E0256" label="" index="5" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F" description="" id="DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F" label="" index="6" flippingStyle="TUMBLE" isManual="false" _type="FlippingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=3E92B9EF-8E6F-412F-AB3B-149BD4ABC684" description="" id="3E92B9EF-8E6F-412F-AB3B-149BD4ABC684" label="" index="7" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=B2EFA01F-4D05-48DD-AE84-16A2C0744196" description="" id="B2EFA01F-4D05-48DD-AE84-16A2C0744196" label="" index="8" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=DB8E26FF-0F1D-412C-A43F-1E33641A8D2B" description="" id="DB8E26FF-0F1D-412C-A43F-1E33641A8D2B" label="" index="9" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=2E5934BD-158B-47B8-9CA2-F502172C3A7E" description="" id="2E5934BD-158B-47B8-9CA2-F502172C3A7E" label="" index="10" _type="PrintingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=9E5A1EAB-52DA-418B-8D69-56073689C1F6" description="" id="9E5A1EAB-52DA-418B-8D69-56073689C1F6" label="" index="11" flippingStyle="TUMBLE" isManual="true" _type="FlippingUnit"/>
+        <spoV3:unit customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=ABD711B0-9762-415A-A599-487CE39ADD50" description="" id="ABD711B0-9762-415A-A599-487CE39ADD50" label="" index="12" flippingStyle="TURN" isManual="true" _type="FlippingUnit"/>
+      </spoV3:units>
+    </spoV3:printingDeviceType>
+    <spoV3:printingDevice customData="eyJwcmltYXJ5R3JpcHBlckVkZ2VTaWRlIjoiQk9UVE9NIiwiZm9ybWF0Ijp7Im1pbiI6eyJ3aWR0aCI6MCwiaGVpZ2h0IjowfSwibWF4Ijp7IndpZHRoIjoyMDAwMDAwLCJoZWlnaHQiOjIwMDAwMDB9fSwid2VpZ2h0Ijp7Im1pbiI6MCwibWF4Ijo2MDB9LCJ3b3JrU3R5bGVzIjp7IlNJTVBMRVgiOnRydWUsIldPUktfQU5EX0JBQ0siOmZhbHNlLCJQRVJGRUNUSU5HIjp0cnVlLCJXT1JLX0FORF9UVU1CTEUiOmZhbHNlLCJXT1JLX0FORF9UVVJOIjpmYWxzZX0sInBlcmZvcm1hbmNlIjp7ImNvc3RfaG91cmx5UHJpbnRpbmdEZXZpY2VSYXRlIjoyMTAsImNvc3RfcmF3UHJpbnRpbmdQbGF0ZSI6OCwiY29zdF9leHBvc2VQcmludGluZ1BsYXRlIjowLCJkdXJhdGlvbl9zZXRVcFBhcGVyIjowLCJkdXJhdGlvbl9zZXRVcEFQcmludGluZ1BsYXRlIjowLCJkdXJhdGlvbl9zZXRVcFBlcmZlY3RpbmdVbml0IjoxMCwic3BlZWRfcHJpbnRpbmdBdFN0YXJ0Ijo4MDAwLCJzcGVlZF9wcmludGluZ0F0UHJvZHVjdGlvbldpdGhvdXRQZXJmZWN0aW5nIjpbeyJ3ZWlnaHQiOjE3MCwic3BlZWQiOjEwMDAwLCJpZCI6ImV4dE1vZGVsNTIyLTMifV0sInNwZWVkX3ByaW50aW5nQXRQcm9kdWN0aW9uV2l0aFBlcmZlY3RpbmciOlt7IndlaWdodCI6MTMwLCJzcGVlZCI6MTAwMDAsImlkIjoiZXh0TW9kZWw1NDAtOCJ9LHsid2VpZ2h0IjoxNzAsInNwZWVkIjo5MDAwLCJpZCI6ImV4dE1vZGVsNTQwLTkifV0sInNwZWVkX3ByaW50aW5nQXRQcm9kdWN0aW9uV2l0aFNoZWV0QnJha2UiOltdLCJudW1iZXJfYmFkU2hlZXRzQXRQcmludFJ1blN0YXJ0IjoxNTAsImNvc3RfY29sb3JQZXJTaGVldCI6MC4wMSwiZHVyYXRpb25fZXh0ZXJuYWxUdW1ibGluZyI6NSwiZHVyYXRpb25fZXh0ZXJuYWxUdXJuaW5nIjo1LCJkdXJhdGlvbl9yZVNldFVwUGFwZXIiOjUsImNvc3RfcHJlUHJpbnQiOjAsImNvc3RfcG9zdFByaW50IjowLCJjb3N0X3ByZVByaW50UnVuIjozNSwiY29zdF9wb3N0UHJpbnRSdW4iOjAsImR1cmF0aW9uX3ByZVByaW50UnVuIjo0LCJkdXJhdGlvbl9wb3N0UHJpbnRSdW4iOjAsImR1cmF0aW9uX2Jhc2ljUGVyU2hlZXQiOjEwLCJkdXJhdGlvbl9jb2xvclBlckNsaWNrIjo2MCwiY29zdF9jb2xvclBlckNsaWNrIjowLjAwNH0sInBsYWNlbWVudFpvbmUiOnsic2ltcGxleCI6eyJtYXJnaW5zIjp7InRvcCI6eyJ3aWR0aCI6NTAwMCwidHlwZSI6IlJlc2VydmVkU3BhY2VQbGFjZW1lbnQifSwicmlnaHQiOnsid2lkdGgiOjUwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sImJvdHRvbSI6eyJ3aWR0aCI6MTAwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sImxlZnQiOnsid2lkdGgiOjUwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In19LCJ4QWxpZ25tZW50IjoiQ0VOVEVSIiwieUFsaWdubWVudCI6Ik1JRERMRSIsImFycmFuZ2VtZW50IjoiTEVGVF9CT1RUT00ifSwicGVyZmVjdGluZyI6eyJtYXJnaW5zIjp7InRvcCI6eyJ3aWR0aCI6MTAwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sInJpZ2h0Ijp7IndpZHRoIjo1MDAwLCJ0eXBlIjoiUmVzZXJ2ZWRTcGFjZVBsYWNlbWVudCJ9LCJib3R0b20iOnsid2lkdGgiOjEwMDAwLCJ0eXBlIjoiUmVzZXJ2ZWRTcGFjZVBsYWNlbWVudCJ9LCJsZWZ0Ijp7IndpZHRoIjo1MDAwLCJ0eXBlIjoiUmVzZXJ2ZWRTcGFjZVBsYWNlbWVudCJ9fSwieEFsaWdubWVudCI6IkNFTlRFUiIsInlBbGlnbm1lbnQiOiJNSURETEUiLCJhcnJhbmdlbWVudCI6IkxFRlRfQk9UVE9NIn19LCJ2ZXJzaW9uIjoiOSJ9" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/devices/id=pd1" description="" id="pd1" label="Ryobi 4/4" active="true" minimalQuantity="0" _type="PrintingDevice">
+      <spoV3:categories/>
+      <spoV3:typeRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType" id="0F8AD8D2-4B03-45C0-B1A3-2D7603A92206"/>
+    </spoV3:printingDevice>
+    <spoV3:mountedMedia customData="eyJwbGFjZW1lbnRab25lU2V0dGluZ3NJZCI6InBlcmZlY3RpbmciLCJhdXRvVXBkYXRlIjp7Imdlb21ldHJ5IjpmYWxzZSwicGVyZm9ybWFuY2UiOnRydWV9LCJ2ZXJzaW9uIjoiOSJ9" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/mountedMedias/id=24b66716-6424-4e11-8737-73a27d58f24e" description="" id="24b66716-6424-4e11-8737-73a27d58f24e" label="Ryobi 4/4 MIT Bilderdruck matt 130g 880x630 Breitbahn Perfector_Central_ColorBar_rechtsAusrichtung" active="true" allowanceRuleRefs="" automatic="false" headSide="BOTTOM" maxSheetCountForSinglePalletUse="1073741823">
+      <spoV3:mediaRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/media" id="m1"/>
+      <spoV3:printingDeviceRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/device" id="pd1"/>
+      <spoV3:allowedWorkStyles>
+        <spoV3:workStyle>PERFECTING</spoV3:workStyle>
+      </spoV3:allowedWorkStyles>
+      <spoV3:cloneGeometry direction="X">
+        <spoV3:cloneZones/>
+      </spoV3:cloneGeometry>
+      <spoV3:placementZone xAlignment="CENTER" yAlignment="MIDDLE" arrangement="RIGHT_BOTTOM" freeRequirementRectangleRefs="">
+        <spoV3:reservedSpacePlacements>
+          <spoV3:reservedSpacePlacement description="" label="">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="630000" width="5000"/>
+          </spoV3:reservedSpacePlacement>
+        </spoV3:reservedSpacePlacements>
+        <spoV3:startConstraintRectangles>
+          <spoV3:startConstraintRectangle group="boundary" _type="OverlappingStartConstraintRectangle">
+            <spoV3:offset x="874000" y="0"/>
+            <spoV3:format height="630000" width="6000"/>
+          </spoV3:startConstraintRectangle>
+          <spoV3:startConstraintRectangle group="colorBar" _type="OverlappingStartConstraintRectangle">
+            <spoV3:offset x="0" y="309000"/>
+            <spoV3:format height="12000" width="880000"/>
+          </spoV3:startConstraintRectangle>
+          <spoV3:startConstraintRectangle group="boundary" _type="OverlappingStartConstraintRectangle">
+            <spoV3:offset x="0" y="619000"/>
+            <spoV3:format height="11000" width="880000"/>
+          </spoV3:startConstraintRectangle>
+          <spoV3:startConstraintRectangle group="boundary" _type="OverlappingStartConstraintRectangle">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="11000" width="880000"/>
+          </spoV3:startConstraintRectangle>
+        </spoV3:startConstraintRectangles>
+        <spoV3:templateRectangles/>
+      </spoV3:placementZone>
+      <spoV3:performance>
+        <spoV3:preGangJob cost="8.432424"/>
+        <spoV3:preGangJob_exposePrintingPlate cost="8.0"/>
+        <spoV3:media_perSheet cost="0.0"/>
+        <spoV3:gangJob_perSheet cost="0.056216" duration="0"/>
+        <spoV3:prePrintRun cost="38.9375" duration="307500"/>
+        <spoV3:prePrintRun_changePrintingUnitState cost="0.0" duration="0"/>
+        <spoV3:prePrintRun_changeManualFlippingUnitState cost="0.0" duration="0"/>
+        <spoV3:prePrintRun_changeAutomaticFlippingUnitState cost="35.0" duration="600000"/>
+        <spoV3:printRun_perSheet cost="0.031" duration="360"/>
+        <spoV3:printRun_perColor cost="0.0" duration="0"/>
+        <spoV3:printRun_manualTurn cost="17.5" duration="300000"/>
+        <spoV3:printRun_manualTumble cost="17.5" duration="300000"/>
+        <spoV3:printRun_automaticTurnPerSheet cost="0.0" duration="0"/>
+        <spoV3:printRun_automaticTumblePerSheet cost="0.0" duration="0"/>
+        <spoV3:postPrintRun cost="0.0" duration="0"/>
+        <spoV3:interPrintRun cost="17.5" duration="300000"/>
+        <spoV3:postGangJob cost="0.0"/>
+      </spoV3:performance>
+    </spoV3:mountedMedia>
+    <spoV3:binderySignatures>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=928495-650_0-1and10-11" description="Bro-12S (E)" id="928495-650_0-1and10-11" label="928495-650_0-1and10-11 Bro-12S (E)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557835200000" canDemand="1000" customerRef="928495" earliestStartTime="0" factionRef="928495-650" filler="false" flipConstraint="ORIGINAL" latestEndTime="1558094400000" mediaCategoryRefs="" mediaRefs="m1" mustDemand="1000" orderRef="928495-650" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="2" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9ImZjNGU0MDc1LTg2M2MtNGMwYy1hMDc0LTYwYzM0YmIzY2Y0ZiIgZGVzY3JpcHRpb249IjkyODQ5NS02NTAiIGlkPSI5Mjg0OTUtNjUwXzAtMWFuZDEwLTExIiBsYWJlbD0iRjQtMSIgY3JlZXBDb21wZW5zYXRpb25TdGVwPSIwLjAwMjQzMjQzMjQzMjQzMjQzMjMiIGRvdWJsZUlzc3VlPSJmYWxzZSI+PGNvbVYxOmF1ZGl0TG9nIGNyZWF0ZWRCeT0iQXNzZW1ibGVyIiBjcmVhdGVkT249IjE1NTc5MDIyMzI5MDEiIGxhc3RNb2RpZmllZEJ5PSJBc3NlbWJsZXIiIGxhc3RNb2RpZmllZE9uPSIxNTU3OTAyMjMyOTAxIj48Y29tVjE6cmVjb3Jkcy8+PC9jb21WMTphdWRpdExvZz48c3BvVjM6YXNzZW1ibHlSZWYgaHJlZj0iIiBpZD0iOTI4NDk1LTY1MCIvPjxzcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMSIgY3JlZXBDb21wZW5zYXRpb249IjEuMCIgZmFjZUJsZWVkPSIzMDAwIiBmYWNlVHJpbT0iMzAwMCIgZm9vdEJsZWVkPSIyNTAwIiBmb290VHJpbT0iMjUwMCIgaGVhZEJsZWVkPSIyNTAwIiBoZWFkVHJpbT0iMjUwMCIgb3JpZW50YXRpb249IlVQIiBvdmVyZm9sZFdpZHRoPSIwIiByb3dJbmRleD0iMCIgc3BpbmVCbGVlZD0iMCIgc3BpbmVUcmltPSIwIiB0cmltQm94U2VwYXJhdGlvbkRpc3RhbmNlPSIwIj48c3BvVjM6ZnJvbnRQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMTAiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMTEiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMTEiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMTIiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTUwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIyNTAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIxLjAiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMjUwMCIgZm9vdFRyaW09IjI1MDAiIGhlYWRCbGVlZD0iMjUwMCIgaGVhZFRyaW09IjI1MDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjEiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMiIgcGRmVXJsPSJUZXN0L0VfOTI4NDk1LTY1MC5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIwIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjEiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTUwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIyNTAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PC9zcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3ViU2lnbmF0dXJlUmVmcz48c3BvVjM6c2lnbmF0dXJlUmVmIGhyZWY9IiIgaWQ9IjkyODQ5NS02NTBfMi0zYW5kOC05IiBpbmRleD0iMCIvPjwvc3BvVjM6c3ViU2lnbmF0dXJlUmVmcz48c3BvVjM6YmluZGVyeVNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI5Mjg0OTUtNjUwXzAtMWFuZDEwLTExIi8+PHNwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8wLTFhbmQxMC0xMSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMC0xYW5kMTAtMTEiIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI5Mjg0OTUtNjUwXzItM2FuZDgtOSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8yLTNhbmQ4LTkiIGluZGV4UGF0aD0iMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzAtMWFuZDEwLTExIiBzaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMi0zYW5kOC05IiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iOTI4NDk1LTY1MF80LTciLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfNC03IiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzItM2FuZDgtOSIgc2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzQtNyIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IiIvPjwvc3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOm92ZXJmb2xkIF9uaWw9InRydWUiLz48c3BvVjM6c2lnbmF0dXJlVHlwZVJlZiBocmVmPSIiIGlkPSJGNC0xIi8+PC9zcG9WMzpzaWduYXR1cmUtUm9vdD4=" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="215000" width="302000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+        <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="211000"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="298000" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="fc4e4075-863c-4c0c-a074-60c34bb3cf4f" description="928495-650" id="928495-650_0-1and10-11" label="F4-1" creepCompensationStep="0.0024324324324324323" doubleIssue="false">
+          <comV1:auditLog createdBy="Assembler" createdOn="1557902232901" lastModifiedBy="Assembler" lastModifiedOn="1557902232901">
+            <comV1:records/>
+          </comV1:auditLog>
+          <spoV3:assemblyRef href="" id="928495-650"/>
+          <spoV3:strippingCells>
+            <spoV3:strippingCell colIndex="1" creepCompensation="1.0" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="10">
+                <spoV3:printData pdfPageNumber="11" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="11">
+                <spoV3:printData pdfPageNumber="12" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+            <spoV3:strippingCell colIndex="0" creepCompensation="1.0" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="1">
+                <spoV3:printData pdfPageNumber="2" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="0">
+                <spoV3:printData pdfPageNumber="1" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+          </spoV3:strippingCells>
+          <spoV3:subSignatureRefs>
+            <spoV3:signatureRef href="" id="928495-650_2-3and8-9" index="0"/>
+          </spoV3:subSignatureRefs>
+          <spoV3:binderySignatureRef href="" id="928495-650_0-1and10-11"/>
+          <spoV3:relatedSignatureRefs>
+            <spoV3:ref binderySignatureRef="928495-650_0-1and10-11" indexPath="0" label="" signatureRef="928495-650_0-1and10-11" subBinderySignatureRefs="928495-650_2-3and8-9"/>
+            <spoV3:ref binderySignatureRef="928495-650_2-3and8-9" indexPath="0 0" label="" parentBinderySignatureRef="928495-650_0-1and10-11" signatureRef="928495-650_2-3and8-9" subBinderySignatureRefs="928495-650_4-7"/>
+            <spoV3:ref binderySignatureRef="928495-650_4-7" indexPath="0 0 0" label="" parentBinderySignatureRef="928495-650_2-3and8-9" signatureRef="928495-650_4-7" subBinderySignatureRefs=""/>
+          </spoV3:relatedSignatureRefs>
+          <spoV3:overfold _nil="true"/>
+          <spoV3:signatureTypeRef href="" id="F4-1"/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=928495-650_2-3and8-9" description="Bro-12S (E)" id="928495-650_2-3and8-9" label="928495-650_2-3and8-9 Bro-12S (E)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557835200000" canDemand="1000" customerRef="928495" earliestStartTime="0" factionRef="928495-650" filler="false" flipConstraint="ORIGINAL" latestEndTime="1558094400000" mediaCategoryRefs="" mediaRefs="m1" mustDemand="1000" orderRef="928495-650" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="2" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjQ4ZjZjMzFmLTUyYzAtNDdiMS05ZTA4LWUyNjY3ZmYyZDJhZSIgZGVzY3JpcHRpb249IjkyODQ5NS02NTAiIGlkPSI5Mjg0OTUtNjUwXzItM2FuZDgtOSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMDI0MzI0MzI0MzI0MzI0MzIzIiBkb3VibGVJc3N1ZT0iZmFsc2UiPjxjb21WMTphdWRpdExvZyBjcmVhdGVkQnk9IkFzc2VtYmxlciIgY3JlYXRlZE9uPSIxNTU3OTAyMjMyOTAxIiBsYXN0TW9kaWZpZWRCeT0iQXNzZW1ibGVyIiBsYXN0TW9kaWZpZWRPbj0iMTU1NzkwMjIzMjkwMSI+PGNvbVYxOnJlY29yZHMvPjwvY29tVjE6YXVkaXRMb2c+PHNwb1YzOmFzc2VtYmx5UmVmIGhyZWY9IiIgaWQ9IjkyODQ5NS02NTAiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk5NzU2NzU2NzU2NzU2NzYiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMjUwMCIgZm9vdFRyaW09IjI1MDAiIGhlYWRCbGVlZD0iMjUwMCIgaGVhZFRyaW09IjI1MDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjgiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iOSIgcGRmVXJsPSJUZXN0L0VfOTI4NDk1LTY1MC5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI5Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjEwIiBwZGZVcmw9IlRlc3QvRV85Mjg0OTUtNjUwLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNTAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMjUwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjxzcG9WMzpzdHJpcHBpbmdDZWxsIGNvbEluZGV4PSIwIiBjcmVlcENvbXBlbnNhdGlvbj0iMC45OTc1Njc1Njc1Njc1Njc2IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjI1MDAiIGZvb3RUcmltPSIyNTAwIiBoZWFkQmxlZWQ9IjI1MDAiIGhlYWRUcmltPSIyNTAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIzIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjQiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMiI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIzIiBwZGZVcmw9IlRlc3QvRV85Mjg0OTUtNjUwLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNTAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMjUwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI5Mjg0OTUtNjUwXzQtNyIgaW5kZXg9IjAiLz48L3Nwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOmJpbmRlcnlTaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iOTI4NDk1LTY1MF8yLTNhbmQ4LTkiLz48c3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzAtMWFuZDEwLTExIiBpbmRleFBhdGg9IjAiIGxhYmVsPSIiIHNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8wLTFhbmQxMC0xMSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjkyODQ5NS02NTBfMi0zYW5kOC05Ii8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzItM2FuZDgtOSIgaW5kZXhQYXRoPSIwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMC0xYW5kMTAtMTEiIHNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8yLTNhbmQ4LTkiIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI5Mjg0OTUtNjUwXzQtNyIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF80LTciIGluZGV4UGF0aD0iMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMi0zYW5kOC05IiBzaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfNC03IiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iIi8+PC9zcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6b3ZlcmZvbGQgX25pbD0idHJ1ZSIvPjxzcG9WMzpzaWduYXR1cmVUeXBlUmVmIGhyZWY9IiIgaWQ9IkY0LTEiLz48L3Nwb1YzOnNpZ25hdHVyZS1Sb290Pg==" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="215000" width="302000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+        <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="211000"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="298000" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="48f6c31f-52c0-47b1-9e08-e2667ff2d2ae" description="928495-650" id="928495-650_2-3and8-9" label="F4-1" creepCompensationStep="0.0024324324324324323" doubleIssue="false">
+          <comV1:auditLog createdBy="Assembler" createdOn="1557902232901" lastModifiedBy="Assembler" lastModifiedOn="1557902232901">
+            <comV1:records/>
+          </comV1:auditLog>
+          <spoV3:assemblyRef href="" id="928495-650"/>
+          <spoV3:strippingCells>
+            <spoV3:strippingCell colIndex="1" creepCompensation="0.9975675675675676" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="8">
+                <spoV3:printData pdfPageNumber="9" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="9">
+                <spoV3:printData pdfPageNumber="10" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+            <spoV3:strippingCell colIndex="0" creepCompensation="0.9975675675675676" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="3">
+                <spoV3:printData pdfPageNumber="4" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="2">
+                <spoV3:printData pdfPageNumber="3" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+          </spoV3:strippingCells>
+          <spoV3:subSignatureRefs>
+            <spoV3:signatureRef href="" id="928495-650_4-7" index="0"/>
+          </spoV3:subSignatureRefs>
+          <spoV3:binderySignatureRef href="" id="928495-650_2-3and8-9"/>
+          <spoV3:relatedSignatureRefs>
+            <spoV3:ref binderySignatureRef="928495-650_0-1and10-11" indexPath="0" label="" signatureRef="928495-650_0-1and10-11" subBinderySignatureRefs="928495-650_2-3and8-9"/>
+            <spoV3:ref binderySignatureRef="928495-650_2-3and8-9" indexPath="0 0" label="" parentBinderySignatureRef="928495-650_0-1and10-11" signatureRef="928495-650_2-3and8-9" subBinderySignatureRefs="928495-650_4-7"/>
+            <spoV3:ref binderySignatureRef="928495-650_4-7" indexPath="0 0 0" label="" parentBinderySignatureRef="928495-650_2-3and8-9" signatureRef="928495-650_4-7" subBinderySignatureRefs=""/>
+          </spoV3:relatedSignatureRefs>
+          <spoV3:overfold _nil="true"/>
+          <spoV3:signatureTypeRef href="" id="F4-1"/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=477712-150" description="Fol-4S (S)" id="477712-150" label="477712-150 Fol-4S (S)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557902232875" canDemand="1000" customerRef="477712" earliestStartTime="0" factionRef="" filler="false" flipConstraint="EQUAL" latestEndTime="1558094400000" mediaCategoryRefs="*" mediaRefs="" mustDemand="1000" orderRef="477712-150" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="297000" width="420000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_477712-150.pdf"/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_477712-150.pdf"/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:padding bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="420000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="297000"/>
+            <spoV3:format height="0" width="420000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="420000" y="0"/>
+            <spoV3:format height="297000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="297000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="297000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="297000"/>
+            <spoV3:format height="0" width="420000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="420000" y="0"/>
+            <spoV3:format height="297000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="420000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature _nil="true">
+          <spoV3:strippingCells/>
+          <spoV3:subSignatureRefs/>
+          <spoV3:relatedSignatureRefs/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=689417-56" description="Fly-2S (S)" id="689417-56" label="689417-56 Fly-2S (S)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557902232802" canDemand="2500" customerRef="689417" earliestStartTime="0" factionRef="" filler="false" flipConstraint="EQUAL" latestEndTime="1558094400000" mediaCategoryRefs="*" mediaRefs="" mustDemand="2500" orderRef="689417-56" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="210000" width="148000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:padding bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature _nil="true">
+          <spoV3:strippingCells/>
+          <spoV3:subSignatureRefs/>
+          <spoV3:relatedSignatureRefs/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=928495-650_4-7" description="Bro-12S (E)" id="928495-650_4-7" label="928495-650_4-7 Bro-12S (E)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557835200000" canDemand="1000" customerRef="928495" earliestStartTime="0" factionRef="928495-650" filler="false" flipConstraint="ORIGINAL" latestEndTime="1558094400000" mediaCategoryRefs="" mediaRefs="m1" mustDemand="1000" orderRef="928495-650" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="2" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9ImY1MmJhOWQ1LTBmZTQtNDNkMS04OTY4LWZjOTI4MTRjMGMwMCIgZGVzY3JpcHRpb249IjkyODQ5NS02NTAiIGlkPSI5Mjg0OTUtNjUwXzQtNyIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMDI0MzI0MzI0MzI0MzI0MzIzIiBkb3VibGVJc3N1ZT0iZmFsc2UiPjxjb21WMTphdWRpdExvZyBjcmVhdGVkQnk9IkFzc2VtYmxlciIgY3JlYXRlZE9uPSIxNTU3OTAyMjMyOTAwIiBsYXN0TW9kaWZpZWRCeT0iQXNzZW1ibGVyIiBsYXN0TW9kaWZpZWRPbj0iMTU1NzkwMjIzMjkwMCI+PGNvbVYxOnJlY29yZHMvPjwvY29tVjE6YXVkaXRMb2c+PHNwb1YzOmFzc2VtYmx5UmVmIGhyZWY9IiIgaWQ9IjkyODQ5NS02NTAiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk5NTEzNTEzNTEzNTEzNTIiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMjUwMCIgZm9vdFRyaW09IjI1MDAiIGhlYWRCbGVlZD0iMjUwMCIgaGVhZFRyaW09IjI1MDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjYiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iNyIgcGRmVXJsPSJUZXN0L0VfOTI4NDk1LTY1MC5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI3Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjgiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTUwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIyNTAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk5NTEzNTEzNTEzNTEzNTIiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMjUwMCIgZm9vdFRyaW09IjI1MDAiIGhlYWRCbGVlZD0iMjUwMCIgaGVhZFRyaW09IjI1MDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjUiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iNiIgcGRmVXJsPSJUZXN0L0VfOTI4NDk1LTY1MC5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI0Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjUiIHBkZlVybD0iVGVzdC9FXzkyODQ5NS02NTAucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTUwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE1MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIyNTAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PC9zcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3ViU2lnbmF0dXJlUmVmcy8+PHNwb1YzOmJpbmRlcnlTaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iOTI4NDk1LTY1MF80LTciLz48c3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzAtMWFuZDEwLTExIiBpbmRleFBhdGg9IjAiIGxhYmVsPSIiIHNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8wLTFhbmQxMC0xMSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjkyODQ5NS02NTBfMi0zYW5kOC05Ii8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI5Mjg0OTUtNjUwXzItM2FuZDgtOSIgaW5kZXhQYXRoPSIwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMC0xYW5kMTAtMTEiIHNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF8yLTNhbmQ4LTkiIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI5Mjg0OTUtNjUwXzQtNyIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iOTI4NDk1LTY1MF80LTciIGluZGV4UGF0aD0iMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfMi0zYW5kOC05IiBzaWduYXR1cmVSZWY9IjkyODQ5NS02NTBfNC03IiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iIi8+PC9zcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6b3ZlcmZvbGQgX25pbD0idHJ1ZSIvPjxzcG9WMzpzaWduYXR1cmVUeXBlUmVmIGhyZWY9IiIgaWQ9IkY0LTEiLz48L3Nwb1YzOnNpZ25hdHVyZS1Sb290Pg==" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="215000" width="302000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+        <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="211000"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="298000" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="215000" width="4000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="4000" width="302000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="f52ba9d5-0fe4-43d1-8968-fc92814c0c00" description="928495-650" id="928495-650_4-7" label="F4-1" creepCompensationStep="0.0024324324324324323" doubleIssue="false">
+          <comV1:auditLog createdBy="Assembler" createdOn="1557902232900" lastModifiedBy="Assembler" lastModifiedOn="1557902232900">
+            <comV1:records/>
+          </comV1:auditLog>
+          <spoV3:assemblyRef href="" id="928495-650"/>
+          <spoV3:strippingCells>
+            <spoV3:strippingCell colIndex="1" creepCompensation="0.9951351351351352" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="6">
+                <spoV3:printData pdfPageNumber="7" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="7">
+                <spoV3:printData pdfPageNumber="8" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+            <spoV3:strippingCell colIndex="0" creepCompensation="0.9951351351351352" faceBleed="3000" faceTrim="3000" footBleed="2500" footTrim="2500" headBleed="2500" headTrim="2500" orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+              <spoV3:frontPage headAssignment="HEAD" index="5">
+                <spoV3:printData pdfPageNumber="6" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:frontPage>
+              <spoV3:backPage headAssignment="HEAD" index="4">
+                <spoV3:printData pdfPageNumber="5" pdfUrl="Test/E_928495-650.pdf"/>
+              </spoV3:backPage>
+              <spoV3:relativeFormat height="215000" width="151000"/>
+              <spoV3:intrinsicFormat height="215000" width="151000"/>
+              <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+              <spoV3:intrinsicTrimBoxOffsets>
+                <spoV3:offset x="0" y="2500"/>
+              </spoV3:intrinsicTrimBoxOffsets>
+            </spoV3:strippingCell>
+          </spoV3:strippingCells>
+          <spoV3:subSignatureRefs/>
+          <spoV3:binderySignatureRef href="" id="928495-650_4-7"/>
+          <spoV3:relatedSignatureRefs>
+            <spoV3:ref binderySignatureRef="928495-650_0-1and10-11" indexPath="0" label="" signatureRef="928495-650_0-1and10-11" subBinderySignatureRefs="928495-650_2-3and8-9"/>
+            <spoV3:ref binderySignatureRef="928495-650_2-3and8-9" indexPath="0 0" label="" parentBinderySignatureRef="928495-650_0-1and10-11" signatureRef="928495-650_2-3and8-9" subBinderySignatureRefs="928495-650_4-7"/>
+            <spoV3:ref binderySignatureRef="928495-650_4-7" indexPath="0 0 0" label="" parentBinderySignatureRef="928495-650_2-3and8-9" signatureRef="928495-650_4-7" subBinderySignatureRefs=""/>
+          </spoV3:relatedSignatureRefs>
+          <spoV3:overfold _nil="true"/>
+          <spoV3:signatureTypeRef href="" id="F4-1"/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=998449-573" description="Fly-2S (E)" id="998449-573" label="998449-573 Fly-2S (E)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557902232965" canDemand="1000" customerRef="998449" earliestStartTime="0" factionRef="" filler="false" flipConstraint="EQUAL" latestEndTime="1558008000000" mediaCategoryRefs="*" mediaRefs="" mustDemand="1000" orderRef="998449-573" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="2" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="210000" width="148000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/E_998449-573.pdf"/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/E_998449-573.pdf"/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:padding bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature _nil="true">
+          <spoV3:strippingCells/>
+          <spoV3:subSignatureRefs/>
+          <spoV3:relatedSignatureRefs/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=262684-11" description="Fly-2S (S)" id="262684-11" label="262684-11 Fly-2S (S)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557902232984" canDemand="1000" customerRef="262684" earliestStartTime="0" factionRef="" filler="false" flipConstraint="EQUAL" latestEndTime="1558094400000" mediaCategoryRefs="*" mediaRefs="" mustDemand="1000" orderRef="262684-11" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="210000" width="148000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_262684-11.pdf"/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_262684-11.pdf"/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:padding bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature _nil="true">
+          <spoV3:strippingCells/>
+          <spoV3:subSignatureRefs/>
+          <spoV3:relatedSignatureRefs/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+      <spoV3:binderySignature customData="" sourceRef="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/parameters/binderySignatures/id=23159600-2" description="Fly-2S (E)" id="23159600-2" label="23159600-2 Fly-2S (E)" active="true" additionalFactionRefs="" allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1557902232666" canDemand="500" customerRef="23159600" earliestStartTime="0" factionRef="" filler="false" flipConstraint="EQUAL" latestEndTime="1558008000000" mediaCategoryRefs="*" mediaRefs="" mustDemand="500" orderRef="23159600-2" orderedItemRef="" preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="2" producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0" separable="false" sheetQuantity="1" signatureData="" smartcut="0" templateGroup="">
+        <spoV3:trimFormat height="210000" width="148000"/>
+        <spoV3:printData>
+          <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/E_23159600-2.pdf"/>
+          <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/E_23159600-2.pdf"/>
+        </spoV3:printData>
+        <spoV3:printDataVariants/>
+        <spoV3:groundsheetConfig _nil="true"/>
+        <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:padding bottom="1000" left="1000" right="1000" top="1000"/>
+        <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+        <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+        <spoV3:requirementConstraintRectangles/>
+        <spoV3:overlappingConstraintRectangles>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="boundary">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="210000"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="148000" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="210000" width="0"/>
+          </spoV3:overlappingConstraintRectangle>
+          <spoV3:overlappingConstraintRectangle group="colorBar">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="0" width="148000"/>
+          </spoV3:overlappingConstraintRectangle>
+        </spoV3:overlappingConstraintRectangles>
+        <spoV3:frontPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:frontPage>
+        <spoV3:backPage>
+          <spoV3:colorUses>
+            <spoV3:colorUse color="Cyan" intensity="50"/>
+            <spoV3:colorUse color="Black" intensity="50"/>
+            <spoV3:colorUse color="Magenta" intensity="50"/>
+            <spoV3:colorUse color="Yellow" intensity="50"/>
+          </spoV3:colorUses>
+          <spoV3:groups/>
+        </spoV3:backPage>
+        <spoV3:groups/>
+        <spoV3:intents>
+          <spoV3:intentsAtSide/>
+          <spoV3:intentsAtRectangle/>
+        </spoV3:intents>
+        <spoV3:signature _nil="true">
+          <spoV3:strippingCells/>
+          <spoV3:subSignatureRefs/>
+          <spoV3:relatedSignatureRefs/>
+        </spoV3:signature>
+      </spoV3:binderySignature>
+    </spoV3:binderySignatures>
+    <spoV3:allowanceRules/>
+    <spoV3:freeRequirementRectangles/>
+    <spoV3:printAllowances/>
+    <spoV3:form>
+      <spoV3:groups/>
+      <spoV3:frontPage>
+        <spoV3:colors>
+          <spoV3:color>Magenta</spoV3:color>
+          <spoV3:color>Black</spoV3:color>
+          <spoV3:color>Cyan</spoV3:color>
+          <spoV3:color>Yellow</spoV3:color>
+        </spoV3:colors>
+        <spoV3:groups/>
+      </spoV3:frontPage>
+      <spoV3:backPage>
+        <spoV3:colors>
+          <spoV3:color>Magenta</spoV3:color>
+          <spoV3:color>Black</spoV3:color>
+          <spoV3:color>Cyan</spoV3:color>
+          <spoV3:color>Yellow</spoV3:color>
+        </spoV3:colors>
+        <spoV3:groups/>
+      </spoV3:backPage>
+      <spoV3:placementZone>
+        <spoV3:binderySignaturePlacements>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="12000" y="321000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_262684-11.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_262684-11.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=262684-11" id="262684-11"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="ZERO" rotationInPlane="ZERO">
+            <spoV3:offset x="448000" y="11000"/>
+            <spoV3:format height="297000" width="420000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_477712-150.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_477712-150.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=477712-150" id="477712-150"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="438000" y="317000"/>
+            <spoV3:format height="302000" width="215000"/>
+            <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+            <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=928495-650_2-3and8-9" id="928495-650_2-3and8-9"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="236000" y="161000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=689417-56" id="689417-56"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="12000" y="161000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/E_998449-573.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/E_998449-573.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=998449-573" id="998449-573"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="653000" y="317000"/>
+            <spoV3:format height="302000" width="215000"/>
+            <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+            <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=928495-650_4-7" id="928495-650_4-7"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="12000" y="471000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/E_23159600-2.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/E_23159600-2.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=23159600-2" id="23159600-2"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="236000" y="11000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=689417-56" id="689417-56"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="12000" y="11000"/>
+            <spoV3:format height="148000" width="210000"/>
+            <spoV3:bleed bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:trim bottom="1000" left="1000" right="1000" top="1000"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="2" pdfRotation="ZERO" pdfUrl="Test/S_689417-56.pdf"/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=689417-56" id="689417-56"/>
+          </spoV3:binderySignaturePlacement>
+          <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90" rotationInPlane="CC90">
+            <spoV3:offset x="223000" y="317000"/>
+            <spoV3:format height="302000" width="215000"/>
+            <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+            <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+            <spoV3:selectedPrintData>
+              <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+              <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+            </spoV3:selectedPrintData>
+            <spoV3:binderySignatureRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/binderySignatures/id=928495-650_0-1and10-11" id="928495-650_0-1and10-11"/>
+          </spoV3:binderySignaturePlacement>
+        </spoV3:binderySignaturePlacements>
+        <spoV3:reservedSpacePlacements>
+          <spoV3:reservedSpacePlacement description="" label="">
+            <spoV3:offset x="0" y="0"/>
+            <spoV3:format height="630000" width="5000"/>
+          </spoV3:reservedSpacePlacement>
+        </spoV3:reservedSpacePlacements>
+      </spoV3:placementZone>
+      <spoV3:cloneZones/>
+    </spoV3:form>
+    <spoV3:realizedRequirements/>
+    <spoV3:groundsheet _nil="true"/>
+    <spoV3:printDeviceStates>
+      <spoV3:printDeviceState index="0" printRunIndex="0">
+        <spoV3:unitStates>
+          <spoV3:unitState active="false" index="0" _type="FlippingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=EF15785F-56E2-402B-A88E-57A0737B17AA" id="EF15785F-56E2-402B-A88E-57A0737B17AA"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="false" index="1" _type="FlippingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=89633147-5A00-4290-B650-725D6330D8D3" id="89633147-5A00-4290-B650-725D6330D8D3"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="2" pageSide="BACK" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=15A0FB42-81E1-46CA-BEAA-E10BF4C4525C" id="15A0FB42-81E1-46CA-BEAA-E10BF4C4525C"/>
+            <spoV3:mountedColor name="Black"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="3" pageSide="BACK" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=8C78BB55-E1CC-40BC-A34F-176A8A6EE60C" id="8C78BB55-E1CC-40BC-A34F-176A8A6EE60C"/>
+            <spoV3:mountedColor name="Cyan"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="4" pageSide="BACK" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46" id="79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46"/>
+            <spoV3:mountedColor name="Magenta"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="5" pageSide="BACK" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=F0CD29BC-7317-44BE-AC05-81B3D03E0256" id="F0CD29BC-7317-44BE-AC05-81B3D03E0256"/>
+            <spoV3:mountedColor name="Yellow"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="6" _type="FlippingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F" id="DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="7" pageSide="FRONT" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=3E92B9EF-8E6F-412F-AB3B-149BD4ABC684" id="3E92B9EF-8E6F-412F-AB3B-149BD4ABC684"/>
+            <spoV3:mountedColor name="Black"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="8" pageSide="FRONT" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=B2EFA01F-4D05-48DD-AE84-16A2C0744196" id="B2EFA01F-4D05-48DD-AE84-16A2C0744196"/>
+            <spoV3:mountedColor name="Cyan"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="9" pageSide="FRONT" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=DB8E26FF-0F1D-412C-A43F-1E33641A8D2B" id="DB8E26FF-0F1D-412C-A43F-1E33641A8D2B"/>
+            <spoV3:mountedColor name="Magenta"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="true" index="10" pageSide="FRONT" _type="PrintingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=2E5934BD-158B-47B8-9CA2-F502172C3A7E" id="2E5934BD-158B-47B8-9CA2-F502172C3A7E"/>
+            <spoV3:mountedColor name="Yellow"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="false" index="11" _type="FlippingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=9E5A1EAB-52DA-418B-8D69-56073689C1F6" id="9E5A1EAB-52DA-418B-8D69-56073689C1F6"/>
+          </spoV3:unitState>
+          <spoV3:unitState active="false" index="12" _type="FlippingUnitState">
+            <spoV3:unitRef href="api/rest/workspaces/id=test/layoutTasks/id=C82885A0-CBCA-4E8F-9C81-7DE4C6CC92EA/result/events/id=a5be0b88-c31a-42fd-9525-df908fea6bf3/@GangJobEvent/gangJob/printingDeviceType/units/id=ABD711B0-9762-415A-A599-487CE39ADD50" id="ABD711B0-9762-415A-A599-487CE39ADD50"/>
+          </spoV3:unitState>
+        </spoV3:unitStates>
+      </spoV3:printDeviceState>
+    </spoV3:printDeviceStates>
+    <spoV3:expenseStructure>
+      <spoV3:total cost="198.585924" duration="667500"/>
+      <spoV3:formProcessCost cost="64.0"/>
+    </spoV3:expenseStructure>
+    <spoV3:efficiencies areaEfficiency="0.9179319727891156" cutCount="22" demandEfficiency="0.9" latestEndTime="1558008000000" mediaEfficiency="0.8615510204081632"/>
+  </spoV3:gangJob>
+</spoV3:gangJobEvent-Root>

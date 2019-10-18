@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spoV3:gangJobEvent-Root xmlns:spoV3="http://www.perfectpattern.de/sPrint.one.v3.api"
+                         xmlns:comV1="http://www.perfectpattern.de/commons.v1.api" _type="GangJobEvent"
+                         href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f"
+                         customData="" sourceRef="" description="" id="5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f" label="1"
+                         approvalSetRef="" deviceRef="pd1" duration="5760000" latestEndTime="1552068000000"
+                         plannedDuration="5760000" startTime="1551971804106" state="PROPOSAL">
+    <spoV3:gangJob alternativeMediasDescription="Bilderdruck matt 130g 880x630 Breitbahn (m1)" quantity="1500"
+                   referenceQuantity="1500" workStyle="PERFECTING">
+        <spoV3:media
+                customData="eyJwcmljZVBlclNoZWV0IjowLjA1NjIxNjE2LCJhdXRvR2VuZXJhdGVMYWJlbCI6dHJ1ZSwiYXV0b0dlbmVyYXRlQ2F0ZWdvcmllcyI6dHJ1ZSwidmVyc2lvbiI6IjkifQ=="
+                sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/medias/id=m1"
+                description="" id="m1" label="Bilderdruck matt 130g 880x630 Breitbahn" active="true" dryingDuration="0"
+                grade="1" grainDirection="Y" mediaType="SHEET" model="" producer="" purpose="Bilderdruck" series=""
+                surface="matt" thickness="130" weight="130">
+            <spoV3:categories>
+                <spoV3:category>Bilderdruck_matt_130g</spoV3:category>
+                <spoV3:category>Bilderdruck_130g</spoV3:category>
+                <spoV3:category>Bilderdruck_matt_130g_880x630</spoV3:category>
+            </spoV3:categories>
+            <spoV3:format height="630000" width="880000"/>
+        </spoV3:media>
+        <spoV3:printingDeviceType customData=""
+                                  sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206"
+                                  description="Bogenmaschine offset 8 Farben mit Wende"
+                                  id="0F8AD8D2-4B03-45C0-B1A3-2D7603A92206" label="8 Farben Bogen mit Wende"
+                                  allowsMultiplePrintRuns="true" jpgImage="" method="OFFSET" model=""
+                                  needsColorGradient="false" producer="" series="" websiteUrl="">
+            <spoV3:units>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=EF15785F-56E2-402B-A88E-57A0737B17AA"
+                            description="" id="EF15785F-56E2-402B-A88E-57A0737B17AA" label="" index="0"
+                            flippingStyle="TUMBLE" isManual="true" _type="FlippingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=89633147-5A00-4290-B650-725D6330D8D3"
+                            description="" id="89633147-5A00-4290-B650-725D6330D8D3" label="" index="1"
+                            flippingStyle="TURN" isManual="true" _type="FlippingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=15A0FB42-81E1-46CA-BEAA-E10BF4C4525C"
+                            description="" id="15A0FB42-81E1-46CA-BEAA-E10BF4C4525C" label="" index="2"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=8C78BB55-E1CC-40BC-A34F-176A8A6EE60C"
+                            description="" id="8C78BB55-E1CC-40BC-A34F-176A8A6EE60C" label="" index="3"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46"
+                            description="" id="79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46" label="" index="4"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=F0CD29BC-7317-44BE-AC05-81B3D03E0256"
+                            description="" id="F0CD29BC-7317-44BE-AC05-81B3D03E0256" label="" index="5"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F"
+                            description="" id="DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F" label="" index="6"
+                            flippingStyle="TUMBLE" isManual="false" _type="FlippingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=3E92B9EF-8E6F-412F-AB3B-149BD4ABC684"
+                            description="" id="3E92B9EF-8E6F-412F-AB3B-149BD4ABC684" label="" index="7"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=B2EFA01F-4D05-48DD-AE84-16A2C0744196"
+                            description="" id="B2EFA01F-4D05-48DD-AE84-16A2C0744196" label="" index="8"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=DB8E26FF-0F1D-412C-A43F-1E33641A8D2B"
+                            description="" id="DB8E26FF-0F1D-412C-A43F-1E33641A8D2B" label="" index="9"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=2E5934BD-158B-47B8-9CA2-F502172C3A7E"
+                            description="" id="2E5934BD-158B-47B8-9CA2-F502172C3A7E" label="" index="10"
+                            _type="PrintingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=9E5A1EAB-52DA-418B-8D69-56073689C1F6"
+                            description="" id="9E5A1EAB-52DA-418B-8D69-56073689C1F6" label="" index="11"
+                            flippingStyle="TUMBLE" isManual="true" _type="FlippingUnit"/>
+                <spoV3:unit customData=""
+                            sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/printingDeviceTypes/id=0F8AD8D2-4B03-45C0-B1A3-2D7603A92206/units/id=ABD711B0-9762-415A-A599-487CE39ADD50"
+                            description="" id="ABD711B0-9762-415A-A599-487CE39ADD50" label="" index="12"
+                            flippingStyle="TURN" isManual="true" _type="FlippingUnit"/>
+            </spoV3:units>
+        </spoV3:printingDeviceType>
+        <spoV3:printingDevice
+                customData="eyJwcmltYXJ5R3JpcHBlckVkZ2VTaWRlIjoiQk9UVE9NIiwiZm9ybWF0Ijp7Im1pbiI6eyJ3aWR0aCI6MCwiaGVpZ2h0IjowfSwibWF4Ijp7IndpZHRoIjoyMDAwMDAwLCJoZWlnaHQiOjIwMDAwMDB9fSwid2VpZ2h0Ijp7Im1pbiI6MCwibWF4Ijo2MDB9LCJ3b3JrU3R5bGVzIjp7IlNJTVBMRVgiOnRydWUsIldPUktfQU5EX0JBQ0siOmZhbHNlLCJQRVJGRUNUSU5HIjp0cnVlLCJXT1JLX0FORF9UVU1CTEUiOmZhbHNlLCJXT1JLX0FORF9UVVJOIjp0cnVlfSwicGVyZm9ybWFuY2UiOnsiY29zdF9ob3VybHlQcmludGluZ0RldmljZVJhdGUiOjgwLCJjb3N0X3Jhd1ByaW50aW5nUGxhdGUiOjgsImNvc3RfZXhwb3NlUHJpbnRpbmdQbGF0ZSI6MTUsImR1cmF0aW9uX3NldFVwUGFwZXIiOjUsImR1cmF0aW9uX3NldFVwQVByaW50aW5nUGxhdGUiOjEwLCJkdXJhdGlvbl9zZXRVcFBlcmZlY3RpbmdVbml0IjoxMCwic3BlZWRfcHJpbnRpbmdBdFN0YXJ0Ijo2MDAwLCJzcGVlZF9wcmludGluZ0F0UHJvZHVjdGlvbldpdGhvdXRQZXJmZWN0aW5nIjpbeyJ3ZWlnaHQiOjE3MCwic3BlZWQiOjEwMDAwLCJpZCI6ImV4dE1vZGVsNTIyLTMifV0sInNwZWVkX3ByaW50aW5nQXRQcm9kdWN0aW9uV2l0aFBlcmZlY3RpbmciOlt7IndlaWdodCI6MTMwLCJzcGVlZCI6MTAwMDAsImlkIjoiZXh0TW9kZWw1NDAtOCJ9LHsid2VpZ2h0IjoxNzAsInNwZWVkIjo5MDAwLCJpZCI6ImV4dE1vZGVsNTQwLTkifV0sInNwZWVkX3ByaW50aW5nQXRQcm9kdWN0aW9uV2l0aFNoZWV0QnJha2UiOltdLCJudW1iZXJfYmFkU2hlZXRzQXRQcmludFJ1blN0YXJ0IjoyMDAsImNvc3RfY29sb3JQZXJTaGVldCI6MC4wMSwiZHVyYXRpb25fZXh0ZXJuYWxUdW1ibGluZyI6NSwiZHVyYXRpb25fZXh0ZXJuYWxUdXJuaW5nIjo1LCJkdXJhdGlvbl9yZVNldFVwUGFwZXIiOjUsImNvc3RfcHJlUHJpbnQiOjAsImNvc3RfcG9zdFByaW50IjowLCJjb3N0X3ByZVByaW50UnVuIjowLCJjb3N0X3Bvc3RQcmludFJ1biI6MCwiZHVyYXRpb25fcHJlUHJpbnRSdW4iOjAsImR1cmF0aW9uX3Bvc3RQcmludFJ1biI6MCwiZHVyYXRpb25fYmFzaWNQZXJTaGVldCI6MTAsImR1cmF0aW9uX2NvbG9yUGVyQ2xpY2siOjYwLCJjb3N0X2NvbG9yUGVyQ2xpY2siOjAuMDA0fSwicGxhY2VtZW50Wm9uZSI6eyJzaW1wbGV4Ijp7Im1hcmdpbnMiOnsidG9wIjp7IndpZHRoIjo1MDAwLCJ0eXBlIjoiUmVzZXJ2ZWRTcGFjZVBsYWNlbWVudCJ9LCJyaWdodCI6eyJ3aWR0aCI6NTAwMCwidHlwZSI6IlJlc2VydmVkU3BhY2VQbGFjZW1lbnQifSwiYm90dG9tIjp7IndpZHRoIjoxMDAwMCwidHlwZSI6IlJlc2VydmVkU3BhY2VQbGFjZW1lbnQifSwibGVmdCI6eyJ3aWR0aCI6NTAwMCwidHlwZSI6IlJlc2VydmVkU3BhY2VQbGFjZW1lbnQifX0sInhBbGlnbm1lbnQiOiJDRU5URVIiLCJ5QWxpZ25tZW50IjoiTUlERExFIiwiYXJyYW5nZW1lbnQiOiJMRUZUX0JPVFRPTSJ9LCJwZXJmZWN0aW5nIjp7Im1hcmdpbnMiOnsidG9wIjp7IndpZHRoIjoxMDAwMCwidHlwZSI6IlJlc2VydmVkU3BhY2VQbGFjZW1lbnQifSwicmlnaHQiOnsid2lkdGgiOjUwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sImJvdHRvbSI6eyJ3aWR0aCI6MTAwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sImxlZnQiOnsid2lkdGgiOjUwMDAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In19LCJ4QWxpZ25tZW50IjoiQ0VOVEVSIiwieUFsaWdubWVudCI6Ik1JRERMRSIsImFycmFuZ2VtZW50IjoiTEVGVF9CT1RUT00ifSwid29ya0FuZFR1cm4iOnsibWFyZ2lucyI6eyJ0b3AiOnsid2lkdGgiOjAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sInJpZ2h0Ijp7IndpZHRoIjowLCJ0eXBlIjoiUmVzZXJ2ZWRTcGFjZVBsYWNlbWVudCJ9LCJib3R0b20iOnsid2lkdGgiOjAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In0sImxlZnQiOnsid2lkdGgiOjAsInR5cGUiOiJSZXNlcnZlZFNwYWNlUGxhY2VtZW50In19LCJ4QWxpZ25tZW50IjoiQ0VOVEVSIiwieUFsaWdubWVudCI6Ik1JRERMRSIsImFycmFuZ2VtZW50IjoiTEVGVF9CT1RUT00ifX0sInZlcnNpb24iOiI5In0="
+                sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/devices/id=pd1"
+                description="" id="pd1" label="Ricoh 4/4" active="true" minimalQuantity="0" _type="PrintingDevice">
+            <spoV3:categories/>
+            <spoV3:typeRef
+                    href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType"
+                    id="0F8AD8D2-4B03-45C0-B1A3-2D7603A92206"/>
+        </spoV3:printingDevice>
+        <spoV3:mountedMedia
+                customData="eyJwbGFjZW1lbnRab25lU2V0dGluZ3NJZCI6InBlcmZlY3RpbmciLCJhdXRvVXBkYXRlIjp7Imdlb21ldHJ5IjpmYWxzZSwicGVyZm9ybWFuY2UiOnRydWV9LCJ2ZXJzaW9uIjoiOSJ9"
+                sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/mountedMedias/id=b0feb1e1-7d42-4936-b7f1-31d8f83a6b1e"
+                description="" id="b0feb1e1-7d42-4936-b7f1-31d8f83a6b1e"
+                label="Ricoh 4/4 MIT Bilderdruck matt 130g 880x630 Breitbahn Perfector_Inline_Farbkontrollstreifen"
+                active="true" allowanceRuleRefs="" automatic="false" headSide="BOTTOM"
+                maxSheetCountForSinglePalletUse="1073741823">
+            <spoV3:mediaRef
+                    href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/media"
+                    id="m1"/>
+            <spoV3:printingDeviceRef
+                    href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/device"
+                    id="pd1"/>
+            <spoV3:allowedWorkStyles>
+                <spoV3:workStyle>PERFECTING</spoV3:workStyle>
+            </spoV3:allowedWorkStyles>
+            <spoV3:cloneGeometry direction="X">
+                <spoV3:cloneZones/>
+            </spoV3:cloneGeometry>
+            <spoV3:placementZone xAlignment="CENTER" yAlignment="MIDDLE" arrangement="LEFT_BOTTOM"
+                                 freeRequirementRectangleRefs="">
+                <spoV3:reservedSpacePlacements>
+                    <spoV3:reservedSpacePlacement description="" label="top">
+                        <spoV3:offset x="0" y="622000"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="right">
+                        <spoV3:offset x="875000" y="0"/>
+                        <spoV3:format height="630000" width="5000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="Farbkontrollstreifen">
+                        <spoV3:offset x="0" y="311000"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="bottom">
+                        <spoV3:offset x="0" y="0"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="left">
+                        <spoV3:offset x="0" y="0"/>
+                        <spoV3:format height="630000" width="5000"/>
+                    </spoV3:reservedSpacePlacement>
+                </spoV3:reservedSpacePlacements>
+                <spoV3:startConstraintRectangles/>
+                <spoV3:templateRectangles/>
+            </spoV3:placementZone>
+            <spoV3:performance>
+                <spoV3:preGangJob cost="11.243232"/>
+                <spoV3:preGangJob_exposePrintingPlate cost="23.0"/>
+                <spoV3:media_perSheet cost="0.0"/>
+                <spoV3:gangJob_perSheet cost="0.056216" duration="0"/>
+                <spoV3:prePrintRun cost="9.333333" duration="420000"/>
+                <spoV3:prePrintRun_changePrintingUnitState cost="13.333333" duration="600000"/>
+                <spoV3:prePrintRun_changeManualFlippingUnitState cost="0.0" duration="0"/>
+                <spoV3:prePrintRun_changeAutomaticFlippingUnitState cost="13.333333" duration="600000"/>
+                <spoV3:printRun_perSheet cost="0.018" duration="360"/>
+                <spoV3:printRun_perColor cost="0.0" duration="0"/>
+                <spoV3:printRun_manualTurn cost="6.666667" duration="300000"/>
+                <spoV3:printRun_manualTumble cost="6.666667" duration="300000"/>
+                <spoV3:printRun_automaticTurnPerSheet cost="0.0" duration="0"/>
+                <spoV3:printRun_automaticTumblePerSheet cost="0.0" duration="0"/>
+                <spoV3:postPrintRun cost="0.0" duration="0"/>
+                <spoV3:interPrintRun cost="6.666667" duration="300000"/>
+                <spoV3:postGangJob cost="0.0"/>
+            </spoV3:performance>
+        </spoV3:mountedMedia>
+        <spoV3:binderySignatures>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B6-7+24-25%5D"
+                                    description="" id="590359-10382_[6-7+24-25]" label="590359-10382_[6-7+24-25]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9Ijg4YWNjYjYzLTE4MTgtNGYxZi04YTIxLTczZTNiNWQyOWZkZiIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMSIgZG91YmxlSXNzdWU9ImZhbHNlIj48Y29tVjE6YXVkaXRMb2cgY3JlYXRlZEJ5PSJBc3NlbWJsZXIiIGNyZWF0ZWRPbj0iMTU1MTk3MDYwMjI5NyIgbGFzdE1vZGlmaWVkQnk9IkFzc2VtYmxlciIgbGFzdE1vZGlmaWVkT249IjE1NTE5NzA2MDIyOTciPjxjb21WMTpyZWNvcmRzLz48L2NvbVYxOmF1ZGl0TG9nPjxzcG9WMzphc3NlbWJseVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODIiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk3IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI3Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjgiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjYiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iNyIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIzMDAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk3IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIyNCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIyNSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMjUiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMjYiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iIGluZGV4PSIwIi8+PC9zcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpiaW5kZXJ5U2lnbmF0dXJlUmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIvPjxzcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleFBhdGg9IjAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1swLTErMzAtMzFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4UGF0aD0iMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBpbmRleFBhdGg9IjAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxNC0xN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxNC0xN10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSIiLz48L3Nwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpvdmVyZm9sZCBfbmlsPSJ0cnVlIi8+PHNwb1YzOnNpZ25hdHVyZVR5cGVSZWYgaHJlZj0iIiBpZD0iRjQtMSIvPjwvc3BvVjM6c2lnbmF0dXJlLVJvb3Q+"
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="88accb63-1818-4f1f-8a21-73e3b5d29fdf"
+                                 description="590359-10382" id="590359-10382_[6-7+24-25]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602297" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602297">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.97" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="7">
+                                <spoV3:printData pdfPageNumber="8" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="6">
+                                <spoV3:printData pdfPageNumber="7" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.97" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="24">
+                                <spoV3:printData pdfPageNumber="25" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="25">
+                                <spoV3:printData pdfPageNumber="26" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[8-9+22-23]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[6-7+24-25]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B12-13+18-19%5D"
+                                    description="" id="590359-10382_[12-13+18-19]" label="590359-10382_[12-13+18-19]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9ImRjMDM5OGM4LThhOTMtNDUzZC05YjIxLTcwZWEyZDM5OTZjYSIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBsYWJlbD0iRjQtMSIgY3JlZXBDb21wZW5zYXRpb25TdGVwPSIwLjAxIiBkb3VibGVJc3N1ZT0iZmFsc2UiPjxjb21WMTphdWRpdExvZyBjcmVhdGVkQnk9IkFzc2VtYmxlciIgY3JlYXRlZE9uPSIxNTUxOTcwNjAyMjk1IiBsYXN0TW9kaWZpZWRCeT0iQXNzZW1ibGVyIiBsYXN0TW9kaWZpZWRPbj0iMTU1MTk3MDYwMjI5NSI+PGNvbVYxOnJlY29yZHMvPjwvY29tVjE6YXVkaXRMb2c+PHNwb1YzOmFzc2VtYmx5UmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4MiIvPjxzcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMCIgY3JlZXBDb21wZW5zYXRpb249IjAuOTQiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMzAwMCIgZm9vdFRyaW09IjMwMDAiIGhlYWRCbGVlZD0iMzAwMCIgaGVhZFRyaW09IjMwMDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjEzIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjE0IiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIxMiI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIxMyIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIzMDAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk0IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIxOCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIxOSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMTkiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMjAiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzE0LTE3XSIgaW5kZXg9IjAiLz48L3Nwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOmJpbmRlcnlTaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIGluZGV4UGF0aD0iMCIgbGFiZWw9IiIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgaW5kZXhQYXRoPSIwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzQtNSsyNi0yN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgaW5kZXhQYXRoPSIwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBpbmRleFBhdGg9IjAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMC0xMSsyMC0yMV0iIGluZGV4UGF0aD0iMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzE0LTE3XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iIi8+PC9zcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6b3ZlcmZvbGQgX25pbD0idHJ1ZSIvPjxzcG9WMzpzaWduYXR1cmVUeXBlUmVmIGhyZWY9IiIgaWQ9IkY0LTEiLz48L3Nwb1YzOnNpZ25hdHVyZS1Sb290Pg=="
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="dc0398c8-8a93-453d-9b21-70ea2d3996ca"
+                                 description="590359-10382" id="590359-10382_[12-13+18-19]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602295" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602295">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.94" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="13">
+                                <spoV3:printData pdfPageNumber="14" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="12">
+                                <spoV3:printData pdfPageNumber="13" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.94" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="18">
+                                <spoV3:printData pdfPageNumber="19" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="19">
+                                <spoV3:printData pdfPageNumber="20" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[14-17]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[12-13+18-19]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B2-3+28-29%5D"
+                                    description="" id="590359-10382_[2-3+28-29]" label="590359-10382_[2-3+28-29]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9ImQzYmQwNjkwLWVlODQtNGEzYy1hZTIxLWZkNzBlNjJlZTFkOSIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMSIgZG91YmxlSXNzdWU9ImZhbHNlIj48Y29tVjE6YXVkaXRMb2cgY3JlYXRlZEJ5PSJBc3NlbWJsZXIiIGNyZWF0ZWRPbj0iMTU1MTk3MDYwMjI5OCIgbGFzdE1vZGlmaWVkQnk9IkFzc2VtYmxlciIgbGFzdE1vZGlmaWVkT249IjE1NTE5NzA2MDIyOTgiPjxjb21WMTpyZWNvcmRzLz48L2NvbVYxOmF1ZGl0TG9nPjxzcG9WMzphc3NlbWJseVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODIiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk5IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIzIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjQiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjIiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMyIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIzMDAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk5IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIyOCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIyOSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMjkiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMzAiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzQtNSsyNi0yN10iIGluZGV4PSIwIi8+PC9zcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpiaW5kZXJ5U2lnbmF0dXJlUmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleFBhdGg9IjAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1swLTErMzAtMzFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4UGF0aD0iMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBpbmRleFBhdGg9IjAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxNC0xN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxNC0xN10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSIiLz48L3Nwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpvdmVyZm9sZCBfbmlsPSJ0cnVlIi8+PHNwb1YzOnNpZ25hdHVyZVR5cGVSZWYgaHJlZj0iIiBpZD0iRjQtMSIvPjwvc3BvVjM6c2lnbmF0dXJlLVJvb3Q+"
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="d3bd0690-ee84-4a3c-ae21-fd70e62ee1d9"
+                                 description="590359-10382" id="590359-10382_[2-3+28-29]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602298" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602298">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.99" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="3">
+                                <spoV3:printData pdfPageNumber="4" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="2">
+                                <spoV3:printData pdfPageNumber="3" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.99" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="28">
+                                <spoV3:printData pdfPageNumber="29" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="29">
+                                <spoV3:printData pdfPageNumber="30" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[4-5+26-27]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[2-3+28-29]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B0-1+30-31%5D"
+                                    description="" id="590359-10382_[0-1+30-31]" label="590359-10382_[0-1+30-31]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjkxNDQzOTRhLWRlZGEtNGNiZi04Mjk3LWU4YTllMjUzMDRiOSIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMSIgZG91YmxlSXNzdWU9ImZhbHNlIj48Y29tVjE6YXVkaXRMb2cgY3JlYXRlZEJ5PSJBc3NlbWJsZXIiIGNyZWF0ZWRPbj0iMTU1MTk3MDYwMjI5OSIgbGFzdE1vZGlmaWVkQnk9IkFzc2VtYmxlciIgbGFzdE1vZGlmaWVkT249IjE1NTE5NzA2MDIyOTkiPjxjb21WMTpyZWNvcmRzLz48L2NvbVYxOmF1ZGl0TG9nPjxzcG9WMzphc3NlbWJseVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODIiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIxLjAiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMzAwMCIgZm9vdFRyaW09IjMwMDAiIGhlYWRCbGVlZD0iMzAwMCIgaGVhZFRyaW09IjMwMDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjEiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMiIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIxIiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmJhY2tQYWdlPjxzcG9WMzpyZWxhdGl2ZUZvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveEZvcm1hdCBoZWlnaHQ9IjIxMDAwMCIgd2lkdGg9IjE0ODAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48c3BvVjM6b2Zmc2V0IHg9IjAiIHk9IjMwMDAiLz48L3Nwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbD48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMSIgY3JlZXBDb21wZW5zYXRpb249IjEuMCIgZmFjZUJsZWVkPSIzMDAwIiBmYWNlVHJpbT0iMzAwMCIgZm9vdEJsZWVkPSIzMDAwIiBmb290VHJpbT0iMzAwMCIgaGVhZEJsZWVkPSIzMDAwIiBoZWFkVHJpbT0iMzAwMCIgb3JpZW50YXRpb249IlVQIiBvdmVyZm9sZFdpZHRoPSIwIiByb3dJbmRleD0iMCIgc3BpbmVCbGVlZD0iMCIgc3BpbmVUcmltPSIwIiB0cmltQm94U2VwYXJhdGlvbkRpc3RhbmNlPSIwIj48c3BvVjM6ZnJvbnRQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMzAiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMzEiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjMxIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjMyIiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmJhY2tQYWdlPjxzcG9WMzpyZWxhdGl2ZUZvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveEZvcm1hdCBoZWlnaHQ9IjIxMDAwMCIgd2lkdGg9IjE0ODAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48c3BvVjM6b2Zmc2V0IHg9IjAiIHk9IjMwMDAiLz48L3Nwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbD48L3Nwb1YzOnN0cmlwcGluZ0NlbGxzPjxzcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpzaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleD0iMCIvPjwvc3BvVjM6c3ViU2lnbmF0dXJlUmVmcz48c3BvVjM6YmluZGVyeVNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iLz48c3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIGluZGV4UGF0aD0iMCIgbGFiZWw9IiIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgaW5kZXhQYXRoPSIwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzQtNSsyNi0yN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgaW5kZXhQYXRoPSIwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBpbmRleFBhdGg9IjAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMC0xMSsyMC0yMV0iIGluZGV4UGF0aD0iMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzE0LTE3XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iIi8+PC9zcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6b3ZlcmZvbGQgX25pbD0idHJ1ZSIvPjxzcG9WMzpzaWduYXR1cmVUeXBlUmVmIGhyZWY9IiIgaWQ9IkY0LTEiLz48L3Nwb1YzOnNpZ25hdHVyZS1Sb290Pg=="
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="9144394a-deda-4cbf-8297-e8a9e25304b9"
+                                 description="590359-10382" id="590359-10382_[0-1+30-31]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602299" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602299">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="1.0" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="1">
+                                <spoV3:printData pdfPageNumber="2" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="0">
+                                <spoV3:printData pdfPageNumber="1" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="1.0" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="30">
+                                <spoV3:printData pdfPageNumber="31" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="31">
+                                <spoV3:printData pdfPageNumber="32" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[2-3+28-29]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[0-1+30-31]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B4-5+26-27%5D"
+                                    description="" id="590359-10382_[4-5+26-27]" label="590359-10382_[4-5+26-27]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjkxOWVhMGYxLTdiZjMtNGRkNS04YzI4LTBmN2ViMjc3M2UzMyIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMSIgZG91YmxlSXNzdWU9ImZhbHNlIj48Y29tVjE6YXVkaXRMb2cgY3JlYXRlZEJ5PSJBc3NlbWJsZXIiIGNyZWF0ZWRPbj0iMTU1MTk3MDYwMjI5OCIgbGFzdE1vZGlmaWVkQnk9IkFzc2VtYmxlciIgbGFzdE1vZGlmaWVkT249IjE1NTE5NzA2MDIyOTgiPjxjb21WMTpyZWNvcmRzLz48L2NvbVYxOmF1ZGl0TG9nPjxzcG9WMzphc3NlbWJseVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODIiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk4IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI1Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjYiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjQiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iNSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIzMDAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk4IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIyNiI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIyNyIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMjciPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMjgiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4PSIwIi8+PC9zcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpiaW5kZXJ5U2lnbmF0dXJlUmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleFBhdGg9IjAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1swLTErMzAtMzFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4UGF0aD0iMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBpbmRleFBhdGg9IjAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxNC0xN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxNC0xN10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSIiLz48L3Nwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpvdmVyZm9sZCBfbmlsPSJ0cnVlIi8+PHNwb1YzOnNpZ25hdHVyZVR5cGVSZWYgaHJlZj0iIiBpZD0iRjQtMSIvPjwvc3BvVjM6c2lnbmF0dXJlLVJvb3Q+"
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="919ea0f1-7bf3-4dd5-8c28-0f7eb2773e33"
+                                 description="590359-10382" id="590359-10382_[4-5+26-27]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602298" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602298">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.98" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="5">
+                                <spoV3:printData pdfPageNumber="6" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="4">
+                                <spoV3:printData pdfPageNumber="5" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.98" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="26">
+                                <spoV3:printData pdfPageNumber="27" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="27">
+                                <spoV3:printData pdfPageNumber="28" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[6-7+24-25]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[4-5+26-27]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B10-11+20-21%5D"
+                                    description="" id="590359-10382_[10-11+20-21]" label="590359-10382_[10-11+20-21]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjM1YzI3YjM2LWJmN2MtNDdmNi05NzgwLTMxMmExMGNhMTY0YyIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBsYWJlbD0iRjQtMSIgY3JlZXBDb21wZW5zYXRpb25TdGVwPSIwLjAxIiBkb3VibGVJc3N1ZT0iZmFsc2UiPjxjb21WMTphdWRpdExvZyBjcmVhdGVkQnk9IkFzc2VtYmxlciIgY3JlYXRlZE9uPSIxNTUxOTcwNjAyMjk2IiBsYXN0TW9kaWZpZWRCeT0iQXNzZW1ibGVyIiBsYXN0TW9kaWZpZWRPbj0iMTU1MTk3MDYwMjI5NiI+PGNvbVYxOnJlY29yZHMvPjwvY29tVjE6YXVkaXRMb2c+PHNwb1YzOmFzc2VtYmx5UmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4MiIvPjxzcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMCIgY3JlZXBDb21wZW5zYXRpb249IjAuOTUiIGZhY2VCbGVlZD0iMzAwMCIgZmFjZVRyaW09IjMwMDAiIGZvb3RCbGVlZD0iMzAwMCIgZm9vdFRyaW09IjMwMDAiIGhlYWRCbGVlZD0iMzAwMCIgaGVhZFRyaW09IjMwMDAiIG9yaWVudGF0aW9uPSJVUCIgb3ZlcmZvbGRXaWR0aD0iMCIgcm93SW5kZXg9IjAiIHNwaW5lQmxlZWQ9IjAiIHNwaW5lVHJpbT0iMCIgdHJpbUJveFNlcGFyYXRpb25EaXN0YW5jZT0iMCI+PHNwb1YzOmZyb250UGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjExIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjEyIiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIxMCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIxMSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpiYWNrUGFnZT48c3BvVjM6cmVsYXRpdmVGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hGb3JtYXQgaGVpZ2h0PSIyMTAwMDAiIHdpZHRoPSIxNDgwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PHNwb1YzOm9mZnNldCB4PSIwIiB5PSIzMDAwIi8+PC9zcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48L3Nwb1YzOnN0cmlwcGluZ0NlbGw+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjEiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk1IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSIyMCI+PHNwb1YzOnByaW50RGF0YSBwZGZQYWdlTnVtYmVyPSIyMSIgcGRmVXJsPSI1OTAzNTktMTAzODIucGRmIi8+PC9zcG9WMzpmcm9udFBhZ2U+PHNwb1YzOmJhY2tQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMjEiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMjIiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOnNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgaW5kZXg9IjAiLz48L3Nwb1YzOnN1YlNpZ25hdHVyZVJlZnM+PHNwb1YzOmJpbmRlcnlTaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iNTkwMzU5LTEwMzgyX1sxMC0xMSsyMC0yMV0iLz48c3BvVjM6cmVsYXRlZFNpZ25hdHVyZVJlZnM+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIGluZGV4UGF0aD0iMCIgbGFiZWw9IiIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzAtMSszMC0zMV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgaW5kZXhQYXRoPSIwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzQtNSsyNi0yN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgaW5kZXhQYXRoPSIwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBpbmRleFBhdGg9IjAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzgtOSsyMi0yM10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMC0xMSsyMC0yMV0iIGluZGV4UGF0aD0iMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgc2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEyLTEzKzE4LTE5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzE0LTE3XSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iIi8+PC9zcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6b3ZlcmZvbGQgX25pbD0idHJ1ZSIvPjxzcG9WMzpzaWduYXR1cmVUeXBlUmVmIGhyZWY9IiIgaWQ9IkY0LTEiLz48L3Nwb1YzOnNpZ25hdHVyZS1Sb290Pg=="
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="35c27b36-bf7c-47f6-9780-312a10ca164c"
+                                 description="590359-10382" id="590359-10382_[10-11+20-21]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602296" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602296">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.95" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="11">
+                                <spoV3:printData pdfPageNumber="12" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="10">
+                                <spoV3:printData pdfPageNumber="11" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.95" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="20">
+                                <spoV3:printData pdfPageNumber="21" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="21">
+                                <spoV3:printData pdfPageNumber="22" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[12-13+18-19]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[10-11+20-21]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B14-17%5D"
+                                    description="" id="590359-10382_[14-17]" label="590359-10382_[14-17]" active="true"
+                                    allowanceRuleRefs="" allowedSplitCutStyles="" availableFrom="1551808800000"
+                                    canDemand="1500" customerRef="590359" earliestStartTime="0"
+                                    factionRef="590359-10382" filler="false" flipConstraint="ORIGINAL"
+                                    latestEndTime="1552068000000" mediaCategoryRefs="" mediaRefs="m1" mustDemand="1500"
+                                    orderRef="590359-10382" orderedItemRef="" preparationDuration="0"
+                                    printingDeviceCategoryRefs="*" printingDeviceRefs="" priority="0"
+                                    producedQuantity="0" productRef="" rotationConstraint="EQUAL" salesPrice="0.0"
+                                    separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjY2NWRkZDBjLTllZjYtNDllOS04ZGM5LTY4YzUxY2VhY2IwMyIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBsYWJlbD0iRjQtMSIgY3JlZXBDb21wZW5zYXRpb25TdGVwPSIwLjAxIiBkb3VibGVJc3N1ZT0iZmFsc2UiPjxjb21WMTphdWRpdExvZyBjcmVhdGVkQnk9IkFzc2VtYmxlciIgY3JlYXRlZE9uPSIxNTUxOTcwNjAyMjk1IiBsYXN0TW9kaWZpZWRCeT0iQXNzZW1ibGVyIiBsYXN0TW9kaWZpZWRPbj0iMTU1MTk3MDYwMjI5NSI+PGNvbVYxOnJlY29yZHMvPjwvY29tVjE6YXVkaXRMb2c+PHNwb1YzOmFzc2VtYmx5UmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4MiIvPjxzcG9WMzpzdHJpcHBpbmdDZWxscz48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMCIgY3JlZXBDb21wZW5zYXRpb249IjAuOTI5OTk5OTk5OTk5OTk5OSIgZmFjZUJsZWVkPSIzMDAwIiBmYWNlVHJpbT0iMzAwMCIgZm9vdEJsZWVkPSIzMDAwIiBmb290VHJpbT0iMzAwMCIgaGVhZEJsZWVkPSIzMDAwIiBoZWFkVHJpbT0iMzAwMCIgb3JpZW50YXRpb249IlVQIiBvdmVyZm9sZFdpZHRoPSIwIiByb3dJbmRleD0iMCIgc3BpbmVCbGVlZD0iMCIgc3BpbmVUcmltPSIwIiB0cmltQm94U2VwYXJhdGlvbkRpc3RhbmNlPSIwIj48c3BvVjM6ZnJvbnRQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMTUiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMTYiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjE0Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjE1IiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmJhY2tQYWdlPjxzcG9WMzpyZWxhdGl2ZUZvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveEZvcm1hdCBoZWlnaHQ9IjIxMDAwMCIgd2lkdGg9IjE0ODAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48c3BvVjM6b2Zmc2V0IHg9IjAiIHk9IjMwMDAiLz48L3Nwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbD48c3BvVjM6c3RyaXBwaW5nQ2VsbCBjb2xJbmRleD0iMSIgY3JlZXBDb21wZW5zYXRpb249IjAuOTI5OTk5OTk5OTk5OTk5OSIgZmFjZUJsZWVkPSIzMDAwIiBmYWNlVHJpbT0iMzAwMCIgZm9vdEJsZWVkPSIzMDAwIiBmb290VHJpbT0iMzAwMCIgaGVhZEJsZWVkPSIzMDAwIiBoZWFkVHJpbT0iMzAwMCIgb3JpZW50YXRpb249IlVQIiBvdmVyZm9sZFdpZHRoPSIwIiByb3dJbmRleD0iMCIgc3BpbmVCbGVlZD0iMCIgc3BpbmVUcmltPSIwIiB0cmltQm94U2VwYXJhdGlvbkRpc3RhbmNlPSIwIj48c3BvVjM6ZnJvbnRQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMTYiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMTciIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjE3Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjE4IiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmJhY2tQYWdlPjxzcG9WMzpyZWxhdGl2ZUZvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveEZvcm1hdCBoZWlnaHQ9IjIxMDAwMCIgd2lkdGg9IjE0ODAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48c3BvVjM6b2Zmc2V0IHg9IjAiIHk9IjMwMDAiLz48L3Nwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbD48L3Nwb1YzOnN0cmlwcGluZ0NlbGxzPjxzcG9WMzpzdWJTaWduYXR1cmVSZWZzLz48c3BvVjM6YmluZGVyeVNpZ25hdHVyZVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODJfWzE0LTE3XSIvPjxzcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleFBhdGg9IjAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1swLTErMzAtMzFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4UGF0aD0iMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBpbmRleFBhdGg9IjAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxNC0xN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxNC0xN10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSIiLz48L3Nwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpvdmVyZm9sZCBfbmlsPSJ0cnVlIi8+PHNwb1YzOnNpZ25hdHVyZVR5cGVSZWYgaHJlZj0iIiBpZD0iRjQtMSIvPjwvc3BvVjM6c2lnbmF0dXJlLVJvb3Q+"
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="665ddd0c-9ef6-49e9-8dc9-68c51ceacb03"
+                                 description="590359-10382" id="590359-10382_[14-17]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602295" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602295">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.9299999999999999" faceBleed="3000"
+                                             faceTrim="3000" footBleed="3000" footTrim="3000" headBleed="3000"
+                                             headTrim="3000" orientation="UP" overfoldWidth="0" rowIndex="0"
+                                             spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="15">
+                                <spoV3:printData pdfPageNumber="16" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="14">
+                                <spoV3:printData pdfPageNumber="15" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.9299999999999999" faceBleed="3000"
+                                             faceTrim="3000" footBleed="3000" footTrim="3000" headBleed="3000"
+                                             headTrim="3000" orientation="UP" overfoldWidth="0" rowIndex="0"
+                                             spineBleed="0" spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="16">
+                                <spoV3:printData pdfPageNumber="17" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="17">
+                                <spoV3:printData pdfPageNumber="18" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs/>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[14-17]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+            <spoV3:binderySignature customData=""
+                                    sourceRef="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/parameters/binderySignatures/id=590359-10382_%5B8-9+22-23%5D"
+                                    description="" id="590359-10382_[8-9+22-23]" label="590359-10382_[8-9+22-23]"
+                                    active="true" allowanceRuleRefs="" allowedSplitCutStyles=""
+                                    availableFrom="1551808800000" canDemand="1500" customerRef="590359"
+                                    earliestStartTime="0" factionRef="590359-10382" filler="false"
+                                    flipConstraint="ORIGINAL" latestEndTime="1552068000000" mediaCategoryRefs=""
+                                    mediaRefs="m1" mustDemand="1500" orderRef="590359-10382" orderedItemRef=""
+                                    preparationDuration="0" printingDeviceCategoryRefs="*" printingDeviceRefs=""
+                                    priority="0" producedQuantity="0" productRef="" rotationConstraint="EQUAL"
+                                    salesPrice="0.0" separable="false" sheetQuantity="1"
+                                    signatureData="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3BvVjM6c2lnbmF0dXJlLVJvb3QgeG1sbnM6c3BvVjM9Imh0dHA6Ly93d3cucGVyZmVjdHBhdHRlcm4uZGUvc1ByaW50Lm9uZS52My5hcGkiIHhtbG5zOmNvbVYxPSJodHRwOi8vd3d3LnBlcmZlY3RwYXR0ZXJuLmRlL2NvbW1vbnMudjEuYXBpIiBocmVmPSIiIGN1c3RvbURhdGE9IiIgc291cmNlUmVmPSJBc3NlbWJsZXIiIHV1aWQ9IjAyOWNkYTUzLTJlMWEtNDQzMC04MzAyLWU1Y2NkNTEyMTE4NiIgZGVzY3JpcHRpb249IjU5MDM1OS0xMDM4MiIgaWQ9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgbGFiZWw9IkY0LTEiIGNyZWVwQ29tcGVuc2F0aW9uU3RlcD0iMC4wMSIgZG91YmxlSXNzdWU9ImZhbHNlIj48Y29tVjE6YXVkaXRMb2cgY3JlYXRlZEJ5PSJBc3NlbWJsZXIiIGNyZWF0ZWRPbj0iMTU1MTk3MDYwMjI5NyIgbGFzdE1vZGlmaWVkQnk9IkFzc2VtYmxlciIgbGFzdE1vZGlmaWVkT249IjE1NTE5NzA2MDIyOTciPjxjb21WMTpyZWNvcmRzLz48L2NvbVYxOmF1ZGl0TG9nPjxzcG9WMzphc3NlbWJseVJlZiBocmVmPSIiIGlkPSI1OTAzNTktMTAzODIiLz48c3BvVjM6c3RyaXBwaW5nQ2VsbHM+PHNwb1YzOnN0cmlwcGluZ0NlbGwgY29sSW5kZXg9IjAiIGNyZWVwQ29tcGVuc2F0aW9uPSIwLjk2IiBmYWNlQmxlZWQ9IjMwMDAiIGZhY2VUcmltPSIzMDAwIiBmb290QmxlZWQ9IjMwMDAiIGZvb3RUcmltPSIzMDAwIiBoZWFkQmxlZWQ9IjMwMDAiIGhlYWRUcmltPSIzMDAwIiBvcmllbnRhdGlvbj0iVVAiIG92ZXJmb2xkV2lkdGg9IjAiIHJvd0luZGV4PSIwIiBzcGluZUJsZWVkPSIwIiBzcGluZVRyaW09IjAiIHRyaW1Cb3hTZXBhcmF0aW9uRGlzdGFuY2U9IjAiPjxzcG9WMzpmcm9udFBhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI5Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjEwIiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmZyb250UGFnZT48c3BvVjM6YmFja1BhZ2UgaGVhZEFzc2lnbm1lbnQ9IkhFQUQiIGluZGV4PSI4Ij48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjkiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6YmFja1BhZ2U+PHNwb1YzOnJlbGF0aXZlRm9ybWF0IGhlaWdodD0iMjE2MDAwIiB3aWR0aD0iMTUxMDAwIi8+PHNwb1YzOmludHJpbnNpY0Zvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94Rm9ybWF0IGhlaWdodD0iMjEwMDAwIiB3aWR0aD0iMTQ4MDAwIi8+PHNwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjxzcG9WMzpvZmZzZXQgeD0iMCIgeT0iMzAwMCIvPjwvc3BvVjM6aW50cmluc2ljVHJpbUJveE9mZnNldHM+PC9zcG9WMzpzdHJpcHBpbmdDZWxsPjxzcG9WMzpzdHJpcHBpbmdDZWxsIGNvbEluZGV4PSIxIiBjcmVlcENvbXBlbnNhdGlvbj0iMC45NiIgZmFjZUJsZWVkPSIzMDAwIiBmYWNlVHJpbT0iMzAwMCIgZm9vdEJsZWVkPSIzMDAwIiBmb290VHJpbT0iMzAwMCIgaGVhZEJsZWVkPSIzMDAwIiBoZWFkVHJpbT0iMzAwMCIgb3JpZW50YXRpb249IlVQIiBvdmVyZm9sZFdpZHRoPSIwIiByb3dJbmRleD0iMCIgc3BpbmVCbGVlZD0iMCIgc3BpbmVUcmltPSIwIiB0cmltQm94U2VwYXJhdGlvbkRpc3RhbmNlPSIwIj48c3BvVjM6ZnJvbnRQYWdlIGhlYWRBc3NpZ25tZW50PSJIRUFEIiBpbmRleD0iMjIiPjxzcG9WMzpwcmludERhdGEgcGRmUGFnZU51bWJlcj0iMjMiIHBkZlVybD0iNTkwMzU5LTEwMzgyLnBkZiIvPjwvc3BvVjM6ZnJvbnRQYWdlPjxzcG9WMzpiYWNrUGFnZSBoZWFkQXNzaWdubWVudD0iSEVBRCIgaW5kZXg9IjIzIj48c3BvVjM6cHJpbnREYXRhIHBkZlBhZ2VOdW1iZXI9IjI0IiBwZGZVcmw9IjU5MDM1OS0xMDM4Mi5wZGYiLz48L3Nwb1YzOmJhY2tQYWdlPjxzcG9WMzpyZWxhdGl2ZUZvcm1hdCBoZWlnaHQ9IjIxNjAwMCIgd2lkdGg9IjE1MTAwMCIvPjxzcG9WMzppbnRyaW5zaWNGb3JtYXQgaGVpZ2h0PSIyMTYwMDAiIHdpZHRoPSIxNTEwMDAiLz48c3BvVjM6aW50cmluc2ljVHJpbUJveEZvcm1hdCBoZWlnaHQ9IjIxMDAwMCIgd2lkdGg9IjE0ODAwMCIvPjxzcG9WMzppbnRyaW5zaWNUcmltQm94T2Zmc2V0cz48c3BvVjM6b2Zmc2V0IHg9IjAiIHk9IjMwMDAiLz48L3Nwb1YzOmludHJpbnNpY1RyaW1Cb3hPZmZzZXRzPjwvc3BvVjM6c3RyaXBwaW5nQ2VsbD48L3Nwb1YzOnN0cmlwcGluZ0NlbGxzPjxzcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpzaWduYXR1cmVSZWYgaHJlZj0iIiBpZD0iNTkwMzU5LTEwMzgyX1sxMC0xMSsyMC0yMV0iIGluZGV4PSIwIi8+PC9zcG9WMzpzdWJTaWduYXR1cmVSZWZzPjxzcG9WMzpiaW5kZXJ5U2lnbmF0dXJlUmVmIGhyZWY9IiIgaWQ9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWxhdGVkU2lnbmF0dXJlUmVmcz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgaW5kZXhQYXRoPSIwIiBsYWJlbD0iIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMC0xKzMwLTMxXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1syLTMrMjgtMjldIiBpbmRleFBhdGg9IjAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1swLTErMzAtMzFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMi0zKzI4LTI5XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bNC01KzI2LTI3XSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBpbmRleFBhdGg9IjAgMCAwIiBsYWJlbD0iIiBwYXJlbnRCaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzItMysyOC0yOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzYtNysyNC0yNV0iIGluZGV4UGF0aD0iMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s0LTUrMjYtMjddIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bNi03KzI0LTI1XSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIvPjxzcG9WMzpyZWYgYmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBpbmRleFBhdGg9IjAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s2LTcrMjQtMjVdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bOC05KzIyLTIzXSIgc3ViQmluZGVyeVNpZ25hdHVyZVJlZnM9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIi8+PHNwb1YzOnJlZiBiaW5kZXJ5U2lnbmF0dXJlUmVmPSI1OTAzNTktMTAzODJfWzEwLTExKzIwLTIxXSIgaW5kZXhQYXRoPSIwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1s4LTkrMjItMjNdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAiIGxhYmVsPSIiIHBhcmVudEJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTAtMTErMjAtMjFdIiBzaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTItMTMrMTgtMTldIiBzdWJCaW5kZXJ5U2lnbmF0dXJlUmVmcz0iNTkwMzU5LTEwMzgyX1sxNC0xN10iLz48c3BvVjM6cmVmIGJpbmRlcnlTaWduYXR1cmVSZWY9IjU5MDM1OS0xMDM4Ml9bMTQtMTddIiBpbmRleFBhdGg9IjAgMCAwIDAgMCAwIDAgMCIgbGFiZWw9IiIgcGFyZW50QmluZGVyeVNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxMi0xMysxOC0xOV0iIHNpZ25hdHVyZVJlZj0iNTkwMzU5LTEwMzgyX1sxNC0xN10iIHN1YkJpbmRlcnlTaWduYXR1cmVSZWZzPSIiLz48L3Nwb1YzOnJlbGF0ZWRTaWduYXR1cmVSZWZzPjxzcG9WMzpvdmVyZm9sZCBfbmlsPSJ0cnVlIi8+PHNwb1YzOnNpZ25hdHVyZVR5cGVSZWYgaHJlZj0iIiBpZD0iRjQtMSIvPjwvc3BvVjM6c2lnbmF0dXJlLVJvb3Q+"
+                                    smartcut="0" templateGroup="">
+                <spoV3:trimFormat height="216000" width="302000"/>
+                <spoV3:printData>
+                    <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                    <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO" pdfUrl=""/>
+                </spoV3:printData>
+                <spoV3:printDataVariants/>
+                <spoV3:groundsheetConfig _nil="true"/>
+                <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                <spoV3:padding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:margin bottom="0" left="0" right="0" top="0"/>
+                <spoV3:layoutPadding bottom="0" left="0" right="0" top="0"/>
+                <spoV3:requirementConstraintRectangles/>
+                <spoV3:overlappingConstraintRectangles/>
+                <spoV3:frontPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:frontPage>
+                <spoV3:backPage>
+                    <spoV3:colorUses>
+                        <spoV3:colorUse color="Cyan" intensity="50"/>
+                        <spoV3:colorUse color="Black" intensity="50"/>
+                        <spoV3:colorUse color="Magenta" intensity="50"/>
+                        <spoV3:colorUse color="Yellow" intensity="50"/>
+                    </spoV3:colorUses>
+                    <spoV3:groups/>
+                </spoV3:backPage>
+                <spoV3:groups/>
+                <spoV3:intents>
+                    <spoV3:intentsAtSide/>
+                    <spoV3:intentsAtRectangle/>
+                </spoV3:intents>
+                <spoV3:signature href="" customData="" sourceRef="Assembler" uuid="029cda53-2e1a-4430-8302-e5ccd5121186"
+                                 description="590359-10382" id="590359-10382_[8-9+22-23]" label="F4-1"
+                                 creepCompensationStep="0.01" doubleIssue="false">
+                    <comV1:auditLog createdBy="Assembler" createdOn="1551970602297" lastModifiedBy="Assembler"
+                                    lastModifiedOn="1551970602297">
+                        <comV1:records/>
+                    </comV1:auditLog>
+                    <spoV3:assemblyRef href="" id="590359-10382"/>
+                    <spoV3:strippingCells>
+                        <spoV3:strippingCell colIndex="0" creepCompensation="0.96" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="9">
+                                <spoV3:printData pdfPageNumber="10" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="8">
+                                <spoV3:printData pdfPageNumber="9" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                        <spoV3:strippingCell colIndex="1" creepCompensation="0.96" faceBleed="3000" faceTrim="3000"
+                                             footBleed="3000" footTrim="3000" headBleed="3000" headTrim="3000"
+                                             orientation="UP" overfoldWidth="0" rowIndex="0" spineBleed="0"
+                                             spineTrim="0" trimBoxSeparationDistance="0">
+                            <spoV3:frontPage headAssignment="HEAD" index="22">
+                                <spoV3:printData pdfPageNumber="23" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:frontPage>
+                            <spoV3:backPage headAssignment="HEAD" index="23">
+                                <spoV3:printData pdfPageNumber="24" pdfUrl="590359-10382.pdf"/>
+                            </spoV3:backPage>
+                            <spoV3:relativeFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicFormat height="216000" width="151000"/>
+                            <spoV3:intrinsicTrimBoxFormat height="210000" width="148000"/>
+                            <spoV3:intrinsicTrimBoxOffsets>
+                                <spoV3:offset x="0" y="3000"/>
+                            </spoV3:intrinsicTrimBoxOffsets>
+                        </spoV3:strippingCell>
+                    </spoV3:strippingCells>
+                    <spoV3:subSignatureRefs>
+                        <spoV3:signatureRef href="" id="590359-10382_[10-11+20-21]" index="0"/>
+                    </spoV3:subSignatureRefs>
+                    <spoV3:binderySignatureRef href="" id="590359-10382_[8-9+22-23]"/>
+                    <spoV3:relatedSignatureRefs>
+                        <spoV3:ref binderySignatureRef="590359-10382_[0-1+30-31]" indexPath="0" label=""
+                                   signatureRef="590359-10382_[0-1+30-31]"
+                                   subBinderySignatureRefs="590359-10382_[2-3+28-29]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[2-3+28-29]" indexPath="0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[0-1+30-31]"
+                                   signatureRef="590359-10382_[2-3+28-29]"
+                                   subBinderySignatureRefs="590359-10382_[4-5+26-27]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[4-5+26-27]" indexPath="0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[2-3+28-29]"
+                                   signatureRef="590359-10382_[4-5+26-27]"
+                                   subBinderySignatureRefs="590359-10382_[6-7+24-25]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[6-7+24-25]" indexPath="0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[4-5+26-27]"
+                                   signatureRef="590359-10382_[6-7+24-25]"
+                                   subBinderySignatureRefs="590359-10382_[8-9+22-23]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[8-9+22-23]" indexPath="0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[6-7+24-25]"
+                                   signatureRef="590359-10382_[8-9+22-23]"
+                                   subBinderySignatureRefs="590359-10382_[10-11+20-21]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[10-11+20-21]" indexPath="0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[8-9+22-23]"
+                                   signatureRef="590359-10382_[10-11+20-21]"
+                                   subBinderySignatureRefs="590359-10382_[12-13+18-19]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[12-13+18-19]" indexPath="0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[10-11+20-21]"
+                                   signatureRef="590359-10382_[12-13+18-19]"
+                                   subBinderySignatureRefs="590359-10382_[14-17]"/>
+                        <spoV3:ref binderySignatureRef="590359-10382_[14-17]" indexPath="0 0 0 0 0 0 0 0" label=""
+                                   parentBinderySignatureRef="590359-10382_[12-13+18-19]"
+                                   signatureRef="590359-10382_[14-17]" subBinderySignatureRefs=""/>
+                    </spoV3:relatedSignatureRefs>
+                    <spoV3:overfold _nil="true"/>
+                    <spoV3:signatureTypeRef href="" id="F4-1"/>
+                </spoV3:signature>
+            </spoV3:binderySignature>
+        </spoV3:binderySignatures>
+        <spoV3:allowanceRules/>
+        <spoV3:freeRequirementRectangles/>
+        <spoV3:printAllowances/>
+        <spoV3:form>
+            <spoV3:groups/>
+            <spoV3:frontPage>
+                <spoV3:colors>
+                    <spoV3:color>Magenta</spoV3:color>
+                    <spoV3:color>Black</spoV3:color>
+                    <spoV3:color>Cyan</spoV3:color>
+                    <spoV3:color>Yellow</spoV3:color>
+                </spoV3:colors>
+                <spoV3:groups/>
+            </spoV3:frontPage>
+            <spoV3:backPage>
+                <spoV3:colors>
+                    <spoV3:color>Magenta</spoV3:color>
+                    <spoV3:color>Black</spoV3:color>
+                    <spoV3:color>Cyan</spoV3:color>
+                    <spoV3:color>Yellow</spoV3:color>
+                </spoV3:colors>
+                <spoV3:groups/>
+            </spoV3:backPage>
+            <spoV3:placementZone>
+                <spoV3:binderySignaturePlacements>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="440000" y="319500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B12-13+18-19%5D"
+                                id="590359-10382_[12-13+18-19]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="224000" y="8500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B2-3+28-29%5D"
+                                id="590359-10382_[2-3+28-29]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="656000" y="319500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B6-7+24-25%5D"
+                                id="590359-10382_[6-7+24-25]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="656000" y="8500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B8-9+22-23%5D"
+                                id="590359-10382_[8-9+22-23]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="8000" y="319500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B0-1+30-31%5D"
+                                id="590359-10382_[0-1+30-31]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="224000" y="319500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B10-11+20-21%5D"
+                                id="590359-10382_[10-11+20-21]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="440000" y="8500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B4-5+26-27%5D"
+                                id="590359-10382_[4-5+26-27]"/>
+                    </spoV3:binderySignaturePlacement>
+                    <spoV3:binderySignaturePlacement description="" label="" flipped="false" rotation="CC90"
+                                                     rotationInPlane="CC90">
+                        <spoV3:offset x="8000" y="8500"/>
+                        <spoV3:format height="302000" width="216000"/>
+                        <spoV3:bleed bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:trim bottom="0" left="0" right="0" top="0"/>
+                        <spoV3:selectedPrintData>
+                            <spoV3:frontPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                             pdfUrl=""/>
+                            <spoV3:backPage jpgImage="" jpgRotation="ZERO" pdfPageNumber="1" pdfRotation="ZERO"
+                                            pdfUrl=""/>
+                        </spoV3:selectedPrintData>
+                        <spoV3:binderySignatureRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/binderySignatures/id=590359-10382_%5B14-17%5D"
+                                id="590359-10382_[14-17]"/>
+                    </spoV3:binderySignaturePlacement>
+                </spoV3:binderySignaturePlacements>
+                <spoV3:reservedSpacePlacements>
+                    <spoV3:reservedSpacePlacement description="" label="top">
+                        <spoV3:offset x="0" y="622000"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="left">
+                        <spoV3:offset x="0" y="0"/>
+                        <spoV3:format height="630000" width="5000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="right">
+                        <spoV3:offset x="875000" y="0"/>
+                        <spoV3:format height="630000" width="5000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="Farbkontrollstreifen">
+                        <spoV3:offset x="0" y="311000"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                    <spoV3:reservedSpacePlacement description="" label="bottom">
+                        <spoV3:offset x="0" y="0"/>
+                        <spoV3:format height="8000" width="880000"/>
+                    </spoV3:reservedSpacePlacement>
+                </spoV3:reservedSpacePlacements>
+            </spoV3:placementZone>
+            <spoV3:cloneZones/>
+        </spoV3:form>
+        <spoV3:realizedRequirements/>
+        <spoV3:groundsheet _nil="true"/>
+        <spoV3:printDeviceStates>
+            <spoV3:printDeviceState index="0" printRunIndex="0">
+                <spoV3:unitStates>
+                    <spoV3:unitState active="false" index="0" _type="FlippingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=EF15785F-56E2-402B-A88E-57A0737B17AA"
+                                id="EF15785F-56E2-402B-A88E-57A0737B17AA"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="false" index="1" _type="FlippingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=89633147-5A00-4290-B650-725D6330D8D3"
+                                id="89633147-5A00-4290-B650-725D6330D8D3"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="2" pageSide="BACK" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=15A0FB42-81E1-46CA-BEAA-E10BF4C4525C"
+                                id="15A0FB42-81E1-46CA-BEAA-E10BF4C4525C"/>
+                        <spoV3:mountedColor name="Black"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="3" pageSide="BACK" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=8C78BB55-E1CC-40BC-A34F-176A8A6EE60C"
+                                id="8C78BB55-E1CC-40BC-A34F-176A8A6EE60C"/>
+                        <spoV3:mountedColor name="Cyan"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="4" pageSide="BACK" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46"
+                                id="79FD5B7F-ECCA-4749-9F3C-E5BE22C2BA46"/>
+                        <spoV3:mountedColor name="Magenta"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="5" pageSide="BACK" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=F0CD29BC-7317-44BE-AC05-81B3D03E0256"
+                                id="F0CD29BC-7317-44BE-AC05-81B3D03E0256"/>
+                        <spoV3:mountedColor name="Yellow"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="6" _type="FlippingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F"
+                                id="DC0CFD5E-9E97-47A8-83BB-61CEEB08CD2F"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="7" pageSide="FRONT" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=3E92B9EF-8E6F-412F-AB3B-149BD4ABC684"
+                                id="3E92B9EF-8E6F-412F-AB3B-149BD4ABC684"/>
+                        <spoV3:mountedColor name="Black"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="8" pageSide="FRONT" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=B2EFA01F-4D05-48DD-AE84-16A2C0744196"
+                                id="B2EFA01F-4D05-48DD-AE84-16A2C0744196"/>
+                        <spoV3:mountedColor name="Cyan"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="9" pageSide="FRONT" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=DB8E26FF-0F1D-412C-A43F-1E33641A8D2B"
+                                id="DB8E26FF-0F1D-412C-A43F-1E33641A8D2B"/>
+                        <spoV3:mountedColor name="Magenta"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="true" index="10" pageSide="FRONT" _type="PrintingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=2E5934BD-158B-47B8-9CA2-F502172C3A7E"
+                                id="2E5934BD-158B-47B8-9CA2-F502172C3A7E"/>
+                        <spoV3:mountedColor name="Yellow"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="false" index="11" _type="FlippingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=9E5A1EAB-52DA-418B-8D69-56073689C1F6"
+                                id="9E5A1EAB-52DA-418B-8D69-56073689C1F6"/>
+                    </spoV3:unitState>
+                    <spoV3:unitState active="false" index="12" _type="FlippingUnitState">
+                        <spoV3:unitRef
+                                href="api/rest/workspaces/id=test/layoutTasks/id=408087FB-E7F7-43F8-833F-900172A893F2/result/events/id=5bc3de7a-c90b-4cd2-bb81-1c1f51f0d49f/@GangJobEvent/gangJob/printingDeviceType/units/id=ABD711B0-9762-415A-A599-487CE39ADD50"
+                                id="ABD711B0-9762-415A-A599-487CE39ADD50"/>
+                    </spoV3:unitState>
+                </spoV3:unitStates>
+            </spoV3:printDeviceState>
+        </spoV3:printDeviceStates>
+        <spoV3:expenseStructure>
+            <spoV3:total cost="422.56722900000005" duration="5760000"/>
+            <spoV3:formProcessCost cost="184.0"/>
+        </spoV3:expenseStructure>
+        <spoV3:efficiencies areaEfficiency="0.9902766708413981" cutCount="15" demandEfficiency="1.0"
+                            latestEndTime="1552068000000" mediaEfficiency="0.9902766708413981"/>
+    </spoV3:gangJob>
+</spoV3:gangJobEvent-Root>

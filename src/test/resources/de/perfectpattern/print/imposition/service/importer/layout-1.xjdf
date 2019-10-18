@@ -1,0 +1,7 @@
+<XJDF JobID="JOB-1" Types="Imposition" xmlns="http://www.CIP4.org/JDFSchema_2_0">
+    <ResourceSet Name="Layout">
+        <Resource>
+            <Layout SurfaceContentsBox="0 0 100 200" />
+        </Resource>
+    </ResourceSet>
+</XJDF>

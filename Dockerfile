@@ -1,7 +1,7 @@
 # build image
 FROM openjdk:8u201-jdk-alpine3.9 as builder
 
-RUN apk add imagemagick \
+RUN apk add imagemagick git \
     && mkdir -p /work/src \
     && mkdir -p /work/gradle \
     && mkdir -p /work/.git

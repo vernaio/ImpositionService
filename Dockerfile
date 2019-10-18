@@ -1,8 +1,5 @@
-ARG build_number=NA
-
 # build image
 FROM openjdk:8u201-jdk-alpine3.9 as builder
-ARG build_number
 
 RUN apk add imagemagick \
     && mkdir -p /work/src \
@@ -15,14 +12,10 @@ COPY gradle /work/gradle
 COPY build.gradle settings.gradle gradlew /work/
 
 WORKDIR /work
-RUN ./gradlew -i -PbuildNumber=${build_number} build
+RUN ./gradlew -i build
 
 # productive image
 FROM openjdk:8u201-jre-alpine3.9
-ARG build_number
-
-# params
-ENV BUILD_NUMBER=${build_number}
 
 ENV SHEET_BLEED_MM=0
 ENV MARK_BS_INFO=FALSE

@@ -1,21 +1,14 @@
-import org.springframework.util.StringUtils
-
 plugins {
 	id 'org.springframework.boot' version '2.1.3.RELEASE'
 	id 'groovy'
 	id 'com.gorylenko.gradle-git-properties' version '2.0.0'
+	id 'net.researchgate.release' version '2.6.0'
 }
 
 apply plugin: 'io.spring.dependency-management'
 
 group = 'de.perfectpattern.print.imposition'
-
-if (project.hasProperty('buildNumber') && !StringUtils.isEmpty(project.buildNumber)) {
-	project.version = 'build-' + project.buildNumber
-} else {
-	project.version = 'UNDEFINED'
-}
-
+version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 test {

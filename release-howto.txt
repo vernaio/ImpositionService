@@ -1,3 +1,6 @@
 Just add a verison tag to git. Thats it.
+
+!! First commit (and push) - then tag !!
 git tag -a v1.4 -m "my version 1.4"
+git push origin --tags
 

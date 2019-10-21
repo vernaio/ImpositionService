@@ -12,7 +12,7 @@ COPY gradle /work/gradle
 COPY build.gradle settings.gradle gradlew /work/
 
 WORKDIR /work
-RUN ./gradlew -i build
+RUN ./gradlew -i build --no-daemon
 
 # productive image
 FROM openjdk:8u201-jre-alpine3.9

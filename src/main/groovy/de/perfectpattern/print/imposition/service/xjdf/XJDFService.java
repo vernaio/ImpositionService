@@ -15,5 +15,5 @@ public interface XJDFService {
      * @param identification The identification document of the artwork.
      * @return The XJDF Package as ZIP archive.
      */
-    byte[] createXJDF(Sheet sheet, byte[] artwork, byte[] thumb, byte[] identification) throws Exception;
+    byte[] createXJDF(Sheet sheet, byte[] artwork, byte[] thumb, byte[] identification, byte[] ppf) throws Exception;
 }

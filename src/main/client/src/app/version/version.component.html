@@ -1,0 +1,9 @@
+<div class="version">
+    <div class="left">
+        &nbsp;
+    </div>
+    <div class="right">
+        <span *ngIf="version">{{version.appName}} {{version.appVersion}} (rev: {{version.commitIdAbbrev}})</span> <br />
+        Build-Time: <span *ngIf="version">{{version.buildTime}}</span> <br />
+    </div>
+</div>

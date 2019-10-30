@@ -16,7 +16,7 @@ public class AboutServiceImpl implements AboutService {
     @Value("${git.build.version}")
     private String version;
 
-    @Value("${git.build.time}")
+    @Value("${git.commit.time}")
     private String buildTime;
 
     @Value("${git.commit.id}")

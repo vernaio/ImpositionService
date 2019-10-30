@@ -81,8 +81,8 @@ class SprintOneV3Importer implements Importer {
         }
 
         // create sheet id
-        String partId = gangJobXml.'..'.@id.toString().substring(0, 4).toUpperCase();
-        int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""));
+        String partId = gangJobXml.'..'.@id.toString().substring(0, 4).toUpperCase()
+        int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""))
         String sheetId = String.format("%04d-%s", partLabel, partId)
 
         // extract layoutTaskId

@@ -28,25 +28,29 @@ public class XJDFServiceImpl implements XJDFService {
     }
 
     @Override
-    public byte[] createXJDF(Sheet sheet, byte[] artwork, byte[] thumb, byte[] identification) throws Exception {
+    public byte[] createXJDF(Sheet sheet, byte[] artwork, byte[] thumb, byte[] identification, byte[] ppf) throws Exception {
         Path workDir = Files.createTempDirectory("xjdf-imposition");
         log.info("Create temp dir: " + workDir.toString());
 
         ByteArrayOutputStream bos;
+        String sheetId = sheet.getSheetId();
 
         try {
             // copy files to temporarily location
-            Path pathArtwork = workDir.resolve("artwork.pdf");
+            Path pathArtwork = workDir.resolve(sheetId + ".pdf");
             Files.write(pathArtwork, artwork);
 
-            Path pathThumb = workDir.resolve("thumb.jpg");
+            Path pathThumb = workDir.resolve(sheetId + "-preview.jpg");
             Files.write(pathThumb, thumb);
 
-            Path pathIdentification = workDir.resolve("identification.pdf");
+            Path pathIdentification = workDir.resolve(sheetId + "-identification.pdf");
             Files.write(pathIdentification, identification);
 
+            Path pathPpf = workDir.resolve(sheetId + ".ppf");
+            Files.write(pathPpf, ppf);
+
             // create xjdf document
-            XJdfBuilder builder = new XJdfBuilder("JOB_ID");
+            XJdfBuilder builder = new XJdfBuilder(sheet.getSheetId());
             builder.getXJdf().getTypes().add("ConventionalPrinting");
             builder.getXJdf().getTypes().add("Cutting");
 
@@ -54,6 +58,7 @@ public class XJDFServiceImpl implements XJDFService {
             addPreviewThumb(builder, pathThumb);
             addPreviewIdentification(builder, pathIdentification);
             addRunList(builder, pathArtwork);
+            addCuttingParams(builder, pathPpf);
 
             // create output
             bos = new ByteArrayOutputStream();
@@ -83,7 +88,7 @@ public class XJDFServiceImpl implements XJDFService {
         fileSpec.setURL(
                 new URI(
                         pathFile.toUri(),
-                        "preview/identification.pdf"
+                        "preview/" + pathFile.getFileName().toString()
                 )
         );
 
@@ -107,7 +112,7 @@ public class XJDFServiceImpl implements XJDFService {
         fileSpec.setURL(
                 new URI(
                         pathFile.toUri(),
-                        "preview/thumb.jpg"
+                        "preview/" + pathFile.getFileName().toString()
                 )
         );
 
@@ -131,7 +136,7 @@ public class XJDFServiceImpl implements XJDFService {
         fileSpec.setURL(
                 new URI(
                         pathFile.toUri(),
-                        "runlist/artwork.pdf"
+                        "runlist/" + pathFile.getFileName().toString()
                 )
         );
 
@@ -139,5 +144,20 @@ public class XJDFServiceImpl implements XJDFService {
         runList.setFileSpec(fileSpec);
 
         builder.addResource(runList);
+    }
+
+    private void addCuttingParams(XJdfBuilder builder, Path pathFile) throws URISyntaxException {
+        FileSpec fileSpec = new FileSpec();
+        fileSpec.setURL(
+                new URI(
+                        pathFile.toUri(),
+                        "cuttingparams/" + pathFile.getFileName().toString()
+                )
+        );
+
+        CuttingParams cuttingParams = new CuttingParams();
+        cuttingParams.setFileSpec(fileSpec);
+
+        builder.addResource(cuttingParams);
     }
 }

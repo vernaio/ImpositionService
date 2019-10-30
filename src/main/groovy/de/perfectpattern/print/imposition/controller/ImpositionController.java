@@ -70,8 +70,12 @@ public class ImpositionController {
             byte[] identification = identificationService.generate(sheet, thumb);
             log.info("Identification PDF sheet " + sheet.getSheetId() + " has been generated.");
 
+            // build ppf
+            byte[] ppf = ppfService.createPPF(sheet);
+            log.info("PPF sheet " + sheet.getSheetId() + " has been generated.");
+
             // build xjdf
-            byte[] xjdf = xjdfService.createXJDF(sheet, artwork, thumb, identification);
+            byte[] xjdf = xjdfService.createXJDF(sheet, artwork, thumb, identification, ppf);
             log.info("XJDF Package sheet " + sheet.getSheetId() + "has been generated.");
 
             // return xjdf

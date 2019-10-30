@@ -30,5 +30,5 @@ fi
 # execute
 docker run \
     -p 4200:4200 \
-    -v /home/stefan/Workspace/DefaultFlowLogic/data/storage:/data \
+    -v /home/stefan/Workspace/DefaultPdfIntegration/data/storage:/data \
     imposition:$version

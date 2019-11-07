@@ -27,31 +27,31 @@ public class AboutServiceImpl implements AboutService {
 
     @Override
     public String getPdfLibrary() {
-        return Document.getVersion();
+        return Document.getVersion().trim();
     }
 
     @Override
     public String getVersion() {
-        return version;
+        return version.trim();
     }
 
     @Override
     public String getAppName() {
-        return appName;
+        return appName.trim();
     }
 
     @Override
     public String getBuildTime() {
-        return buildTime;
+        return buildTime.trim();
     }
 
     @Override
     public String getCommitId() {
-        return commitId;
+        return commitId.trim();
     }
 
     @Override
     public String getCommitIdAbbrev() {
-        return commitIdAbbrev;
+        return commitIdAbbrev.trim();
     }
 }

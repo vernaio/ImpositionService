@@ -56,6 +56,10 @@ public class ContentObject extends PlacedObject {
             com.lowagie.text.Rectangle pdfTrimBox = pdfReader.getBoxSize(pageNumber + 1, "trim");
             com.lowagie.text.Rectangle pdfMediaBox = pdfReader.getBoxSize(pageNumber + 1, "media");
 
+            if(pdfTrimBox == null) {
+                pdfTrimBox = pdfMediaBox;
+            }
+
             pdfTrimRight = pdfTrimBox.getRight() - pdfMediaBox.getLeft();
             pdfTrimTop = pdfTrimBox.getTop() - pdfMediaBox.getBottom();
             pdfTrimLeft = pdfTrimBox.getLeft() - pdfMediaBox.getLeft();

@@ -292,6 +292,24 @@ public class SprintOneV3ImporterTest {
         assertEquals("Priority is wrong.", Priority.Standard, sheet.getPriority());
     }
 
+    @Test
+    public void read_6() throws Exception {
+
+        // arrange
+        byte[] bytes = IOUtils.toByteArray(SprintOneV3ImporterTest.class.getResource(RES_ROOT + "event-6.xml"));
+
+        // act
+        Sheet sheet = importer.importDocument(bytes);
+
+        // assert
+        printSheet(sheet);
+
+        assertNotNull("RunList TwoSided Front is null.", sheet.getPositions().get(0).getBinderySignature().getSignatureCells().get(0).getPageFront());
+        assertNotNull("RunList TwoSided Back is null.", sheet.getPositions().get(0).getBinderySignature().getSignatureCells().get(0).getPageBack());
+        assertNotNull("RunList OneSided Front is null.", sheet.getPositions().get(1).getBinderySignature().getSignatureCells().get(0).getPageFront());
+        assertNull("RunList OneSided Back is null.", sheet.getPositions().get(1).getBinderySignature().getSignatureCells().get(0).getPageBack());
+    }
+
     /**
      * Helper method for debugging.
      *

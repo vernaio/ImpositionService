@@ -242,7 +242,7 @@ public class LayoutProcessorImpl implements LayoutProcessor {
             if (runList != null) {
                 Path pdfPath = Paths.get(dataRoot).resolve(runList.getFile().toString());
 
-                if (pdfPath == null || pdfPath.toString().equals("")) {
+                if (pdfPath.toString().equals("")) {
                     throw new IOException("PDF FileSpec is empty.");
                 } else if (!pdfPath.toFile().exists()) {
                     throw new IOException("PDF '" + pdfPath.toString() + "' does not exist.");
@@ -257,19 +257,18 @@ public class LayoutProcessorImpl implements LayoutProcessor {
                 }
 
                 pdfReader = pdfReaderCache.get(pdfPath.toString());
+
+                // create content object
+                result.add(
+                        new ContentObject(
+                                clipBox,
+                                trimBox,
+                                orientationCell,
+                                pdfReader,
+                                runList.getPage()
+                        )
+                );
             }
-
-
-            // create content object
-            result.add(
-                    new ContentObject(
-                            clipBox,
-                            trimBox,
-                            orientationCell,
-                            pdfReader,
-                            runList == null ? 0 : runList.getPage()
-                    )
-            );
 
             // draw marks
             if (FoldCatalog.F2_1 == binderySignature.getFoldCatalog()) {

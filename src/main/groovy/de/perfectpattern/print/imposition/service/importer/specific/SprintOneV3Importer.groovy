@@ -359,10 +359,17 @@ class SprintOneV3Importer implements Importer {
                 Paths.get(positionXml.selectedPrintData.frontPage.@pdfUrl.toString()),
                 positionXml.selectedPrintData.frontPage.@pdfPageNumber.toInteger() - 1
         )
-        RunList pageBack = new RunList(
-                Paths.get(positionXml.selectedPrintData.backPage.@pdfUrl.toString()),
-                positionXml.selectedPrintData.backPage.@pdfPageNumber.toInteger() - 1
-        )
+
+        RunList pageBack
+
+        if(StringUtils.isEmpty(positionXml.selectedPrintData.backPage.@pdfUrl.toString())) {
+            pageBack = null
+        } else {
+            pageBack = new RunList(
+                    Paths.get(positionXml.selectedPrintData.backPage.@pdfUrl.toString()),
+                    positionXml.selectedPrintData.backPage.@pdfPageNumber.toInteger() - 1
+            )
+        }
         int pageIndexFront = 0
         int pageIndexBack = 1
 

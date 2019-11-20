@@ -7,8 +7,9 @@ RUN apk add --no-cache git \
 
 USER node
 
-COPY --chown=node:node ["src/main/client", "/work/client"]
-WORKDIR /work/client
+COPY --chown=node:node ["src", "/work/src"]
+COPY --chown=node:node ["README.md", "/work/"]
+WORKDIR /work/src/main/client
 RUN ls -l
 
 RUN npm install

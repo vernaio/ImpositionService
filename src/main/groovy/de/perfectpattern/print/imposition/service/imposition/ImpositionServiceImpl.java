@@ -14,6 +14,7 @@ import de.perfectpattern.print.imposition.model.type.Side;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
 import java.io.ByteArrayOutputStream;
@@ -30,6 +31,9 @@ public class ImpositionServiceImpl implements ImpositionService {
 
     @Autowired
     private AboutService aboutService;
+
+    @Value("${HIDE_LABELS:false}")
+    private boolean hideLabels;
 
     /**
      * Default constructor.
@@ -77,7 +81,9 @@ public class ImpositionServiceImpl implements ImpositionService {
         // create front page
         doc.newPage();
 
-        placeLabels(pdfWriter, layout.getLabels(), sheet, Side.Front);
+        if(!hideLabels) {
+            placeLabels(pdfWriter, layout.getLabels(), sheet, Side.Front);
+        }
 
         for (PlacedObject placedObject : layout.getPlacedObjectsFront()) {
             try {
@@ -93,7 +99,9 @@ public class ImpositionServiceImpl implements ImpositionService {
         if (layout.getPlacedObjectsBack() != null && layout.getPlacedObjectsBack().size() > 0) {
             doc.newPage();
 
-            placeLabels(pdfWriter, layout.getLabels(), sheet, Side.Back);
+            if(!hideLabels) {
+                placeLabels(pdfWriter, layout.getLabels(), sheet, Side.Back);
+            }
 
             for (PlacedObject placedObject : layout.getPlacedObjectsBack()) {
                 try {

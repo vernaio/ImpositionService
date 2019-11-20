@@ -28,9 +28,6 @@ public class LayoutProcessorImpl implements LayoutProcessor {
     @Value("${data.root}")
     private String dataRoot;
 
-    @Value("${MARK_BS_INFO}")
-    private String markBsInfo;
-
     @Override
     public Layout generateLayout(Sheet sheet) throws IOException {
         Layout layout = new Layout();
@@ -99,13 +96,11 @@ public class LayoutProcessorImpl implements LayoutProcessor {
     private List<PlacedObject> placePositionMarks(BinderySignature binderySignature, Orientation orientation, Rectangle absoluteBox, Side side) {
         List<PlacedObject> result = new ArrayList<>(10);
 
-        // if("TRUE" == markBsInfo) {
-            if (FoldCatalog.F4_1 == binderySignature.getFoldCatalog()) {
-                if (binderySignature.getSignatureCells().get(0).getTrimFoot() > mm2dtp(2.0f)) {
-                    result.add(new BinderySignatureInfoMark(absoluteBox, orientation, binderySignature, side));
-                }
+        if (FoldCatalog.F4_1 == binderySignature.getFoldCatalog()) {
+            if (binderySignature.getSignatureCells().get(0).getTrimFoot() > mm2dtp(2.0f)) {
+                result.add(new BinderySignatureInfoMark(absoluteBox, orientation, binderySignature, side));
             }
-        // }
+        }
 
         return result;
     }

@@ -38,7 +38,7 @@ RUN ./gradlew -i build --no-daemon
 FROM openjdk:8u201-jre-alpine3.9
 
 ENV SHEET_BLEED_MM=0
-ENV MARK_BS_INFO=FALSE
+ENV HIDE_LABELS=false
 
 RUN apk add imagemagick
 RUN mkdir /data

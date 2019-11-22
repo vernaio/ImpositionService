@@ -59,7 +59,6 @@ public class PPFServiceImpl implements PPFService {
     private void writeCutBlock(Rectangle contentBox, CutBlock cutBlock, PrintWriter writer) {
         Rectangle box = cutBlock.getBox();
 
-        // TODO: modified box
         box = new Rectangle(
                 contentBox.getWidth() - box.getUrx(),
                 box.getLly(),

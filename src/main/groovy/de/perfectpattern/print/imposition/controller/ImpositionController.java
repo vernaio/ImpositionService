@@ -109,7 +109,7 @@ public class ImpositionController {
             byte[] artwork = impositionService.impose(sheet);
             log.info("Sheet " + sheet.getSheetId() + " has been imposed.");
 
-            // return xjdf
+            // return artwork
             log.info("Send PDF response (" + DimensionUtil.bytes2readable(artwork.length) + ")...");
             return artwork;
 

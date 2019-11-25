@@ -40,6 +40,7 @@ FROM openjdk:8u201-jre-alpine3.9
 
 ENV SHEET_BLEED_MM=0
 ENV HIDE_LABELS=false
+ENV BOX_MARK_TO_FINAL_TRIM_THRESHOLD = 2000
 
 RUN apk add imagemagick
 RUN mkdir /data

@@ -40,7 +40,7 @@ public class ThumbServiceImpl implements ThumbService {
         Process process = pb.start();
         process.waitFor();
         int response = process.waitFor();
-        log.info("Response code imagemagick thumbnail geneation: " + response);
+        log.info("Response code imagemagick thumbnail generation: " + response);
 
         byte[] result = IOUtils.toByteArray(new FileInputStream(pathPng.toFile()));
 

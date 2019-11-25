@@ -35,7 +35,7 @@ class SprintOneV3Importer implements Importer {
     @Value('${SHEET_BLEED_MM}')
     private String sheetBleedMm;
 
-    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD}')
+    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD:"0"}')
     private String boxMarkToFinalTrimThreshold_ENV;
 
     private Long boxMarkToFinalTrimThreshold;
@@ -189,8 +189,6 @@ class SprintOneV3Importer implements Importer {
     private Position readPosition(def placement, def gangJobXml) {
 
         final Border clip =  new Border(Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()));
-
-        System.out.println(clip.getTop()+","+clip.getBottom()+","+clip.getLeft()+","+clip.getRight());
 
         // absolute box
         float llx = placement.offset.@x.toFloat() - placement.trim.@left.toFloat()

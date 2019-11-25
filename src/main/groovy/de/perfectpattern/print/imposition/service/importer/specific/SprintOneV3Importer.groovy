@@ -230,8 +230,6 @@ class SprintOneV3Importer implements Importer {
                 ((binderySignature.getInnerContentFrame().getTop(orientation)+clip.getTop())>=this.boxMarkToFinalTrimThreshold)&&
                 ((binderySignature.getInnerContentFrame().getLeft(orientation)+clip.getLeft())>=this.boxMarkToFinalTrimThreshold)&&
                 ((binderySignature.getInnerContentFrame().getRight(orientation)+clip.getRight())>=this.boxMarkToFinalTrimThreshold);
-        System.out.println("allowsBoxMark:"+allowsBoxMark);
-        System.out.println(binderySignature.getInnerContentFrame().getBottom(orientation)+"+"+clip.getBottom()+">"+this.boxMarkToFinalTrimThreshold);
 
         // create and return position object
         return new Position.Builder()

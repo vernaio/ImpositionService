@@ -60,6 +60,7 @@ public class ContentObject extends PlacedObject {
                 pdfTrimBox = pdfMediaBox;
             }
 
+            // normalization regarding to the origin (0, 0)
             pdfTrimRight = pdfTrimBox.getRight() - pdfMediaBox.getLeft();
             pdfTrimTop = pdfTrimBox.getTop() - pdfMediaBox.getBottom();
             pdfTrimLeft = pdfTrimBox.getLeft() - pdfMediaBox.getLeft();
@@ -69,7 +70,7 @@ public class ContentObject extends PlacedObject {
             pdfTrimWidth = pdfTrimBox.getWidth();
         }
 
-        // compute relative trimBox coordinates
+        // compute relative trimBox coordinates (trimbox here means LayoutTrimBox)
         float trimBoxLlx = trimBox.getLlx() - clipBox.getLlx();
         float trimBoxLly = trimBox.getLly() - clipBox.getLly();
 
@@ -82,7 +83,7 @@ public class ContentObject extends PlacedObject {
         template.fill();
         template.restoreState();
 
-        // pdf rotation
+        // pdf rotation (CTM Transformation)
         int pdfRotation = pdfReader.getPageRotation(pageNumber + 1);
         Orientation finalOrientation = Orientation.findByDegree(orientation.getDegree() - pdfRotation);
 

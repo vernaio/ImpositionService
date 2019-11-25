@@ -7,8 +7,9 @@ RUN apk add --no-cache git \
 
 USER node
 
-COPY --chown=node:node ["src/main/client", "/work/client"]
-WORKDIR /work/client
+COPY --chown=node:node ["src", "/work/src"]
+COPY --chown=node:node ["README.md", "/work/"]
+WORKDIR /work/src/main/client
 RUN ls -l
 
 RUN npm install
@@ -32,14 +33,13 @@ RUN rm -rf /work/src/main/resources/static
 COPY --from=client-builder /work/static /work/src/main/resources/static
 
 WORKDIR /work
-RUN ./gradlew -i build --no-daemon --stacktrace
+RUN ./gradlew -i build --no-daemon
 
 # build final image
 FROM openjdk:8u201-jre-alpine3.9
 
 ENV SHEET_BLEED_MM=0
-#ENV MARK_BS_INFO=FALSE
-ENV BOX_MARK_TO_FINAL_TRIM_THRESHOLD=2000
+ENV HIDE_LABELS=false
 
 RUN apk add imagemagick
 RUN mkdir /data

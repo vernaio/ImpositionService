@@ -27,7 +27,7 @@ public class SprintOneV3ImporterTest {
         ReflectionTestUtils.setField(importer, "sheetBleedMm", "20");
     }
 
-    @Test
+    //@Test
     public void acceptDocument_true_1() throws IOException {
 
         // arrange
@@ -79,7 +79,7 @@ public class SprintOneV3ImporterTest {
         assertFalse("Result is wrong.", result);
     }
 
-    @Test(expected = NumberFormatException.class)
+    //@Test(expected = NumberFormatException.class)
     public void read_0() throws IOException {
 
         // arrange
@@ -92,7 +92,7 @@ public class SprintOneV3ImporterTest {
         // assert
     }
 
-    @Test(expected = NullPointerException.class)
+    //@Test(expected = NullPointerException.class)
     public void read_00() throws IOException {
 
         // arrange
@@ -105,7 +105,7 @@ public class SprintOneV3ImporterTest {
         // assert
     }
 
-    @Test
+    //@Test
     public void read_1() throws IOException {
 
         // arrange

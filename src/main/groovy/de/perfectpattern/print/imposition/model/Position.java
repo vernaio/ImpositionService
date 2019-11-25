@@ -14,6 +14,8 @@ public class Position {
 
     private final BinderySignature binderySignature;
 
+    private final boolean allowsBoxMark;
+
     /**
      * Private constructor.
      */
@@ -21,6 +23,7 @@ public class Position {
         this.absoluteBox = builder.absoluteBox;
         this.orientation = builder.orientation;
         this.binderySignature = builder.binderySignature;
+        this.allowsBoxMark = builder.allowsBoxMark;
     }
 
     public Rectangle getAbsoluteBox() {
@@ -35,6 +38,8 @@ public class Position {
         return binderySignature;
     }
 
+    public boolean allowsBoxMark() { return this.allowsBoxMark; }
+
     /**
      * Position builder class.
      */
@@ -43,6 +48,7 @@ public class Position {
         private Rectangle absoluteBox;
         private Orientation orientation;
         private BinderySignature binderySignature;
+        private boolean allowsBoxMark;
 
         /**
          * Default constructor.
@@ -59,6 +65,7 @@ public class Position {
             this.absoluteBox = position.getAbsoluteBox();
             this.orientation = position.getOrientation();
             this.binderySignature = position.getBinderySignature();
+            this.allowsBoxMark = position.allowsBoxMark();
         }
 
         public Builder absoluteBox(Rectangle absoluteBox) {
@@ -73,6 +80,11 @@ public class Position {
 
         public Builder binderySignature(BinderySignature binderySignature) {
             this.binderySignature = binderySignature;
+            return this;
+        }
+
+        public Builder allowsBoxMark(boolean allowsBoxMark) {
+            this.allowsBoxMark = allowsBoxMark;
             return this;
         }
 

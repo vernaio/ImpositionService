@@ -32,13 +32,14 @@ RUN rm -rf /work/src/main/resources/static
 COPY --from=client-builder /work/static /work/src/main/resources/static
 
 WORKDIR /work
-RUN ./gradlew -i build --no-daemon
+RUN ./gradlew -i build --no-daemon --stacktrace
 
 # build final image
 FROM openjdk:8u201-jre-alpine3.9
 
 ENV SHEET_BLEED_MM=0
-ENV MARK_BS_INFO=FALSE
+#ENV MARK_BS_INFO=FALSE
+ENV BOX_MARK_TO_FINAL_TRIM_THRESHOLD=2000
 
 RUN apk add imagemagick
 RUN mkdir /data

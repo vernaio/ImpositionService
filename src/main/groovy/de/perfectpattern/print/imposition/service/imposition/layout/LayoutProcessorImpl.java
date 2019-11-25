@@ -28,9 +28,6 @@ public class LayoutProcessorImpl implements LayoutProcessor {
     @Value("${data.root}")
     private String dataRoot;
 
-    @Value("${MARK_BS_INFO}")
-    private String markBsInfo;
-
     @Override
     public Layout generateLayout(Sheet sheet) throws IOException {
         Layout layout = new Layout();
@@ -63,7 +60,7 @@ public class LayoutProcessorImpl implements LayoutProcessor {
 
             // place bindery signature
             layout.getPlacedObjectsFront().addAll(
-                    placePosition(position.getBinderySignature(), position.getOrientation(), absoluteBox, Side.Front, pdfReaderCache)
+                    placePosition(position.allowsBoxMark(),position.getBinderySignature(), position.getOrientation(), absoluteBox, Side.Front, pdfReaderCache)
             );
 
             // place bindery signature info marks
@@ -81,7 +78,7 @@ public class LayoutProcessorImpl implements LayoutProcessor {
 
             // place bindery signature
             layout.getPlacedObjectsBack().addAll(
-            	placePosition(position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back, pdfReaderCache)
+            	placePosition(position.allowsBoxMark(),position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back, pdfReaderCache)
             );
 
             // place bindery signature info marks
@@ -162,7 +159,7 @@ public class LayoutProcessorImpl implements LayoutProcessor {
      * @param side             The side to be imposed.
      * @return A list of placed objects.
      */
-    private List<PlacedObject> placePosition(BinderySignature binderySignature, Orientation orientation, Rectangle absoluteBox, Side side, HashMap<String, PdfReader> pdfReaderCache) throws IOException {
+    private List<PlacedObject> placePosition(boolean allowsBoxMark,BinderySignature binderySignature, Orientation orientation, Rectangle absoluteBox, Side side, HashMap<String, PdfReader> pdfReaderCache) throws IOException {
 
         // validate supported fold catalogs
         if (FoldCatalog.F2_1 != binderySignature.getFoldCatalog() &&
@@ -305,14 +302,10 @@ public class LayoutProcessorImpl implements LayoutProcessor {
             );
         }
 
-        result.add(
-                new BoxMark(
-                        absoluteBox,
-                        Color.MAGENTA
-                )
-        );
+        if (allowsBoxMark) {
+            result.add(new BoxMark(absoluteBox,Color.MAGENTA));
+        }
 
-        // return result
         return result;
     }
 

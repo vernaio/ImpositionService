@@ -1,5 +1,6 @@
 package de.perfectpattern.print.imposition.model;
 
+import de.perfectpattern.print.imposition.model.type.Border;
 import de.perfectpattern.print.imposition.model.type.FoldCatalog;
 import de.perfectpattern.print.imposition.model.type.Priority;
 import de.perfectpattern.print.imposition.model.type.XYPair;
@@ -22,6 +23,7 @@ public class BinderySignature {
     private final boolean flipped;
     private final Integer bsNumberTotal;
     private final Integer bsNumberCurrent;
+    private final Border innerContentFrame;
 
 
     /**
@@ -39,6 +41,7 @@ public class BinderySignature {
         this.flipped = builder.flipped;
         this.bsNumberTotal = builder.bsNumberTotal;
         this.bsNumberCurrent = builder.bsNumberCurrent;
+        this.innerContentFrame = builder.innerContentFrame;
     }
 
     public XYPair getBinderySignatureSize() {
@@ -81,6 +84,8 @@ public class BinderySignature {
         return bsNumberCurrent;
     }
 
+    public Border getInnerContentFrame() {return innerContentFrame; }
+
     /**
      * BinderySignature builder class.
      */
@@ -96,6 +101,7 @@ public class BinderySignature {
         private boolean flipped;
         private Integer bsNumberTotal;
         private Integer bsNumberCurrent;
+        private Border innerContentFrame;
 
         /**
          * Default constructor.
@@ -150,6 +156,11 @@ public class BinderySignature {
 
         public Builder bsNumberCurrent(Integer bsNumberCurrent) {
             this.bsNumberCurrent = bsNumberCurrent;
+            return this;
+        }
+
+        public Builder innerContentFrame(final Border innerContentFrame) {
+            this.innerContentFrame = innerContentFrame;
             return this;
         }
 

@@ -6,6 +6,7 @@ import de.perfectpattern.print.imposition.model.Position
 import de.perfectpattern.print.imposition.model.RunList
 import de.perfectpattern.print.imposition.model.Sheet
 import de.perfectpattern.print.imposition.model.SignatureCell
+import de.perfectpattern.print.imposition.model.type.Border
 import de.perfectpattern.print.imposition.model.type.FoldCatalog
 import de.perfectpattern.print.imposition.model.type.Orientation
 import de.perfectpattern.print.imposition.model.type.Priority
@@ -34,10 +35,22 @@ class SprintOneV3Importer implements Importer {
     @Value('${SHEET_BLEED_MM}')
     private String sheetBleedMm;
 
+    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD}')
+    private String boxMarkToFinalTrimThreshold_ENV;
+
+    private Long boxMarkToFinalTrimThreshold;
+
     /**
      * Default constructor.
      */
     SprintOneV3Importer() {
+        if (boxMarkToFinalTrimThreshold_ENV==null) {
+            this.boxMarkToFinalTrimThreshold=0L;
+        } else {
+            if (this.boxMarkToFinalTrimThreshold_ENV.isNumber()) {
+                this.boxMarkToFinalTrimThreshold = this.boxMarkToFinalTrimThreshold_ENV.toFloat().longValue();
+            }
+        }
     }
 
     @Override
@@ -173,13 +186,19 @@ class SprintOneV3Importer implements Importer {
      * @param gangJobXml The GangJob XML.
      * @return The Position object.
      */
-    private static Position readPosition(def placement, def gangJobXml) {
+    private Position readPosition(def placement, def gangJobXml) {
+
+        final Border clip =  new Border(Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()));
+
+        System.out.println(clip.getTop()+","+clip.getBottom()+","+clip.getLeft()+","+clip.getRight());
 
         // absolute box
         float llx = placement.offset.@x.toFloat() - placement.trim.@left.toFloat()
         float lly = placement.offset.@y.toFloat() - placement.trim.@bottom.toFloat()
         float urx = placement.offset.@x.toFloat() + placement.format.@width.toFloat() + placement.trim.@right.toFloat()
         float ury = placement.offset.@y.toFloat() + placement.format.@height.toFloat() + placement.trim.@top.toFloat()
+
+
 
         Rectangle absoluteBox = new Rectangle(
                 DimensionUtil.micro2dtp(llx),
@@ -208,11 +227,20 @@ class SprintOneV3Importer implements Importer {
         String binderySignatureId = placement.binderySignatureRef.@id.toString()
         BinderySignature binderySignature = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
 
+        boolean allowsBoxMark =
+                ((binderySignature.getInnerContentFrame().getBottom(orientation)+clip.getBottom())>=this.boxMarkToFinalTrimThreshold)&&
+                ((binderySignature.getInnerContentFrame().getTop(orientation)+clip.getTop())>=this.boxMarkToFinalTrimThreshold)&&
+                ((binderySignature.getInnerContentFrame().getLeft(orientation)+clip.getLeft())>=this.boxMarkToFinalTrimThreshold)&&
+                ((binderySignature.getInnerContentFrame().getRight(orientation)+clip.getRight())>=this.boxMarkToFinalTrimThreshold);
+        System.out.println("allowsBoxMark:"+allowsBoxMark);
+        System.out.println(binderySignature.getInnerContentFrame().getBottom(orientation)+"+"+clip.getBottom()+">"+this.boxMarkToFinalTrimThreshold);
+
         // create and return position object
         return new Position.Builder()
                 .orientation(orientation)
                 .binderySignature(binderySignature)
                 .absoluteBox(absoluteBox)
+                .allowsBoxMark(allowsBoxMark)
                 .build()
     }
 
@@ -283,9 +311,13 @@ class SprintOneV3Importer implements Importer {
             // extract signature cells
             List<SignatureCell> signatureCells;
 
+            final Border innerContentFrame;
+
             if (FoldCatalog.F2_1 == foldCatalog) {
                 signatureCells = new ArrayList<>(1)
                 signatureCells.add(createSignatureCellF2(bsXml, positionXml, orientation))
+
+                innerContentFrame=new Border(0L);
 
             } else if (FoldCatalog.F4_1 == foldCatalog) {
                 signatureCells = new ArrayList<>(bsXml.signature.strippingCells.strippingCell.size())
@@ -304,6 +336,11 @@ class SprintOneV3Importer implements Importer {
                         createSignatureCellF4(col_1)
                 )
 
+                innerContentFrame=new Border(
+                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@headTrim.toFloat()).longValue(),
+                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@footTrim.toFloat()).longValue(),
+                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@faceTrim.toFloat()).longValue(),
+                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }.@faceTrim.toFloat()).longValue());
 
             } else {
 
@@ -323,6 +360,7 @@ class SprintOneV3Importer implements Importer {
                     .flipped(flipped)
                     .bsNumberTotal(bsNumberTotal)
                     .bsNumberCurrent(bsNumberCurrent)
+                    .innerContentFrame(innerContentFrame)
                     .build()
         }
 

@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Paths;
 import java.nio.file.Path;
 import java.util.*;
@@ -235,23 +236,32 @@ public class LayoutProcessorImpl implements LayoutProcessor {
             PdfReader pdfReader = null;
 
             if (runList != null) {
-                Path pdfPath = Paths.get(dataRoot).resolve(runList.getFile().toString());
+                URL pdfUrl;
 
-                if (pdfPath.toString().equals("")) {
-                    throw new IOException("PDF FileSpec is empty.");
-                } else if (!pdfPath.toFile().exists()) {
-                    throw new IOException("PDF '" + pdfPath.toString() + "' does not exist.");
+                if(runList.getFile().toLowerCase().startsWith("http://") || runList.getFile().toLowerCase().startsWith("https://")) {
+                    pdfUrl = new URL(runList.getFile());
+
+                } else {
+                    Path pdfPath = Paths.get(dataRoot).resolve(runList.getFile());
+
+                    if (pdfPath.toString().equals("")) {
+                        throw new IOException("PDF FileSpec is empty.");
+                    } else if (!pdfPath.toFile().exists()) {
+                        throw new IOException("PDF '" + pdfPath.toString() + "' does not exist.");
+                    }
+
+                    pdfUrl = pdfPath.toUri().toURL();
                 }
 
-                if(!pdfReaderCache.containsKey(pdfPath.toString())) {
+                if(!pdfReaderCache.containsKey(pdfUrl.toString())) {
                     try {
-                        pdfReaderCache.put(pdfPath.toString(), new PdfReader(pdfPath.toUri().toURL()));
+                        pdfReaderCache.put(pdfUrl.toString(), new PdfReader(pdfUrl));
                     } catch (Exception ex) {
-                        throw new CorruptPdfException("Error reading PDF '" + pdfPath.toUri().toURL()  + "'. PDF may be corrupt.", ex);
+                        throw new CorruptPdfException("Error reading PDF '" + pdfUrl.toString()  + "'. PDF may be corrupt.", ex);
                     }
                 }
 
-                pdfReader = pdfReaderCache.get(pdfPath.toString());
+                pdfReader = pdfReaderCache.get(pdfUrl.toString());
 
                 // create content object
                 result.add(

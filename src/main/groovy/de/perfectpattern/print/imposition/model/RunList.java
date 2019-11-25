@@ -5,9 +5,9 @@ import java.nio.file.Path;
 public class RunList {
 
     /**
-     * Path to the PDL document.
+     * Path / URL to the PDL document.
      */
-    private final Path file;
+    private final String file;
 
     /**
      * Zero-based page number in the PDL document.
@@ -19,12 +19,12 @@ public class RunList {
      * @param file The path to the file.
      * @param page The (zero-based) page in the file.
      */
-    public RunList(Path file, int page) {
+    public RunList(String file, int page) {
         this.file = file;
         this.page = page;
     }
 
-    public Path getFile() {
+    public String getFile() {
         return file;
     }
 

@@ -20,8 +20,6 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.util.StringUtils
 
-import java.nio.file.Paths
-
 /**
  * The Importer for a Sprint One V3 file format.
  */
@@ -35,22 +33,16 @@ class SprintOneV3Importer implements Importer {
     @Value('${SHEET_BLEED_MM}')
     private String sheetBleedMm;
 
-    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD:"0"}')
-    private String boxMarkToFinalTrimThreshold_ENV;
+//    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD}')
+//    private String boxMarkToFinalTrimThreshold;
 
-    private Long boxMarkToFinalTrimThreshold;
+    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD:0}')
+    private int boxMarkToFinalTrimThreshold;
 
     /**
      * Default constructor.
      */
     SprintOneV3Importer() {
-        if (boxMarkToFinalTrimThreshold_ENV==null) {
-            this.boxMarkToFinalTrimThreshold=0L;
-        } else {
-            if (this.boxMarkToFinalTrimThreshold_ENV.isNumber()) {
-                this.boxMarkToFinalTrimThreshold = this.boxMarkToFinalTrimThreshold_ENV.toFloat().longValue();
-            }
-        }
     }
 
     @Override

@@ -390,7 +390,7 @@ class SprintOneV3Importer implements Importer {
 
         // pages
         RunList pageFront = new RunList(
-                Paths.get(positionXml.selectedPrintData.frontPage.@pdfUrl.toString()),
+                positionXml.selectedPrintData.frontPage.@pdfUrl.toString(),
                 positionXml.selectedPrintData.frontPage.@pdfPageNumber.toInteger() - 1
         )
 
@@ -400,7 +400,7 @@ class SprintOneV3Importer implements Importer {
             pageBack = null
         } else {
             pageBack = new RunList(
-                    Paths.get(positionXml.selectedPrintData.backPage.@pdfUrl.toString()),
+                    positionXml.selectedPrintData.backPage.@pdfUrl.toString(),
                     positionXml.selectedPrintData.backPage.@pdfPageNumber.toInteger() - 1
             )
         }
@@ -463,11 +463,11 @@ class SprintOneV3Importer implements Importer {
 
         // pages
         RunList pageFront = new RunList(
-                Paths.get(strippingCell.frontPage.printData.@pdfUrl.toString()),
+                strippingCell.frontPage.printData.@pdfUrl.toString(),
                 strippingCell.frontPage.printData.@pdfPageNumber.toInteger() - 1
         )
         RunList pageBack = new RunList(
-                Paths.get(strippingCell.backPage.printData.@pdfUrl.toString()),
+                strippingCell.backPage.printData.@pdfUrl.toString(),
                 strippingCell.backPage.printData.@pdfPageNumber.toInteger() - 1
         )
         int pageIndexFront = strippingCell.frontPage.@index.toInteger()

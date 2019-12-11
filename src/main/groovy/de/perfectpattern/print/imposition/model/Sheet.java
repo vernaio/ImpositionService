@@ -20,6 +20,7 @@ public class Sheet {
     private final List<CutBlock> cuttingParams;
     private final float bleed;
     private final int amount;
+    private final long latestEndTime;
     private final Priority priority;
 
     /**
@@ -34,6 +35,7 @@ public class Sheet {
         this.cuttingParams = builder.cuttingParams;
         this.bleed = builder.bleed;
         this.amount = builder.amount;
+        this.latestEndTime = builder.latestEndTime;
 
         // compute values
         this.priority = definePriority(builder.positions);
@@ -70,6 +72,8 @@ public class Sheet {
     public int getAmount() {
         return amount;
     }
+
+    public long getLatestEndTime() { return latestEndTime; }
 
     public Priority getPriority() {
         return priority;
@@ -115,6 +119,7 @@ public class Sheet {
         private List<CutBlock> cuttingParams;
         private float bleed;
         private int amount;
+        private long latestEndTime;
 
         /**
          * Default constructor.
@@ -135,6 +140,7 @@ public class Sheet {
             this.cuttingParams = sheet.getCuttingParams();
             this.bleed = sheet.getBleed();
             this.amount = sheet.getAmount();
+            this.latestEndTime = sheet.getLatestEndTime();
         }
 
         public Builder sheetId(String sheetId) {
@@ -174,6 +180,11 @@ public class Sheet {
 
         public Builder amount(int amount) {
             this.amount = amount;
+            return this;
+        }
+
+        public Builder latestEndTime(long latestEndTime) {
+            this.latestEndTime = latestEndTime;
             return this;
         }
 

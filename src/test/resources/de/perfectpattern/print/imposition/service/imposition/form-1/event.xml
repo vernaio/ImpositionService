@@ -5,7 +5,7 @@
                          customData=""
                          sourceRef="api/rest/workspaces/id=test/layoutTasks/id=D8D6A27C-13E5-48C8-A2EF-085A6053CC25/result/events/id=ee1d8a20-dbba-4e54-93c6-b08e0ffd94bf"
                          description="" id="ee1d8a20-dbba-4e54-93c6-b08e0ffd94bf" label="Job 174" approvalSetRef=""
-                         deviceRef="pd1" duration="451500" latestEndTime="9007199254740991" plannedDuration="451500"
+                         deviceRef="pd1" duration="451500" latestEndTime="1576081683000" plannedDuration="451500"
                          startTime="1574076370528" state="PLANNED">
     <spoV3:gangJob
             alternativeMediasDescription="Bilderdruck matt 130g 880x630 mm Short grain (m1), Offset matt 90g 880x630 mm Breitbahn (m2)"

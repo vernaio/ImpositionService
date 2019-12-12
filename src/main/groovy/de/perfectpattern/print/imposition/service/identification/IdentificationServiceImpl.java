@@ -152,6 +152,11 @@ public class IdentificationServiceImpl implements IdentificationService {
         tpl.addTemplate(lblAmount, offsetLeft, marginBottom);
         offsetLeft += lblAmount.getWidth();
 
+        // amount (left)
+        PdfTemplate lblLatestEndTime = new LatestEndTimeLabel(sheet.getLatestEndTime()).createLabel(cb, Side.Front, barHeight - marginBottom);
+        tpl.addTemplate(lblLatestEndTime, offsetLeft, marginBottom);
+        offsetLeft += lblLatestEndTime.getWidth();
+
         // barcode (right)
         PdfTemplate lblBarcode = new BarcodeLabel(sheet.getSheetId()).createLabel(cb, Side.Front, barHeight - marginBottom);
         offsetRight -= lblBarcode.getWidth();

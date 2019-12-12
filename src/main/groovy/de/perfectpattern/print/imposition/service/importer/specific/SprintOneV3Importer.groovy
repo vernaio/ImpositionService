@@ -123,12 +123,15 @@ class SprintOneV3Importer implements Importer {
 
         sheetBleedMm = DimensionUtil.mm2dtp(sheetBleedMm);
 
+        long latestEndTime = new Float(gangJobXml.'..'.@latestEndTime.toFloat()).longValue();
+
         // create sheet
         Sheet sheet = new Sheet.Builder()
                 .sheetId(sheetId)
                 .bleed(sheetBleedMm)
                 .layoutTaskId(layoutTaskId)
                 .amount((int) gangJobXml.@quantity.toInteger())
+                .latestEndTime(latestEndTime)
                 .workStyle(workStyle)
                 .surfaceContentsBox(surfaceContentsBox)
                 .cuttingParams(cuttingParams)

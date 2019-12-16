@@ -16,4 +16,3 @@ jobs:
       uses: alxppgithub/pinf-69@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

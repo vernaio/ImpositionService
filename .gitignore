@@ -3,3 +3,8 @@ out
 log
 .idea
 build
+.settings
+.classpath
+.project
+target
+bin

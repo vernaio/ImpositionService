@@ -38,7 +38,7 @@ public class Position {
         return binderySignature;
     }
 
-    public boolean allowsBoxMark() { return this.allowsBoxMark; }
+    public boolean getAllowsBoxMark() { return this.allowsBoxMark; }
 
     /**
      * Position builder class.
@@ -48,7 +48,7 @@ public class Position {
         private Rectangle absoluteBox;
         private Orientation orientation;
         private BinderySignature binderySignature;
-        private boolean allowsBoxMark;
+        private boolean allowsBoxMark = false;
 
         /**
          * Default constructor.
@@ -65,7 +65,7 @@ public class Position {
             this.absoluteBox = position.getAbsoluteBox();
             this.orientation = position.getOrientation();
             this.binderySignature = position.getBinderySignature();
-            this.allowsBoxMark = position.allowsBoxMark();
+            this.allowsBoxMark = position.getAllowsBoxMark();
         }
 
         public Builder absoluteBox(Rectangle absoluteBox) {

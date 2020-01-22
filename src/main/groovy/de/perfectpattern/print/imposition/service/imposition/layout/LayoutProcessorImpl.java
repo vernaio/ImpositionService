@@ -61,7 +61,7 @@ public class LayoutProcessorImpl implements LayoutProcessor {
 
             // place bindery signature
             layout.getPlacedObjectsFront().addAll(
-                    placePosition(position.getAllowsBoxMark(),position.getBinderySignature(), position.getOrientation(), absoluteBox, Side.Front, pdfReaderCache)
+                    placePosition(position.getAllowsBoxMark(), position.getBinderySignature(), position.getOrientation(), absoluteBox, Side.Front, pdfReaderCache)
             );
 
             // place bindery signature info marks
@@ -71,23 +71,22 @@ public class LayoutProcessorImpl implements LayoutProcessor {
         }
 
         // back surface
-        layout.setPlacedObjectsBack(new ArrayList<>(100));
+        if (!sheet.getWorkStyle().equals(WorkStyle.Simplex)) {
+					layout.setPlacedObjectsBack(new ArrayList<>(100));
 
-        for (Position position : normalizedPositions) {
-            Rectangle reversedAbsoluteBox = reverseObject(position.getAbsoluteBox(), sheet.getMediaBox());
-            Orientation reversedOrientation = revertOrientation(position.getOrientation());
+					for (Position position : normalizedPositions) {
+						Rectangle reversedAbsoluteBox = reverseObject(position.getAbsoluteBox(), sheet.getMediaBox());
+						Orientation reversedOrientation = revertOrientation(position.getOrientation());
 
-            // place bindery signature
-            layout.getPlacedObjectsBack().addAll(
-            	placePosition(position.getAllowsBoxMark(),position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back, pdfReaderCache)
+						// place bindery signature
+						layout.getPlacedObjectsBack().addAll(
+						  placePosition(position.getAllowsBoxMark(), position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back, pdfReaderCache)
             );
 
-            // place bindery signature info marks
-            layout.getPlacedObjectsBack().addAll(
-                placePositionMarks(position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back)
-            );
-        }
-
+						// place bindery signature info marks
+						layout.getPlacedObjectsBack().addAll(placePositionMarks(position.getBinderySignature(), reversedOrientation, reversedAbsoluteBox, Side.Back));
+					}
+				}
         return layout;
     }
 

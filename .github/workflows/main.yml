@@ -6,13 +6,13 @@ on:
     branches:
       - master
 
-jobs:
-  Version-check:
-    runs-on: ubuntu-latest
-    name: Increment Tag Version
-    steps:
-    - name: Increment version
-      id: version   
-      uses: alxppgithub/pinf-69@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#jobs:
+#  Version-check:
+#    runs-on: ubuntu-latest
+#    name: Increment Tag Version
+#    steps:
+#    - name: Increment version
+#      id: version
+#      uses: alxppgithub/pinf-69@master
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

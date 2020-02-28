@@ -57,6 +57,7 @@ dependencies {
 	implementation 'org.reflections:reflections:0.9.10'
 	implementation 'org.eclipse.persistence:eclipselink:2.6.0-RC1'
 	implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+	implementation 'de.perfectpattern:sPrint.one.v3.webService:665'
 	implementation 'org.cip4.lib.xjdf:xJdfLib:+'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

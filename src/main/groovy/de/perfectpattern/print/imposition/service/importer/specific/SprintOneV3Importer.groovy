@@ -29,6 +29,10 @@ class SprintOneV3Importer implements Importer {
     private static final Logger log = LoggerFactory.getLogger(SprintOneV3Importer.class)
 
     private final static String NS_SPO_V3 = 'http://www.perfectpattern.de/sPrint.one.v3.api'
+		
+		// Alex edit
+		// private final DtoGangJobEvent hier hin, und das nutzen nachdem es accepted wurde (beim accepten auch initialisieren)
+		// entweder final ohne static oder andersrum
 
     @Value('${SHEET_BLEED_MM}')
     private String sheetBleedMm;
@@ -45,6 +49,9 @@ class SprintOneV3Importer implements Importer {
     SprintOneV3Importer() {
     }
 
+		// Alex edit:
+		// Das hier ueberpruefen ob es ein DtoGangJobEvent ist
+		// initalisierung erwartet byte[] -> bytearrayinputstream
     @Override
     boolean acceptDocument(byte[] bytes) {
         boolean result
@@ -60,6 +67,7 @@ class SprintOneV3Importer implements Importer {
     }
 
     @Override
+		//kann ohne byte bytes sein, da man die priv final gangjob event ist
     Sheet importDocument(byte[] bytes) {
         log.info("Sheet Bleed: " + sheetBleedMm + " mm")
 
@@ -87,6 +95,7 @@ class SprintOneV3Importer implements Importer {
 
         // create sheet id
         String partId = gangJobXml.'..'.@id.toString().substring(0, 4).toUpperCase()
+				partId = 
         int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""))
         String sheetId = String.format("%04d-%s", partLabel, partId)
 

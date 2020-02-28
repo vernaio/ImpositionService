@@ -19,6 +19,7 @@ import de.perfectpattern.print.imposition.util.DimensionUtil
 import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.form.DtoFormBinderySignaturePlacement
 import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
 
 import org.slf4j.Logger
@@ -111,14 +112,20 @@ class SprintOneV3Importer implements Importer {
 				
         // extract positions (each placement is a position)
         def bsPlacements = gangJobXml.form.placementZone.binderySignaturePlacements.binderySignaturePlacement
-				Object bsPlacements2 = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
+				final List<DtoFormBinderySignaturePlacement> bsPlacements2 = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
         List<Position> positions = new ArrayList<>((int) bsPlacements.size())
+        List<Position> positions2 = new ArrayList<>(bsPlacements2.size());
         List<CutBlock> cuttingParams = new ArrayList<>((int) bsPlacements.size());
+        List<CutBlock> cuttingParams2 = new ArrayList<>(bsPlacements2.size());
 
         bsPlacements.eachWithIndex { it, idx ->
             positions.add(readPosition(it, gangJobXml))
             cuttingParams.add(readCutBlock(it, gangJobXml, idx))
         }
+				
+//				for (int i = 0; i < bsPlacements2size; i++) {
+//					positions2.add(readPosition(bsPlacements2[i], gangJobXml))
+//				}
 
         // create sheet id
         String partId = gangJobXml.'..'.@id.toString().substring(0, 4).toUpperCase()
@@ -144,7 +151,7 @@ class SprintOneV3Importer implements Importer {
         float mediaWidth = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@width.toFloat());
 				final float mediaWidth2 = DimensionUtil.micro2dtp(dtoGJE.getGangJob().getMedia().getFormat().getWidth().floatValue());
         float mediaHeight = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@height.toFloat());
-				final float mediaHeigth2 = DimensionUtil.micro2dtp(dtoGJE.getGangJob().getMedia().getFormat().getHeight().floatValue());
+				final float mediaHeight2 = DimensionUtil.micro2dtp(dtoGJE.getGangJob().getMedia().getFormat().getHeight().floatValue());
         final Rectangle surfaceContentsBox = new Rectangle(0, 0, mediaWidth2, mediaHeight2);
 				
 				// TODO
@@ -179,11 +186,11 @@ class SprintOneV3Importer implements Importer {
 
         // create sheet
         Sheet sheet = new Sheet.Builder()
-                .sheetId(sheetId2d)
+                .sheetId(sheetId)
                 .bleed(sheetBleedMm)
-                .layoutTaskId(layoutTaskId2d)
+                .layoutTaskId(layoutTaskId)
                 .amount(amount)
-                .latestEndTime(latestEndTime2)
+                .latestEndTime(latestEndTime)
                 .workStyle(workStyle)
                 .surfaceContentsBox(surfaceContentsBox)
                 .cuttingParams(cuttingParams)
@@ -234,57 +241,79 @@ class SprintOneV3Importer implements Importer {
      * @return The Position object.
      */
     private Position readPosition(def placement, def gangJobXml) {
+			
+			// TODO
+			// muss aus Schleife kommen
+			final List<DtoFormBinderySignaturePlacement> lp = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
+			final DtoFormBinderySignaturePlacement lp0 = lp[0];
+			
+			// TODO
+			// Warum wird hier 4 mal trim left genutzt?
+      final Border clip =  new Border(Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()));
+			final Border clip2 = new Border(Math.round((float)lp0.getTrim().left), Math.round((float)lp0.getTrim().left), Math.round((float)lp0.getTrim().left), Math.round((float)lp0.getTrim().left));
+			
+			
+			// TODO
+			// Warum float?
+			
+      // absolute box
+      float llx = placement.offset.@x.toFloat() - placement.trim.@left.toFloat()
+			final float llx2 = (float)(lp0.getOffset().getX() - lp0.getTrim().getLeft());
+			
+      float lly = placement.offset.@y.toFloat() - placement.trim.@bottom.toFloat()
+			final float lly2 = (float)(lp0.getOffset().getY() - lp0.getTrim().getBottom());
+			
+      float urx = placement.offset.@x.toFloat() + placement.format.@width.toFloat() + placement.trim.@right.toFloat()
+			final float urx2 = (float)(lp0.getOffset().getX() + lp0.getFormat().getWidth() + lp0.getTrim().getRight());
+			
+      float ury = placement.offset.@y.toFloat() + placement.format.@height.toFloat() + placement.trim.@top.toFloat()
+			final float ury2 = (float)(lp0.getOffset().getY() + lp0.getFormat().getHeight() + lp0.getTrim().getTop());
 
-        final Border clip =  new Border(Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()));
 
-        // absolute box
-        float llx = placement.offset.@x.toFloat() - placement.trim.@left.toFloat()
-        float lly = placement.offset.@y.toFloat() - placement.trim.@bottom.toFloat()
-        float urx = placement.offset.@x.toFloat() + placement.format.@width.toFloat() + placement.trim.@right.toFloat()
-        float ury = placement.offset.@y.toFloat() + placement.format.@height.toFloat() + placement.trim.@top.toFloat()
-
-
-
-        Rectangle absoluteBox = new Rectangle(
-                DimensionUtil.micro2dtp(llx),
-                DimensionUtil.micro2dtp(lly),
-                DimensionUtil.micro2dtp(urx),
-                DimensionUtil.micro2dtp(ury)
+      Rectangle absoluteBox = new Rectangle(
+              DimensionUtil.micro2dtp(llx),
+              DimensionUtil.micro2dtp(lly),
+              DimensionUtil.micro2dtp(urx),
+              DimensionUtil.micro2dtp(ury)
         )
 
-        // orientation
-        Orientation orientation
-        String rotation = placement.@rotation.toString()
+      // orientation
+      Orientation orientation
+      String rotation = placement.@rotation.toString()
+			String rotation2 = lp0.getRotation();
 
-        if (rotation == "ZERO") {
-            orientation = Orientation.Rotate0
-        } else if (rotation == "CC90") {
-            orientation = Orientation.Rotate90
-        } else if (rotation == "CC180") {
-            orientation = Orientation.Rotate180
-        } else if (rotation == "CC270") {
-            orientation = Orientation.Rotate270
-        } else {
-            throw new IOException("Rotation '" + rotation + "' is not supported.")
-        }
+      if (rotation == "ZERO") {
+          orientation = Orientation.Rotate0
+      } else if (rotation == "CC90") {
+          orientation = Orientation.Rotate90
+      } else if (rotation == "CC180") {
+          orientation = Orientation.Rotate180
+      } else if (rotation == "CC270") {
+          orientation = Orientation.Rotate270
+      } else {
+					Log.error("Rotation '" + rotation + "' is not supported.");
+        	throw new IOException("Rotation '" + rotation + "' is not supported.");
+      }
 
-        // load bindery signature
-        String binderySignatureId = placement.binderySignatureRef.@id.toString()
-        BinderySignature binderySignature = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
+      // load bindery signature
+      String binderySignatureId = placement.binderySignatureRef.@id.toString()
+			String binderySignatureId2 = lp0.getBinderySignatureRef().getId();
+      BinderySignature binderySignature = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
+    	BinderySignature binderySignature2 = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
 
-        boolean allowsBoxMark =
-                ((binderySignature.getInnerContentFrame().getBottom(orientation)+clip.getBottom())>=this.boxMarkToFinalTrimThreshold)&&
-                ((binderySignature.getInnerContentFrame().getTop(orientation)+clip.getTop())>=this.boxMarkToFinalTrimThreshold)&&
-                ((binderySignature.getInnerContentFrame().getLeft(orientation)+clip.getLeft())>=this.boxMarkToFinalTrimThreshold)&&
-                ((binderySignature.getInnerContentFrame().getRight(orientation)+clip.getRight())>=this.boxMarkToFinalTrimThreshold);
+      boolean allowsBoxMark =
+              ((binderySignature.getInnerContentFrame().getBottom(orientation)+clip.getBottom())>=this.boxMarkToFinalTrimThreshold)&&
+              ((binderySignature.getInnerContentFrame().getTop(orientation)+clip.getTop())>=this.boxMarkToFinalTrimThreshold)&&
+              ((binderySignature.getInnerContentFrame().getLeft(orientation)+clip.getLeft())>=this.boxMarkToFinalTrimThreshold)&&
+              ((binderySignature.getInnerContentFrame().getRight(orientation)+clip.getRight())>=this.boxMarkToFinalTrimThreshold);
 
-        // create and return position object
-        return new Position.Builder()
-                .orientation(orientation)
-                .binderySignature(binderySignature)
-                .absoluteBox(absoluteBox)
-                .allowsBoxMark(allowsBoxMark)
-                .build()
+      // create and return position object
+      return new Position.Builder()
+              .orientation(orientation)
+              .binderySignature(binderySignature)
+              .absoluteBox(absoluteBox)
+              .allowsBoxMark(allowsBoxMark)
+              .build()
     }
 
     /**

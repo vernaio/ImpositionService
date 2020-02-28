@@ -21,6 +21,12 @@ public class BasicTest {
 	
 	public static void main(String[] args) {
 		System.out.println("test");
+		
+		final String ss = "87C051BF-F576-40A0-93CF-20ECF9BC413F";
+		final String s = "api/rest/workspaces/id=test/layoutTasks/id=87C051BF-F576-40A0-93CF-20ECF9BC413F/result/events/id=85970220-c783-4b45-aedc-8f23748e2ac5";
+    String a = s.split("layoutTasks/id=")[1].split("/result")[0];
+    System.out.println(a);
+		
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(new File("C:\\Users\\Alex\\pp\\PIMP\\PIMP-48\\clone.xml"));

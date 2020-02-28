@@ -1,4 +1,4 @@
-package de.perfectpattern.print.imposition.service.importer.specific
+package de.perfectpattern.print.imposition.service.importer.specific;
 
 import de.perfectpattern.print.imposition.model.BinderySignature
 import de.perfectpattern.print.imposition.model.CutBlock
@@ -95,7 +95,7 @@ class SprintOneV3Importer implements Importer {
 
         // create sheet id
         String partId = gangJobXml.'..'.@id.toString().substring(0, 4).toUpperCase()
-				partId = 
+				//partId = 
         int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""))
         String sheetId = String.format("%04d-%s", partLabel, partId)
 

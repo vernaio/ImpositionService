@@ -1,5 +1,7 @@
 package de.perfectpattern.print.imposition.service.importer.specific;
 
+import de.perfectpattern.commons.api.marshalling.XmlContext
+import de.perfectpattern.commons.api.marshalling.XmlContextProvider
 import de.perfectpattern.print.imposition.model.BinderySignature
 import de.perfectpattern.print.imposition.model.CutBlock
 import de.perfectpattern.print.imposition.model.Position
@@ -14,11 +16,19 @@ import de.perfectpattern.print.imposition.model.type.Rectangle
 import de.perfectpattern.print.imposition.model.type.WorkStyle
 import de.perfectpattern.print.imposition.model.type.XYPair
 import de.perfectpattern.print.imposition.util.DimensionUtil
+import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle
+import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
+
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.util.StringUtils
+
+// TODO
+// change DtoWorkspaces_ROOT to gangjobevent
 
 /**
  * The Importer for a Sprint One V3 file format.
@@ -33,6 +43,7 @@ class SprintOneV3Importer implements Importer {
 		// Alex edit
 		// private final DtoGangJobEvent hier hin, und das nutzen nachdem es accepted wurde (beim accepten auch initialisieren)
 		// entweder final ohne static oder andersrum
+		private DtoGangJobEvent dtoGJE;
 
     @Value('${SHEET_BLEED_MM}')
     private String sheetBleedMm;
@@ -54,20 +65,32 @@ class SprintOneV3Importer implements Importer {
 		// initalisierung erwartet byte[] -> bytearrayinputstream
     @Override
     boolean acceptDocument(byte[] bytes) {
-        boolean result
-
-        try {
-            result = new XmlSlurper().parse(new ByteArrayInputStream(bytes)).lookupNamespace('spoV3') == NS_SPO_V3
-
-        } catch (Exception ex) {
-            result = false
-        }
+        boolean result;
+				
+				ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
+				XmlContext xc = new XmlContextProvider().get();
+				Object umo = xc.unmarshal(bais);
+				if (umo instanceof DtoGangJobEvent) {
+					dtoGJE = (DtoGangJobEvent) umo;
+					result = true;
+				} else {
+					final String EMSG = "The provided XML file should be an instance of DtoGangJobEvent but is currently an instance of " + umo.getClass().getCanonicalName();
+					log.error(EMSG)
+					throw new IllegalArgumentException(EMSG);
+				}
+				
+//        try {
+//            result = new XmlSlurper().parse(new ByteArrayInputStream(bytes)).lookupNamespace('spoV3') == NS_SPO_V3
+//
+//        } catch (Exception ex) {
+//            result = false
+//        }
 
         return result
     }
 
     @Override
-		//kann ohne byte bytes sein, da man die priv final gangjob event ist
+		//kann ohne byte bytes sein
     Sheet importDocument(byte[] bytes) {
         log.info("Sheet Bleed: " + sheetBleedMm + " mm")
 
@@ -77,14 +100,18 @@ class SprintOneV3Importer implements Importer {
         // get gangjob node
         def gangJobs = xml.depthFirst().findAll { it.name() == 'gangJob' }
 
-        if (gangJobs.size() > 1) {
+				// TODO
+				// Howto?
+				final int gjSize = gangJobs.size();
+        if (gjSize > 1) {
             throw new IOException("Multiple GangJobs has been found... - Only one is supported.")
         }
 
         def gangJobXml = gangJobs[0]
-
+				
         // extract positions (each placement is a position)
         def bsPlacements = gangJobXml.form.placementZone.binderySignaturePlacements.binderySignaturePlacement
+				Object bsPlacements2 = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
         List<Position> positions = new ArrayList<>((int) bsPlacements.size())
         List<CutBlock> cuttingParams = new ArrayList<>((int) bsPlacements.size());
 
@@ -98,49 +125,65 @@ class SprintOneV3Importer implements Importer {
 				//partId = 
         int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""))
         String sheetId = String.format("%04d-%s", partLabel, partId)
+				partId = dtoGJE.getId().substring(0, 4);
+				final String partLabelS = dtoGJE.getLabel().split(" ")[1];
+				final String sheetId2 = String.format("%s-%s", partLabelS, partId);
 
         // extract layoutTaskId
-        String layoutTaskId = null
-        String sourceRef = gangJobXml.'..'.@sourceRef.toString()
+        String layoutTaskId;
+        final String layoutTaskId2;
+        String sourceRef = gangJobXml.'..'.@sourceRef.toString();
+				final String sourceRef2 = dtoGJE.getSourceRef();
 
         if(!StringUtils.isEmpty(sourceRef)) {
-            layoutTaskId = (sourceRef =~ /[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/)[0]
+            layoutTaskId = (sourceRef =~ /[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/)[0];
+            layoutTaskId2 = sourceRef2.split("layoutTasks/id=")[1].split("/result")[0];
         }
 
         // create sheet
-        float mediaWidth = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@width.toFloat())
-        float mediaHeight = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@height.toFloat())
-        Rectangle surfaceContentsBox = new Rectangle(0, 0, mediaWidth, mediaHeight)
-
-        WorkStyle workStyle
-
-        if (gangJobXml.@workStyle.toString() == "SIMPLEX") {
-            workStyle = WorkStyle.Simplex
-        } else {
-            workStyle = WorkStyle.WorkAndBack
-        }
+        float mediaWidth = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@width.toFloat());
+				final float mediaWidth2 = DimensionUtil.micro2dtp(dtoGJE.getGangJob().getMedia().getFormat().getWidth().floatValue());
+        float mediaHeight = DimensionUtil.micro2dtp((float) gangJobXml.media.format.@height.toFloat());
+				final float mediaHeigth2 = DimensionUtil.micro2dtp(dtoGJE.getGangJob().getMedia().getFormat().getHeight().floatValue());
+        final Rectangle surfaceContentsBox = new Rectangle(0, 0, mediaWidth2, mediaHeight2);
+				
+				// TODO
+				// don't use two enum classes?
+				final DtoWorkStyle dtoWorkStyle = dtoGJE.getGangJob().getWorkStyle();
+				WorkStyle workStyle;
+				
+				if (dtoWorkStyle.equals(DtoWorkStyle.SIMPLEX)) {
+					workStyle = WorkStyle.Simplex;
+				} else {
+					workStyle = WorkStyle.WorkAndBack;
+				}
 
         // sheet bleed
-        float sheetBleedMm
+        float sheetBleedMm;
 
         try {
             sheetBleedMm = Float.parseFloat(this.sheetBleedMm);
         } catch (Exception ex) {
-            log.error("Sheet Bleed is wrongly defined.", ex)
+            log.error("Sheet Bleed is wrongly defined.", ex);
             throw ex;
         }
 
         sheetBleedMm = DimensionUtil.mm2dtp(sheetBleedMm);
 
+				// TODO
+				// this is not the same somehow?
         long latestEndTime = new Float(gangJobXml.'..'.@latestEndTime.toFloat()).longValue();
+				final long latestEndTime2 = dtoGJE.getLatestEndTime();
+				
+				final int amount = dtoGJE.getGangJob().getQuantity();
 
         // create sheet
         Sheet sheet = new Sheet.Builder()
-                .sheetId(sheetId)
+                .sheetId(sheetId2d)
                 .bleed(sheetBleedMm)
-                .layoutTaskId(layoutTaskId)
-                .amount((int) gangJobXml.@quantity.toInteger())
-                .latestEndTime(latestEndTime)
+                .layoutTaskId(layoutTaskId2d)
+                .amount(amount)
+                .latestEndTime(latestEndTime2)
                 .workStyle(workStyle)
                 .surfaceContentsBox(surfaceContentsBox)
                 .cuttingParams(cuttingParams)

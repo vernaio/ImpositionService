@@ -277,6 +277,13 @@ class SprintOneV3Importer implements Importer {
               DimensionUtil.micro2dtp(ury)
         )
 
+			Rectangle absoluteBox2 = new Rectangle(
+				DimensionUtil.micro2dtp(llx2),
+				DimensionUtil.micro2dtp(lly2),
+				DimensionUtil.micro2dtp(urx2),
+				DimensionUtil.micro2dtp(ury2)
+			  )
+				
       // orientation
       Orientation orientation
       String rotation = placement.@rotation.toString()
@@ -299,7 +306,7 @@ class SprintOneV3Importer implements Importer {
       String binderySignatureId = placement.binderySignatureRef.@id.toString()
 			String binderySignatureId2 = lp0.getBinderySignatureRef().getId();
       BinderySignature binderySignature = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
-    	BinderySignature binderySignature2 = readBinderySignature(binderySignatureId, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
+    	BinderySignature binderySignature2 = readBinderySignature(binderySignatureId2, placement, gangJobXml, orientation, placement.@flipped.toBoolean())
 
       boolean allowsBoxMark =
               ((binderySignature.getInnerContentFrame().getBottom(orientation)+clip.getBottom())>=this.boxMarkToFinalTrimThreshold)&&
@@ -323,121 +330,122 @@ class SprintOneV3Importer implements Importer {
      * @return The bindery signature as object.
      */
     private static BinderySignature readBinderySignature(String id, def positionXml, def gangJobXml, Orientation orientation, boolean flipped) {
-        BinderySignature binderySignature = null;
+        
+			BinderySignature binderySignature = null;
 
-        // find bindery signature node
-        def bsXml = gangJobXml.binderySignatures.binderySignature.find { it.@id == id }
+      // find bindery signature node
+      def bsXml = gangJobXml.binderySignatures.binderySignature.find { it.@id == id }
 
-        if (bsXml.size() == 1) {
+      if (bsXml.size() == 1) {
 
-            // bindery signature size
-            float heightDtp = DimensionUtil.micro2dtp(
-                    (float) (bsXml.trimFormat.@height.toFloat() + getTrimHead(positionXml, orientation) + getTrimFoot(positionXml, orientation))
-            )
-            float widthDtp = DimensionUtil.micro2dtp(
-                    (float) (bsXml.trimFormat.@width.toFloat() + getTrimFace(positionXml, orientation) + getTrimSpine(positionXml, orientation))
-            )
+          // bindery signature size
+          float heightDtp = DimensionUtil.micro2dtp(
+                  (float) (bsXml.trimFormat.@height.toFloat() + getTrimHead(positionXml, orientation) + getTrimFoot(positionXml, orientation))
+          )
+          float widthDtp = DimensionUtil.micro2dtp(
+                  (float) (bsXml.trimFormat.@width.toFloat() + getTrimFace(positionXml, orientation) + getTrimSpine(positionXml, orientation))
+          )
 
-            XYPair binderySignatureSize = new XYPair(widthDtp, heightDtp)
+          XYPair binderySignatureSize = new XYPair(widthDtp, heightDtp)
 
-            // fold catalog
-            String strFoldCatalog = bsXml.signature.signatureTypeRef.@id.toString();
+          // fold catalog
+          String strFoldCatalog = bsXml.signature.signatureTypeRef.@id.toString();
 
-            FoldCatalog foldCatalog
+          FoldCatalog foldCatalog
 
-            if (StringUtils.isEmpty(strFoldCatalog)) {
-                foldCatalog = FoldCatalog.F2_1
-            } else {
-                foldCatalog = FoldCatalog.findByName(strFoldCatalog)
-            }
+          if (StringUtils.isEmpty(strFoldCatalog)) {
+              foldCatalog = FoldCatalog.F2_1
+          } else {
+              foldCatalog = FoldCatalog.findByName(strFoldCatalog)
+          }
 
-            // bindery signature context
-            Integer bsNumberTotal = null, bsNumberCurrent = null
+          // bindery signature context
+          Integer bsNumberTotal = null, bsNumberCurrent = null
 
-            if(bsXml.signature.relatedSignatureRefs.size() > 0) {
-                bsNumberTotal = bsXml.signature.relatedSignatureRefs.ref.size()
+          if(bsXml.signature.relatedSignatureRefs.size() > 0) {
+              bsNumberTotal = bsXml.signature.relatedSignatureRefs.ref.size()
 
-                // validate index path for collecting only
-                boolean isValid = true
+              // validate index path for collecting only
+              boolean isValid = true
 
-                bsXml.signature.relatedSignatureRefs.ref.each {
-                    if(!it.@indexPath.toString().matches("0( 0)*")) {
-                        isValid = false
-                        log.warn("IndexPath '" + it.@indexPath + "' is not supported.")
-                    }
-                }
+              bsXml.signature.relatedSignatureRefs.ref.each {
+                  if(!it.@indexPath.toString().matches("0( 0)*")) {
+                      isValid = false
+                      log.warn("IndexPath '" + it.@indexPath + "' is not supported.")
+                  }
+              }
 
-                if(isValid) {
-                    String signatureId = bsXml.signature.@id
-                    String[] indexPath = bsXml.signature.relatedSignatureRefs.ref.find {
-                        it.@binderySignatureRef == signatureId
-                    }.@indexPath.toString().split(" ")
+              if(isValid) {
+                  String signatureId = bsXml.signature.@id
+                  String[] indexPath = bsXml.signature.relatedSignatureRefs.ref.find {
+                      it.@binderySignatureRef == signatureId
+                  }.@indexPath.toString().split(" ")
 
-                    bsNumberCurrent = indexPath.length
-                }
-            }
+                  bsNumberCurrent = indexPath.length
+              }
+          }
 
-            // priority
-            Priority priority = Priority.findByValue(bsXml.@priority.toInteger());
+          // priority
+          Priority priority = Priority.findByValue(bsXml.@priority.toInteger());
 
-            // extract signature cells
-            List<SignatureCell> signatureCells;
+          // extract signature cells
+          List<SignatureCell> signatureCells;
 
-            final Border innerContentFrame;
+          final Border innerContentFrame;
 
-            if (FoldCatalog.F2_1 == foldCatalog) {
-                signatureCells = new ArrayList<>(1)
-                signatureCells.add(createSignatureCellF2(bsXml, positionXml, orientation))
+          if (FoldCatalog.F2_1 == foldCatalog) {
+              signatureCells = new ArrayList<>(1)
+              signatureCells.add(createSignatureCellF2(bsXml, positionXml, orientation))
 
-                innerContentFrame=new Border(0L);
+              innerContentFrame=new Border(0L);
 
-            } else if (FoldCatalog.F4_1 == foldCatalog) {
-                signatureCells = new ArrayList<>(bsXml.signature.strippingCells.strippingCell.size())
+          } else if (FoldCatalog.F4_1 == foldCatalog) {
+              signatureCells = new ArrayList<>(bsXml.signature.strippingCells.strippingCell.size())
 
-                // row index 0
-                def col_0 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }
+              // row index 0
+              def col_0 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }
 
-                signatureCells.add(
-                        createSignatureCellF4(col_0)
-                )
+              signatureCells.add(
+                      createSignatureCellF4(col_0)
+              )
 
-                // row index 1
-                def col_1 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }
+              // row index 1
+              def col_1 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }
 
-                signatureCells.add(
-                        createSignatureCellF4(col_1)
-                )
+              signatureCells.add(
+                      createSignatureCellF4(col_1)
+              )
 
-                innerContentFrame=new Border(
-                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@headTrim.toFloat()).longValue(),
-                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@footTrim.toFloat()).longValue(),
-                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@faceTrim.toFloat()).longValue(),
-                        Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }.@faceTrim.toFloat()).longValue());
+              innerContentFrame=new Border(
+                      Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@headTrim.toFloat()).longValue(),
+                      Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@footTrim.toFloat()).longValue(),
+                      Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@faceTrim.toFloat()).longValue(),
+                      Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }.@faceTrim.toFloat()).longValue());
 
-            } else {
+          } else {
 
-                log.error("Fold Schema is not supported.")
-                throw new Exception("FoldSchema is not supported.")
-            }
+              log.error("Fold Schema is not supported.")
+              throw new Exception("FoldSchema is not supported.")
+          }
 
-            // create bindery signature object
-            binderySignature = new BinderySignature.Builder()
-                    .label(bsXml.@label.toString())
-                    .amount((int) bsXml.@mustDemand.toInteger())
-                    .priority(priority)
-                    .jobId(bsXml.@orderRef.toString())
-                    .foldCatalog(foldCatalog)
-                    .binderySignatureSize(binderySignatureSize)
-                    .signatureCells(signatureCells)
-                    .flipped(flipped)
-                    .bsNumberTotal(bsNumberTotal)
-                    .bsNumberCurrent(bsNumberCurrent)
-                    .innerContentFrame(innerContentFrame)
-                    .build()
-        }
+          // create bindery signature object
+          binderySignature = new BinderySignature.Builder()
+                  .label(bsXml.@label.toString())
+                  .amount((int) bsXml.@mustDemand.toInteger())
+                  .priority(priority)
+                  .jobId(bsXml.@orderRef.toString())
+                  .foldCatalog(foldCatalog)
+                  .binderySignatureSize(binderySignatureSize)
+                  .signatureCells(signatureCells)
+                  .flipped(flipped)
+                  .bsNumberTotal(bsNumberTotal)
+                  .bsNumberCurrent(bsNumberCurrent)
+                  .innerContentFrame(innerContentFrame)
+                  .build()
+      }
 
-        // return bindery signature object
-        return binderySignature
+      // return bindery signature object
+      return binderySignature
     }
 
     /**

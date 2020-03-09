@@ -209,29 +209,40 @@ class SprintOneV3Importer implements Importer {
      * @param gangJobXml The GangJob XML.
      * @return The Position object.
      */
-    private static CutBlock readCutBlock(def placement, def gangJobXml, def idx) {
+    private CutBlock readCutBlock(def placement, def gangJobXml, def idx) {
+			
+			// TODO
+			// muss aus Schleife kommen
+			final List<DtoFormBinderySignaturePlacement> lp = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
+			final DtoFormBinderySignaturePlacement lp0 = lp[0];
 
-        // box
-        float llx = placement.offset.@x.toFloat()
-        float lly = placement.offset.@y.toFloat()
-        float urx = placement.offset.@x.toFloat() + placement.format.@width.toFloat()
-        float ury = placement.offset.@y.toFloat() + placement.format.@height.toFloat()
+      // box
+      float llx = placement.offset.@x.toFloat()
+      float lly = placement.offset.@y.toFloat()
+      float urx = placement.offset.@x.toFloat() + placement.format.@width.toFloat()
+      float ury = placement.offset.@y.toFloat() + placement.format.@height.toFloat()
+			
+			final float llx2 = (float)(lp0.getOffset().getX());
+			final float lly2 = (float)(lp0.getOffset().getY());
+			final float urx2 = (float)(lp0.getOffset().getX() + lp0.getFormat().getWidth());
+			final float ury2 = (float)(lp0.getOffset().getY() + lp0.getFormat().getHeight());
 
-        Rectangle box = new Rectangle(
-                DimensionUtil.micro2dtp(llx),
-                DimensionUtil.micro2dtp(lly),
-                DimensionUtil.micro2dtp(urx),
-                DimensionUtil.micro2dtp(ury)
-        )
 
-        // block name
-        String blockName = "BLOCK-" + idx
+      Rectangle box = new Rectangle(
+              DimensionUtil.micro2dtp(llx),
+              DimensionUtil.micro2dtp(lly),
+              DimensionUtil.micro2dtp(urx),
+              DimensionUtil.micro2dtp(ury)
+      )
 
-        // create and return cut block object
-        return new CutBlock.Builder()
-                .blockName(blockName)
-                .box(box)
-                .build()
+      // block name
+      String blockName = "BLOCK-" + idx
+
+      // create and return cut block object
+      return new CutBlock.Builder()
+              .blockName(blockName)
+              .box(box)
+              .build()
     }
 
 
@@ -303,18 +314,19 @@ class SprintOneV3Importer implements Importer {
         	throw new IOException("Rotation '" + rotation + "' is not supported.");
       }
 			
-			if (rotation2.equals(DtoRotation.ZERO)) {
-				orientation = Orientation.Rotate0;
-			} else if (rotation2.equals(DtoRotation) {
-				orientation = Orientation.Rotate90;
-			} else if (rotation2.equals(DtoRotation.ZERO) {
-					orientation = Orientation.Rotate180;
-			} else if (rotation2.equals(DtoRotation.ZERO) {
-					orientation = Orientation.Rotate270;
-			} else {
-					Log.error("Rotation '" + rotation + "' is not supported.");
-					throw new IOException("Rotation '" + rotation + "' is not supported.");
-			}
+//			if (rotation2.equals(DtoRotation.ZERO)) {
+//				orientation = Orientation.Rotate0
+//			} else if (rotation2.equals(DtoRotation) {
+//				orientation = Orientation.Rotate90
+//			}
+//			} else if (rotation2.equals(DtoRotation.ZERO) {
+//					orientation = Orientation.Rotate180;
+//			} else if (rotation2.equals(DtoRotation.ZERO) {
+//					orientation = Orientation.Rotate270;
+//			} else {
+//					Log.error("Rotation '" + rotation + "' is not supported.");
+//					throw new IOException("Rotation '" + rotation + "' is not supported.");
+//			}
 
       // load bindery signature
       String binderySignatureId = placement.binderySignatureRef.@id.toString()

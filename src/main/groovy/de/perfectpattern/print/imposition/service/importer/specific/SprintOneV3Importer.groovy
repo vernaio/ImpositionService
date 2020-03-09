@@ -20,6 +20,7 @@ import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.form.DtoFormBinderySignaturePlacement
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoRotation
 import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
 
 import org.slf4j.Logger
@@ -287,7 +288,7 @@ class SprintOneV3Importer implements Importer {
       // orientation
       Orientation orientation
       String rotation = placement.@rotation.toString()
-			String rotation2 = lp0.getRotation();
+			DtoRotation rotation2 = lp0.getRotation();
 
       if (rotation == "ZERO") {
           orientation = Orientation.Rotate0
@@ -301,6 +302,19 @@ class SprintOneV3Importer implements Importer {
 					Log.error("Rotation '" + rotation + "' is not supported.");
         	throw new IOException("Rotation '" + rotation + "' is not supported.");
       }
+			
+			if (rotation2.equals(DtoRotation.ZERO)) {
+				orientation = Orientation.Rotate0;
+			} else if (rotation2.equals(DtoRotation) {
+				orientation = Orientation.Rotate90;
+			} else if (rotation2.equals(DtoRotation.ZERO) {
+					orientation = Orientation.Rotate180;
+			} else if (rotation2.equals(DtoRotation.ZERO) {
+					orientation = Orientation.Rotate270;
+			} else {
+					Log.error("Rotation '" + rotation + "' is not supported.");
+					throw new IOException("Rotation '" + rotation + "' is not supported.");
+			}
 
       // load bindery signature
       String binderySignatureId = placement.binderySignatureRef.@id.toString()

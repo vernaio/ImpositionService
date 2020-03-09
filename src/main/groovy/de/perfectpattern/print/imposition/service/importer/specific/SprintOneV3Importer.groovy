@@ -16,10 +16,14 @@ import de.perfectpattern.print.imposition.model.type.Rectangle
 import de.perfectpattern.print.imposition.model.type.WorkStyle
 import de.perfectpattern.print.imposition.model.type.XYPair
 import de.perfectpattern.print.imposition.util.DimensionUtil
+import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoSignatureRef
+import de.perfectpattern.sPrint.one.v3.api.format.binderySignature.DtoBinderySignature
 import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.form.DtoFormBinderySignaturePlacement
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoBorder
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoFormat
 import de.perfectpattern.sPrint.one.v3.api.format.util.DtoRotation
 import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
 
@@ -355,29 +359,66 @@ class SprintOneV3Importer implements Importer {
      * @param gangJobXml The gangJob xml
      * @return The bindery signature as object.
      */
-    private static BinderySignature readBinderySignature(String id, def positionXml, def gangJobXml, Orientation orientation, boolean flipped) {
+    private BinderySignature readBinderySignature(String id, def positionXml, def gangJobXml, Orientation orientation, boolean flipped) {
         
 			BinderySignature binderySignature = null;
+			
+			// TODO
+			// muss aus Schleife kommen
+			final List<DtoFormBinderySignaturePlacement> lp = dtoGJE.getGangJob().getForm().getPlacementZone().getBinderySignaturePlacements();
+			final DtoFormBinderySignaturePlacement lp0 = lp[0];
+			
+//			final List<DtoBinderySignature> lp2 = dtoGJE.getGangJob().getBinderySignatures().getBinderySignatures();
+//			final DtoBinderySignature lp20 = lp2[0];
+			
+//			for (DtoBinderySignature bs : lp2) {
+//				println(bs.getId());
+//			}
 
       // find bindery signature node
       def bsXml = gangJobXml.binderySignatures.binderySignature.find { it.@id == id }
+			
+			// TODO
+			// Is this codeblock necessary just to reproduce the groovy one-liner?
+			final DtoBinderySignature bsXml2;
+			final List<DtoBinderySignature> dtoBinderySignatureList = dtoGJE.getGangJob().getBinderySignatures().getBinderySignatures();
+			for (DtoBinderySignature bs : dtoBinderySignatureList) {
+				if (bs.getId() == id) {
+					bsXml2 = bs;
+				}
+			}
 
       if (bsXml.size() == 1) {
+				
+					float t1 = (float) bsXml.trimFormat.@height.toFloat();
+					float t1b = (float) bsXml.trimFormat.@width.toFloat();
+					DtoBorder t2 = lp0.getTrim();
+					DtoFormat t3 = lp0.getFormat();
+					Long t3height = t3.getHeight();
+					Long t3width = t3.getWidth();
+					Object t4 = bsXml2.getTrimFormat().getHeight();
 
           // bindery signature size
           float heightDtp = DimensionUtil.micro2dtp(
-                  (float) (bsXml.trimFormat.@height.toFloat() + getTrimHead(positionXml, orientation) + getTrimFoot(positionXml, orientation))
+						(float) (bsXml.trimFormat.@height.toFloat() + getTrimHead(positionXml, orientation) + getTrimFoot(positionXml, orientation))
           )
+					final float heightDtp2 = DimensionUtil.micro2dtp(
+						(float) ((float) bsXml2.getTrimFormat().getHeight() + getTrimHead(positionXml, orientation) + getTrimFoot(positionXml, orientation))
+					)
           float widthDtp = DimensionUtil.micro2dtp(
-                  (float) (bsXml.trimFormat.@width.toFloat() + getTrimFace(positionXml, orientation) + getTrimSpine(positionXml, orientation))
+            (float) (bsXml.trimFormat.@width.toFloat() + getTrimFace(positionXml, orientation) + getTrimSpine(positionXml, orientation))
           )
+					final float widthDtp2 = DimensionUtil.micro2dtp(
+						(float) ((float) bsXml2.getTrimFormat().getWidth() + getTrimFace(positionXml, orientation) + getTrimSpine(positionXml, orientation))
+					)
 
           XYPair binderySignatureSize = new XYPair(widthDtp, heightDtp)
 
           // fold catalog
           String strFoldCatalog = bsXml.signature.signatureTypeRef.@id.toString();
+					final String strFoldCatalog2 = bsXml2.getSignature().getSignatureTypeRef().getId();
 
-          FoldCatalog foldCatalog
+          FoldCatalog foldCatalog;
 
           if (StringUtils.isEmpty(strFoldCatalog)) {
               foldCatalog = FoldCatalog.F2_1
@@ -386,14 +427,31 @@ class SprintOneV3Importer implements Importer {
           }
 
           // bindery signature context
-          Integer bsNumberTotal = null, bsNumberCurrent = null
+          Integer bsNumberTotal = null;
+					Integer bsNumberCurrent = null;
+					Integer bsNumberTotal2 = null;
+					Integer bsNumberCurrent2 = null;
 
           if(bsXml.signature.relatedSignatureRefs.size() > 0) {
+							// TODO
+							// Stimmt das hier? Ich aendere es und streiche .ref
               bsNumberTotal = bsXml.signature.relatedSignatureRefs.ref.size()
+							
+							
+							// TODO
+							// Das hier loeschen
+//							ArrayList<Object> al = new ArrayList();
+							
+//							for (Object a : bsXml.signature.relatedSignatureRefs.ref) {
+//								println(a.toString())
+//								al.add(a)
+//							}
 
               // validate index path for collecting only
               boolean isValid = true
 
+							// TODO
+							// wie wird das schoen ohne groovy?
               bsXml.signature.relatedSignatureRefs.ref.each {
                   if(!it.@indexPath.toString().matches("0( 0)*")) {
                       isValid = false
@@ -410,6 +468,38 @@ class SprintOneV3Importer implements Importer {
                   bsNumberCurrent = indexPath.length
               }
           }
+					
+					if(bsXml2.getSignature().getRelatedSignatureRefs().size() > 0) {
+						bsNumberTotal2 = bsXml2.getSignature().getRelatedSignatureRefs().size();
+
+						// validate index path for collecting only
+						boolean isValid = true
+						
+						for (DtoSignatureRef dtoSR : bsXml2.getSignature().getRelatedSignatureRefs()) {
+							if (!dtoSR.getIndexPath().toString().replace('[', '').replace(']', '').replace(',', '').matches("0( 0)*")) {
+								isValid = false;
+								log.warn("IndexPath '" + it.@indexPath + "' is not supported.");
+							}
+						}
+
+						if(isValid) {
+								String signatureId = bsXml.signature.@id
+								String signatureId2 = bsXml2.getSignature().getId();
+								
+								String[] indexPath = bsXml.signature.relatedSignatureRefs.ref.find {
+										it.@binderySignatureRef == signatureId
+								}.@indexPath.toString().split(" ")
+
+								bsNumberCurrent = indexPath.length
+								
+								for (DtoSignatureRef dtoSR : bsXml2.getSignature().getRelatedSignatureRefs()) {
+									if (dtoSR.getBinderySignatureRef() == bsXml2.getSignature().getId()) {
+										bsNumberCurrent2 = dtoSR.getIndexPath().size();
+										break;
+									}
+								}
+						}
+					}
 
           // priority
           Priority priority = Priority.findByValue(bsXml.@priority.toInteger());

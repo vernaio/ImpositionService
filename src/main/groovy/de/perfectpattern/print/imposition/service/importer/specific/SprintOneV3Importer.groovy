@@ -17,6 +17,7 @@ import de.perfectpattern.print.imposition.model.type.WorkStyle
 import de.perfectpattern.print.imposition.model.type.XYPair
 import de.perfectpattern.print.imposition.util.DimensionUtil
 import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoSignatureRef
+import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoStrippingCell
 import de.perfectpattern.sPrint.one.v3.api.format.binderySignature.DtoBinderySignature
 import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
 import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
@@ -385,6 +386,7 @@ class SprintOneV3Importer implements Importer {
 			for (DtoBinderySignature bs : dtoBinderySignatureList) {
 				if (bs.getId() == id) {
 					bsXml2 = bs;
+					break;
 				}
 			}
 
@@ -483,15 +485,6 @@ class SprintOneV3Importer implements Importer {
 						}
 
 						if(isValid) {
-								String signatureId = bsXml.signature.@id
-								String signatureId2 = bsXml2.getSignature().getId();
-								
-								String[] indexPath = bsXml.signature.relatedSignatureRefs.ref.find {
-										it.@binderySignatureRef == signatureId
-								}.@indexPath.toString().split(" ")
-
-								bsNumberCurrent = indexPath.length
-								
 								for (DtoSignatureRef dtoSR : bsXml2.getSignature().getRelatedSignatureRefs()) {
 									if (dtoSR.getBinderySignatureRef() == bsXml2.getSignature().getId()) {
 										bsNumberCurrent2 = dtoSR.getIndexPath().size();
@@ -506,21 +499,35 @@ class SprintOneV3Importer implements Importer {
 
           // extract signature cells
           List<SignatureCell> signatureCells;
+          List<SignatureCell> signatureCells2;
 
-          final Border innerContentFrame;
+          Border innerContentFrame;
 
           if (FoldCatalog.F2_1 == foldCatalog) {
-              signatureCells = new ArrayList<>(1)
-              signatureCells.add(createSignatureCellF2(bsXml, positionXml, orientation))
+              signatureCells = new ArrayList<>(1);
+              signatureCells.add(createSignatureCellF2(bsXml, positionXml, orientation));
 
-              innerContentFrame=new Border(0L);
+              innerContentFrame = new Border(0L);
 
           } else if (FoldCatalog.F4_1 == foldCatalog) {
               signatureCells = new ArrayList<>(bsXml.signature.strippingCells.strippingCell.size())
+							signatureCells2 = new ArrayList<>(bsXml2.getSignature().getStrippingCells().size());
 
-              // row index 0
+              // row index 0 and 1
               def col_0 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }
-
+							final DtoStrippingCell col_02;
+							// TODO
+							// this variable cannot be final regarding to groovy compiler?
+							DtoStrippingCell col_12;
+							for (DtoStrippingCell dtoSC : bsXml2.getSignature().getStrippingCells()) {
+								if (dtoSC.getColIndex() == 0) {
+									col_02 = dtoSC;
+								}
+								if (dtoSC.getColIndex() == 1) {
+									col_12 = dtoSC;
+								}
+							}
+							
               signatureCells.add(
                       createSignatureCellF4(col_0)
               )
@@ -531,6 +538,18 @@ class SprintOneV3Importer implements Importer {
               signatureCells.add(
                       createSignatureCellF4(col_1)
               )
+							
+							// TODO
+							// round still necessary when using API?
+							Long a = Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@headTrim.toFloat()).longValue();
+							Long b = Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@footTrim.toFloat()).longValue();
+							Long c = Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@faceTrim.toFloat()).longValue();
+							Long d = Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }.@faceTrim.toFloat()).longValue();
+							
+							Long a2 = col_02.getHeadTrim();
+							Long b2 = col_02.getFootTrim();
+							Long c2 = col_02.getFaceTrim();
+							Long d2 = col_12.getFaceTrim();
 
               innerContentFrame=new Border(
                       Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }.@headTrim.toFloat()).longValue(),
@@ -539,10 +558,12 @@ class SprintOneV3Importer implements Importer {
                       Math.round(bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }.@faceTrim.toFloat()).longValue());
 
           } else {
-
               log.error("Fold Schema is not supported.")
               throw new Exception("FoldSchema is not supported.")
           }
+					
+					// TODO
+					// here is still some groovy
 
           // create bindery signature object
           binderySignature = new BinderySignature.Builder()
@@ -569,14 +590,35 @@ class SprintOneV3Importer implements Importer {
      * @param positionXml The Position (BindeySignaturesPlacement) XML snippet.
      * @return The extracted information of the SignatureCell
      */
-    private static SignatureCell createSignatureCellF2(def bsXml, def positionXml, Orientation orientation) {
+    private SignatureCell createSignatureCellF2(def bsXml, def positionXml, Orientation orientation) {
+			
+			// TODO
+			// muss uebergeben werden
+				final DtoBinderySignature bsXml2;
+			final List<DtoBinderySignature> dtoBinderySignatureList = dtoGJE.getGangJob().getBinderySignatures().getBinderySignatures();
+			for (DtoBinderySignature bs : dtoBinderySignatureList) {
+				if (bs.getId() == "768922-115_8-11") {
+					bsXml2 = bs;
+					break;
+				}
+			}
 
         // bleed
-        float bleedFace = DimensionUtil.micro2dtp(bsXml.bleed.@right.toFloat())
-        float bleedFoot = DimensionUtil.micro2dtp(bsXml.bleed.@bottom.toFloat())
-        float bleedHead = DimensionUtil.micro2dtp(bsXml.bleed.@top.toFloat())
-        float bleedSpine = DimensionUtil.micro2dtp(bsXml.bleed.@left.toFloat())
+        float bleedFace = DimensionUtil.micro2dtp(bsXml.bleed.@right.toFloat());
+        float bleedFoot = DimensionUtil.micro2dtp(bsXml.bleed.@bottom.toFloat());
+        float bleedHead = DimensionUtil.micro2dtp(bsXml.bleed.@top.toFloat());
+        float bleedSpine = DimensionUtil.micro2dtp(bsXml.bleed.@left.toFloat());
+				
+				
+				
+				final float bleedFace2 = DimensionUtil.micro2dtp((float) bsXml2.getBleed().getRight());
+				final float bleedFoot2 = DimensionUtil.micro2dtp((float) bsXml2.getBleed().getBottom());
+				final float bleedHead2 = DimensionUtil.micro2dtp((float) bsXml2.getBleed().getTop());
+				final float bleedSpine2 = DimensionUtil.micro2dtp((float) bsXml2.getBleed().getLeft());
 
+				
+				// TODO
+				// here is still groovy maybe
         // trim
         float trimFace = DimensionUtil.micro2dtp(getTrimFace(positionXml, orientation))
         float trimFoot = DimensionUtil.micro2dtp(getTrimFoot(positionXml, orientation))
@@ -587,7 +629,14 @@ class SprintOneV3Importer implements Importer {
                 DimensionUtil.micro2dtp(bsXml.trimFormat.@width.toFloat()),
                 DimensionUtil.micro2dtp(bsXml.trimFormat.@height.toFloat())
         )
+				
+				final XYPair trimSize2 = new XYPair(
+					DimensionUtil.micro2dtp((float) bsXml2.getTrimFormat().getWidth()),
+					DimensionUtil.micro2dtp((float) bsXml2.getTrimFormat().getHeight())
+				)
 
+				// TODO
+				// positionXml without groovy, see all below
         // pages
         RunList pageFront = new RunList(
                 positionXml.selectedPrintData.frontPage.@pdfUrl.toString(),

@@ -29,7 +29,7 @@ public class BasicTest {
 		
 		FileInputStream fis = null;
 		try {
-			fis = new FileInputStream(new File("C:\\Users\\Alex\\pp\\PIMP\\PIMP-48\\clone.xml"));
+			fis = new FileInputStream(new File("C:\\Users\\Alex\\pp\\PIMP\\48\\clone.xml"));
 		} catch(FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,7 +66,7 @@ public class BasicTest {
 
 	private static void writeSpoInstance(Object o) {
 		try {
-			FileOutputStream fio = new FileOutputStream(new File ("C:\\Users\\Alex\\pp\\PIMP\\PIMP-48\\clone2.xml"));
+			FileOutputStream fio = new FileOutputStream(new File ("C:\\Users\\Alex\\pp\\PIMP\\48\\clone2.xml"));
 			xc.marshal(o, true, fio);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

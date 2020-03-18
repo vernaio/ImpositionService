@@ -13,7 +13,7 @@ jobs:
     name: Increment Tag Version
     steps:
     - name: Increment version
-      id: version   
-      uses: alxppgithub/pinf-69@master
+      id: version
+      uses: perfectpattern/IncrementGithubAction@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

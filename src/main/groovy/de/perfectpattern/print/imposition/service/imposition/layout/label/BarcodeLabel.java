@@ -1,5 +1,6 @@
 package de.perfectpattern.print.imposition.service.imposition.layout.label;
 
+import com.lowagie.text.DocumentException;
 import com.lowagie.text.Image;
 import com.lowagie.text.pdf.Barcode128;
 import com.lowagie.text.pdf.PdfContentByte;
@@ -50,7 +51,12 @@ public class BarcodeLabel extends AbstractLabel {
         Image imgBarcode = barcode.createImageWithBarcode(cb, Color.BLACK.cmyk(), Color.WHITE.cmyk());
         imgBarcode.setAbsolutePosition(PADDING_SIDE, PADDING_BOTTOM);
         imgBarcode.scaleAbsoluteWidth(getWidth() - 2 * PADDING_SIDE);
-        template.addImage(imgBarcode);
+        // added try catch block to work with spo api fat jar
+        try {
+        	template.addImage(imgBarcode);
+        } catch (DocumentException e) {
+        	System.out.println("Error in BarcodeLabel class, template.addImage");
+        }
 
 
         return template;

@@ -35,13 +35,13 @@ repositories {
 	mavenCentral()
 
 	maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-	maven {
-		url mavenUrl
-		credentials {
-			username mavenUser
-			password mavenPassword
-		}
-	}
+//	maven {
+//		url mavenUrl
+//		credentials {
+//			username mavenUser
+//			password mavenPassword
+//		}
+//	}
 }
 
 dependencies {
@@ -53,7 +53,7 @@ dependencies {
 	implementation 'commons-io:commons-io:+'
 	implementation 'org.jolokia:jolokia-core:+'
 	implementation 'io.hawt:hawtio-springboot:+'
-	implementation 'de.perfectpattern:sPrint.one.v3.api:665'
+//	implementation 'de.perfectpattern:sPrint.one.v3.api:665'
 	implementation 'org.reflections:reflections:0.9.10'
 	implementation 'org.eclipse.persistence:eclipselink:2.6.0-RC1'
 	implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
@@ -61,4 +61,6 @@ dependencies {
 	implementation 'org.cip4.lib.xjdf:xJdfLib:+'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	implementation fileTree(dir: 'jars', include: '*.jar')
 }

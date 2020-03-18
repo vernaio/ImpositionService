@@ -22,11 +22,13 @@ FROM openjdk:8u201-jdk-alpine3.9 as java-builder
 RUN apk add imagemagick git \
     && mkdir -p /work/src \
     && mkdir -p /work/gradle \
-    && mkdir -p /work/.git
+    && mkdir -p /work/.git \
+    && mkdir -p /work/jars
 
 COPY .git /work/.git
 COPY src /work/src
 COPY gradle /work/gradle
+COPY jars /work/jars
 COPY build.gradle settings.gradle gradlew /work/
 
 RUN rm -rf /work/src/main/resources/static

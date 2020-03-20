@@ -59,6 +59,7 @@ dependencies {
 	implementation 'javax.ws.rs:javax.ws.rs-api:2.0.1'
 //	implementation 'de.perfectpattern:sPrint.one.v3.webService:665'
 	implementation 'org.cip4.lib.xjdf:xJdfLib:+'
+	implementation 'javax.mail:mail:+'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	

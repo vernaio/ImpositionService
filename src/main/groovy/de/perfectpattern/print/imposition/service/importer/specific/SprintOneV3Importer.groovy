@@ -29,6 +29,8 @@ import de.perfectpattern.sPrint.one.v3.api.format.util.DtoFormat
 import de.perfectpattern.sPrint.one.v3.api.format.util.DtoRotation
 import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
 
+import javax.management.RuntimeErrorException
+
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
@@ -102,6 +104,12 @@ class SprintOneV3Importer implements Importer {
     @Override
     Sheet importDocument(byte[] bytes) {
         log.info("Sheet Bleed: " + sheetBleedMm + " mm")
+				
+				// Newly added:
+				if (!acceptDocument(bytes)) {
+					log.error("Document was not accepted!");
+					throw new RuntimeErrorException("Document was not accepted!")
+				}
 
 //        // parse
 //        def xml = new XmlSlurper().parse(new ByteArrayInputStream(bytes))

@@ -77,9 +77,20 @@ class SprintOneV3Importer implements Importer {
     boolean acceptDocument(byte[] bytes) {
         boolean result;
 				
+				if (bytes.length < 2) {
+					return false;
+				}
+				
 				ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
 				XmlContext xc = new XmlContextProvider().get();
-				Object umo = xc.unmarshal(bais);
+				final Object umo;
+				try { 
+					umo = xc.unmarshal(bais);
+				} catch (RuntimeException e) {
+					log.error("Input could not be unmarshaled");
+//					throw new RuntimeException("Input could not be unmarshaled");
+					return false;
+				}
 				if (umo instanceof DtoGangJobEvent) {
 					dtoGJE = (DtoGangJobEvent) umo;
 					result = true;
@@ -151,9 +162,17 @@ class SprintOneV3Importer implements Importer {
 				//partId = 
 //        int partLabel = Integer.parseInt(gangJobXml.'..'.@label.toString().toLowerCase().replace("job ", ""))
 //        String sheetId = String.format("%04d-%s", partLabel, partId)
-				final String partId = dtoGJE.getId().substring(0, 4);
-				final String partLabel = dtoGJE.getLabel().split(" ")[1];
-				final String sheetId = String.format("%s-%s", partLabel, partId);
+				final String partId = dtoGJE.getId().substring(0, 4).toUpperCase();
+				
+				final int partLabel;
+				if (dtoGJE.getLabel().contains(" ")) {
+					partLabel = Integer.parseInt(dtoGJE.getLabel().split(" ")[1]);
+				} else {
+					partLabel = Integer.parseInt(dtoGJE.getLabel());
+				}
+				
+				
+				final String sheetId = String.format("%04d-%s", partLabel, partId);
 
         // extract layoutTaskId
 //        String layoutTaskId;

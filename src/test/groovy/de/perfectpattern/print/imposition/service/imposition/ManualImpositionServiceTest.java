@@ -13,9 +13,9 @@ public class ManualImpositionServiceTest extends ImpositionServiceTest {
     /**
      * Single sided job.
      */
-    @Test
-    public void manual_imposition_form_1() throws Exception {
-        super.imposition_form_1();
-    }
+//    @Test
+//    public void manual_imposition_form_1() throws Exception {
+//        super.imposition_form_1();
+//    }
 
 }

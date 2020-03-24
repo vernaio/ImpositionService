@@ -96,189 +96,190 @@ public class ImpositionServiceTest {
      *
      * @throws Exception
      */
-    @Test
+//    @Test
 //    public void imposition_form_1() throws Exception {
 //        genericFormTest("form-1");
 //    }
 
-    /**
-     * Generic test method for forms.
-     *
-     * @param formName The forms name.
-     */
-    private void genericFormTest(String formName) throws Exception {
+    
+//    /**
+//     * Generic test method for forms.
+//     *
+//     * @param formName The forms name.
+//     */
+//    private void genericFormTest(String formName) throws Exception {
+//
+//        // arrange
+//        byte[] xml = getModifiedEventXml(formName);
+//        Sheet sheet = spoV3Importer.importDocument(xml);
+//
+//        // act
+//        long startTime = System.currentTimeMillis();
+//        byte[] pdf = impositionService.impose(sheet);
+//        long totalDuration = System.currentTimeMillis() - startTime;
+//
+//        // assert
+//        System.out.println("Total Duration (" + formName + "): " + totalDuration + " ms");
+//
+//        byte[] bytesReference_p1 = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/page-1-reference.jpg").toURI());
+//        byte[] bytesReference_p2 = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/page-2-reference.jpg").toURI());
+//
+//        assertPdf(pdf, bytesReference_p1, bytesReference_p2);
+//    }
 
-        // arrange
-        byte[] xml = getModifiedEventXml(formName);
-        Sheet sheet = spoV3Importer.importDocument(xml);
+//    /**
+//     * Helper method for getting a modified Event XML.
+//     *
+//     * @param formName The name of the form.
+//     * @return The modified xml.
+//     */
+//    private byte[] getModifiedEventXml(String formName) throws Exception {
+//        byte[] xml = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/event.xml").toURI());
+//        Path dir = Paths.get(ImpositionServiceTest.class.getResource(RES_ROOT + formName).toURI());
+//
+//        List<Path> files = Files.list(dir).collect(Collectors.toList());
+//
+//        for (Path file : files) {
+//            String fileName = file.getFileName().toString();
+//
+//            if (fileName.startsWith("job_")) {
+//                xml = new String(xml).replaceAll(fileName.substring("job_".length()), file.toString()).getBytes();
+//            }
+//        }
+//
+//        return xml;
+//    }
 
-        // act
-        long startTime = System.currentTimeMillis();
-        byte[] pdf = impositionService.impose(sheet);
-        long totalDuration = System.currentTimeMillis() - startTime;
+//    /**
+//     * Asserts the result of a pdf against a jpeg reference.
+//     *
+//     * @param pdf       The pdf to be asserted
+//     * @param jpgRef_p1 Page one of the reference image
+//     * @param jpgRef_p2 Page one of the reference image
+//     */
+//    private void assertPdf(byte[] pdf, byte[] jpgRef_p1, byte[] jpgRef_p2) throws Exception {
+//
+//        if (manualCheck) {
+//            showPdfResult(pdf);
+//            return;
+//        }
+//
+//        // auto test
+//        final int difference_1, difference_2;
+//        long startTime = System.currentTimeMillis();
+//
+//        // prepare files
+//        Path dir = FILE_ROOT.resolve(name.getMethodName());
+//        Files.createDirectories(dir);
+//        Path pdfOriginal = dir.resolve("original.pdf");
+//        Files.write(pdfOriginal, pdf);
+//
+//        // process page 1
+//        Path pathReference_p1 = dir.resolve("page-1-reference.jpg");
+//        Files.write(pathReference_p1, jpgRef_p1);
+//
+//        Path pathGenerated_p1 = dir.resolve("page-1-generated.jpg");
+//        imConvert(pdfOriginal, pathGenerated_p1, 0);
+//
+//        Path pathDiff_p1 = dir.resolve("page-1-DIFF.png");
+//        difference_1 = imCompare(pathGenerated_p1, pathReference_p1, pathDiff_p1);
+//
+//        // process page 2
+//        if (jpgRef_p2 != null) {
+//            Path pathReference_p2 = dir.resolve("page-2-reference.jpg");
+//            Files.write(pathReference_p2, jpgRef_p2);
+//
+//            Path pathGenerated_p2 = dir.resolve("page-2-generated.jpg");
+//            imConvert(pdfOriginal, pathGenerated_p2, 1);
+//
+//            Path pathDiff_p2 = dir.resolve("page-2-DIFF.png");
+//            difference_2 = imCompare(pathGenerated_p2, pathReference_p2, pathDiff_p2);
+//        } else {
+//            difference_2 = -1;
+//        }
+//
+//        // write result
+//        String text = "";
+//        text += "Report:\n";
+//        text += "=======\n";
+//        text += "Difference Page 1: " + difference_1 + "\n";
+//        text += "Difference Page 2: " + difference_2 + "\n";
+//        text += "\n";
+//        text += "Duration: " + (System.currentTimeMillis() - startTime) + " ms\n";
+//        text += "Timestamp: " + dateFormat.format(new Date()) + "\n";
+//        text += "\n";
+//        text += "\n";
+//        text += "ImageMagick Details:\n";
+//        text += "====================\n";
+//        text += imVersion();
+//
+//        if (difference_1 > 0 || difference_2 > 0) {
+//            FileUtils.writeByteArrayToFile(dir.resolve("report (ERROR).txt").toFile(), text.getBytes());
+//
+//            fail("PDF Diff check has failed. See: " + dir.toString());
+//        } else {
+//            FileUtils.writeByteArrayToFile(dir.resolve("report (OK).txt").toFile(), text.getBytes());
+//        }
+//    }
 
-        // assert
-        System.out.println("Total Duration (" + formName + "): " + totalDuration + " ms");
-
-        byte[] bytesReference_p1 = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/page-1-reference.jpg").toURI());
-        byte[] bytesReference_p2 = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/page-2-reference.jpg").toURI());
-
-        assertPdf(pdf, bytesReference_p1, bytesReference_p2);
-    }
-
-    /**
-     * Helper method for getting a modified Event XML.
-     *
-     * @param formName The name of the form.
-     * @return The modified xml.
-     */
-    private byte[] getModifiedEventXml(String formName) throws Exception {
-        byte[] xml = IOUtils.toByteArray(ImpositionServiceTest.class.getResource(RES_ROOT + formName + "/event.xml").toURI());
-        Path dir = Paths.get(ImpositionServiceTest.class.getResource(RES_ROOT + formName).toURI());
-
-        List<Path> files = Files.list(dir).collect(Collectors.toList());
-
-        for (Path file : files) {
-            String fileName = file.getFileName().toString();
-
-            if (fileName.startsWith("job_")) {
-                xml = new String(xml).replaceAll(fileName.substring("job_".length()), file.toString()).getBytes();
-            }
-        }
-
-        return xml;
-    }
-
-    /**
-     * Asserts the result of a pdf against a jpeg reference.
-     *
-     * @param pdf       The pdf to be asserted
-     * @param jpgRef_p1 Page one of the reference image
-     * @param jpgRef_p2 Page one of the reference image
-     */
-    private void assertPdf(byte[] pdf, byte[] jpgRef_p1, byte[] jpgRef_p2) throws Exception {
-
-        if (manualCheck) {
-            showPdfResult(pdf);
-            return;
-        }
-
-        // auto test
-        final int difference_1, difference_2;
-        long startTime = System.currentTimeMillis();
-
-        // prepare files
-        Path dir = FILE_ROOT.resolve(name.getMethodName());
-        Files.createDirectories(dir);
-        Path pdfOriginal = dir.resolve("original.pdf");
-        Files.write(pdfOriginal, pdf);
-
-        // process page 1
-        Path pathReference_p1 = dir.resolve("page-1-reference.jpg");
-        Files.write(pathReference_p1, jpgRef_p1);
-
-        Path pathGenerated_p1 = dir.resolve("page-1-generated.jpg");
-        imConvert(pdfOriginal, pathGenerated_p1, 0);
-
-        Path pathDiff_p1 = dir.resolve("page-1-DIFF.png");
-        difference_1 = imCompare(pathGenerated_p1, pathReference_p1, pathDiff_p1);
-
-        // process page 2
-        if (jpgRef_p2 != null) {
-            Path pathReference_p2 = dir.resolve("page-2-reference.jpg");
-            Files.write(pathReference_p2, jpgRef_p2);
-
-            Path pathGenerated_p2 = dir.resolve("page-2-generated.jpg");
-            imConvert(pdfOriginal, pathGenerated_p2, 1);
-
-            Path pathDiff_p2 = dir.resolve("page-2-DIFF.png");
-            difference_2 = imCompare(pathGenerated_p2, pathReference_p2, pathDiff_p2);
-        } else {
-            difference_2 = -1;
-        }
-
-        // write result
-        String text = "";
-        text += "Report:\n";
-        text += "=======\n";
-        text += "Difference Page 1: " + difference_1 + "\n";
-        text += "Difference Page 2: " + difference_2 + "\n";
-        text += "\n";
-        text += "Duration: " + (System.currentTimeMillis() - startTime) + " ms\n";
-        text += "Timestamp: " + dateFormat.format(new Date()) + "\n";
-        text += "\n";
-        text += "\n";
-        text += "ImageMagick Details:\n";
-        text += "====================\n";
-        text += imVersion();
-
-        if (difference_1 > 0 || difference_2 > 0) {
-            FileUtils.writeByteArrayToFile(dir.resolve("report (ERROR).txt").toFile(), text.getBytes());
-
-            fail("PDF Diff check has failed. See: " + dir.toString());
-        } else {
-            FileUtils.writeByteArrayToFile(dir.resolve("report (OK).txt").toFile(), text.getBytes());
-        }
-    }
-
-    /**
-     * Helper method for converting PDFs.
-     */
-    private void imConvert(Path pathOriginal, Path pathTarget, int page) throws Exception {
-        ProcessBuilder
-                pb =
-                new ProcessBuilder("convert", "-shave", "50x0", "-density", "150", "-quality", "100", pathOriginal.toString() + "[" + page + "]", pathTarget.toString());
-        pb.start().waitFor();
-    }
+//    /**
+//     * Helper method for converting PDFs.
+//     */
+//    private void imConvert(Path pathOriginal, Path pathTarget, int page) throws Exception {
+//        ProcessBuilder
+//                pb =
+//                new ProcessBuilder("convert", "-shave", "50x0", "-density", "150", "-quality", "100", pathOriginal.toString() + "[" + page + "]", pathTarget.toString());
+//        pb.start().waitFor();
+//    }
 
 
-    /**
-     * Helper method for comparing images.
-     */
-    private int imCompare(Path pathSrc, Path pathRef, Path pathDiff) throws Exception {
-        ProcessBuilder pb = new ProcessBuilder(
-                "compare",
-                "-metric",
-                "pae",
-                pathSrc.toString(),
-                pathRef.toString(),
-                pathDiff.toString()
-        );
+//    /**
+//     * Helper method for comparing images.
+//     */
+//    private int imCompare(Path pathSrc, Path pathRef, Path pathDiff) throws Exception {
+//        ProcessBuilder pb = new ProcessBuilder(
+//                "compare",
+//                "-metric",
+//                "pae",
+//                pathSrc.toString(),
+//                pathRef.toString(),
+//                pathDiff.toString()
+//        );
+//
+//        Process process = pb.redirectErrorStream(true).start();
+//        byte[] result = IOUtils.toByteArray(process.getInputStream());
+//        process.waitFor();
+//
+//        String str = new String(result);
+//        str = str.substring(0, str.indexOf(" "));
+//        return Integer.parseInt(str);
+//    }
 
-        Process process = pb.redirectErrorStream(true).start();
-        byte[] result = IOUtils.toByteArray(process.getInputStream());
-        process.waitFor();
+//    /**
+//     * Helper method for getting ImageMagick version.
+//     */
+//    private String imVersion() throws Exception {
+//        ProcessBuilder pb = new ProcessBuilder("compare", "--version");
+//        Process process = pb.redirectErrorStream(true).start();
+//        byte[] version = IOUtils.toByteArray(process.getInputStream());
+//        process.waitFor();
+//
+//        return new String(version);
+//    }
 
-        String str = new String(result);
-        str = str.substring(0, str.indexOf(" "));
-        return Integer.parseInt(str);
-    }
-
-    /**
-     * Helper method for getting ImageMagick version.
-     */
-    private String imVersion() throws Exception {
-        ProcessBuilder pb = new ProcessBuilder("compare", "--version");
-        Process process = pb.redirectErrorStream(true).start();
-        byte[] version = IOUtils.toByteArray(process.getInputStream());
-        process.waitFor();
-
-        return new String(version);
-    }
-
-    /**
-     * Helper class for showing a PDF Document.
-     *
-     * @param result The PDF Result as byte stream.
-     */
-    private void showPdfResult(byte[] result) throws Exception {
-        Path path = Files.createTempFile("pdf-comparision-", ".pdf");
-        Files.write(path, result);
-
-        String command = "evince " + path.toAbsolutePath();
-        Process p = Runtime.getRuntime().exec(command);
-        p.waitFor();
-
-        Files.delete(path);
-    }
+//    /**
+//     * Helper class for showing a PDF Document.
+//     *
+//     * @param result The PDF Result as byte stream.
+//     */
+//    private void showPdfResult(byte[] result) throws Exception {
+//        Path path = Files.createTempFile("pdf-comparision-", ".pdf");
+//        Files.write(path, result);
+//
+//        String command = "evince " + path.toAbsolutePath();
+//        Process p = Runtime.getRuntime().exec(command);
+//        p.waitFor();
+//
+//        Files.delete(path);
+//    }
 }

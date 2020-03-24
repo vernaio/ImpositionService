@@ -86,12 +86,14 @@ public class PPFServiceImplTest {
                 .cuttingParams(cuttingParams)
                 .build();
 
+        
         // act
         byte[] result = ppfService.createPPF(sheet);
 
         // assert
         System.out.print(new String(result));
 
-        assertEquals("Result is wrong.", new String(expected), new String(result));
+        // added replaceAll method to have linux newlines instead of windows newlines
+        assertEquals("Result is wrong.", new String(expected), new String(result).replaceAll("\\r\\n", "\n"));
     }
 }

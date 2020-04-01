@@ -1,7 +1,7 @@
 # build client
-FROM node:current-alpine as client-builder
+FROM alpine:3.11 as client-builder
 
-RUN apk add --no-cache git \
+RUN apk add --no-cache git npm \
     && mkdir /work \
     && chown node:node /work
 

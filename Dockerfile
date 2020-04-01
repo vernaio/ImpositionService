@@ -2,13 +2,10 @@
 FROM alpine:3.11 as client-builder
 
 RUN apk add --no-cache git npm \
-    && mkdir /work \
-    && chown node:node /work
+    && mkdir /work
 
-USER node
-
-COPY --chown=node:node ["src", "/work/src"]
-COPY --chown=node:node ["README.md", "/work/"]
+COPY ["src", "/work/src"]
+COPY ["README.md", "/work/"]
 WORKDIR /work/src/main/client
 #RUN ls -l
 

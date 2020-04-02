@@ -11,6 +11,7 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class ImporterServiceImplTest {
     }
 
     @Test
-    public void importDocument() {
+    public void importDocument() throws IOException, Exception {
 
         // arrange
         byte[] bytes = "My Document".getBytes();

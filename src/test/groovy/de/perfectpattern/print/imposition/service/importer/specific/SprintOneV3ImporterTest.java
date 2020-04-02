@@ -80,7 +80,7 @@ public class SprintOneV3ImporterTest {
     }
 
     //@Test(expected = NumberFormatException.class)
-    public void read_0() throws IOException {
+    public void read_0() throws Exception {
 
         // arrange
         byte[] bytes = IOUtils.toByteArray(SprintOneV3ImporterTest.class.getResource(RES_ROOT + "event-1.xml"));
@@ -93,7 +93,7 @@ public class SprintOneV3ImporterTest {
     }
 
     //@Test(expected = NullPointerException.class)
-    public void read_00() throws IOException {
+    public void read_00() throws Exception {
 
         // arrange
         byte[] bytes = IOUtils.toByteArray(SprintOneV3ImporterTest.class.getResource(RES_ROOT + "event-1.xml"));
@@ -106,7 +106,7 @@ public class SprintOneV3ImporterTest {
     }
 
     //@Test
-    public void read_1() throws IOException {
+    public void read_1() throws Exception {
 
         // arrange
         byte[] bytes = IOUtils.toByteArray(SprintOneV3ImporterTest.class.getResource(RES_ROOT + "event-1.xml"));

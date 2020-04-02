@@ -44,7 +44,7 @@ import org.springframework.util.StringUtils;
  * The Importer for a Sprint One V3 file format.
  */
 @Controller
-class SprintOneV3Importer implements Importer {
+public class SprintOneV3Importer implements Importer {
 
     private static final Logger log = LoggerFactory.getLogger(SprintOneV3Importer.class);
 
@@ -67,7 +67,7 @@ class SprintOneV3Importer implements Importer {
     /**
      * Default constructor.
      */
-    SprintOneV3Importer() {
+    public SprintOneV3Importer() {
     }
 
 		// Alex edit:
@@ -113,7 +113,7 @@ class SprintOneV3Importer implements Importer {
 		// TODO
 		// kann ohne byte bytes sein
     @Override
-    public Sheet importDocument(byte[] bytes) throws Exception {
+    public Sheet importDocument(byte[] bytes) throws RuntimeException, IOException {
         log.info("Sheet Bleed: " + sheetBleedMm + " mm");
 				
 				// Newly added:
@@ -290,9 +290,10 @@ class SprintOneV3Importer implements Importer {
      * @param placement The position XML to be imported.
      * @param gangJobXml The GangJob XML.
      * @return The Position object.
-     * @throws Exception 
+     * @throws RuntimeException 
+     * @throws IOException 
      */
-    private Position readPosition(DtoFormBinderySignaturePlacement dtoFBSP) throws Exception {
+    private Position readPosition(DtoFormBinderySignaturePlacement dtoFBSP) throws RuntimeException, IOException {
 			
 			// TODO
 			// muss aus Schleife kommen
@@ -401,9 +402,8 @@ class SprintOneV3Importer implements Importer {
      * @param id The identifier of the bindery signature.
      * @param gangJobXml The gangJob xml
      * @return The bindery signature as object.
-     * @throws Exception
      */
-    private BinderySignature readBinderySignature(String binderySignatureId, DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation, boolean flipped) throws Exception {
+    private BinderySignature readBinderySignature(String binderySignatureId, DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation, boolean flipped) {
         
 //			BinderySignature binderySignature = null;
 			
@@ -628,7 +628,7 @@ class SprintOneV3Importer implements Importer {
 
       } else {
           log.error("Fold Schema is not supported.");
-          throw new Exception("FoldSchema is not supported.");
+          throw new RuntimeException("FoldSchema is not supported.");
       }
 
       // create bindery signature object

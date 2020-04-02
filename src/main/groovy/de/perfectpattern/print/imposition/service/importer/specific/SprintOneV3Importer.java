@@ -184,7 +184,7 @@ public class SprintOneV3Importer implements Importer {
 //            layoutTaskId = (sourceRef =~ /[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/)[0];
           layoutTaskId = sourceRef.split("layoutTasks/id=")[1].split("/result")[0];
         } else {
-        	layoutTaskId = "";
+        	layoutTaskId = null;
         }
 
         // create sheet
@@ -426,7 +426,9 @@ public class SprintOneV3Importer implements Importer {
 			DtoBinderySignature bsXml = null;
 			final List<DtoBinderySignature> dtoBinderySignatureList = dtoGJE.getGangJob().getBinderySignatures().getBinderySignatures();
 			for (DtoBinderySignature bs : dtoBinderySignatureList) {
-				if (bs.getId() == binderySignatureId) {
+				String a = bs.getId();
+				String b = binderySignatureId;
+				if (bs.getId().equals(binderySignatureId)) {
 					bsXml = bs;
 					break;
 				}
@@ -526,7 +528,7 @@ public class SprintOneV3Importer implements Importer {
 				boolean isValid = true;
 				
 				for (DtoSignatureRef dtoSR : bsXml.getSignature().getRelatedSignatureRefs()) {
-					final String indexPath = dtoSR.getIndexPath().toString().replaceAll("[", "").replaceAll("]", "").replaceAll(",", "");
+					final String indexPath = dtoSR.getIndexPath().toString().replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", "");
 					if (!indexPath.matches("0( 0)*")) {
 						isValid = false;
 						log.warn("IndexPath '" + indexPath + "' is not supported.");
@@ -535,7 +537,7 @@ public class SprintOneV3Importer implements Importer {
 
 				if(isValid) {
 						for (DtoSignatureRef dtoSR : bsXml.getSignature().getRelatedSignatureRefs()) {
-							if (dtoSR.getBinderySignatureRef() == bsXml.getSignature().getId()) {
+							if (dtoSR.getBinderySignatureRef().equals(bsXml.getSignature().getId())) {
 								bsNumberCurrent = dtoSR.getIndexPath().size();
 								break;
 							}

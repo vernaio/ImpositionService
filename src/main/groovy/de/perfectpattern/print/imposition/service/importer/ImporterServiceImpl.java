@@ -5,6 +5,7 @@ import de.perfectpattern.print.imposition.service.importer.specific.Importer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ public class ImporterServiceImpl implements ImporterService {
 
 
     @Override
-    public Sheet importDocument(byte[] bytes) {
+    public Sheet importDocument(byte[] bytes) throws IOException, Exception {
         Sheet sheet = null;
 
 

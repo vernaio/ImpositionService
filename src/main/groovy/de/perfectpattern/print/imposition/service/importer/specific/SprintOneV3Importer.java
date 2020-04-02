@@ -475,10 +475,10 @@ class SprintOneV3Importer implements Importer {
 //      }
 
       // bindery signature context
-      final Integer bsNumberTotal;
+      Integer bsNumberTotal = null;
 			// TODO
 			// cannot make this final according to groovy compiler
-			Integer bsNumberCurrent ;
+			Integer bsNumberCurrent = null ;
 //			Integer bsNumberTotal2 = null;
 //			Integer bsNumberCurrent2 = null;
 
@@ -569,14 +569,14 @@ class SprintOneV3Importer implements Importer {
 
           // row index 0 and 1
 //          def col_0 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "0" }
-					final DtoStrippingCell col_0;
+					DtoStrippingCell col_0 = null;
 					// TODO
 					// this variable cannot be final regarding to groovy compiler?
-					DtoStrippingCell col_1;
-					final boolean gotCol_0;
+					DtoStrippingCell col_1 = null;
+					boolean gotCol_0 = false;
 					// TODO
 					// this variable cannot be final regarding to groovy compiler?
-					boolean gotCol_1;
+					boolean gotCol_1 = false;
 					for (DtoStrippingCell dtoSC : bsXml.getSignature().getStrippingCells()) {
 						if (dtoSC.getColIndex() == 0) {
 							col_0 = dtoSC;
@@ -686,10 +686,10 @@ class SprintOneV3Importer implements Importer {
 				// TODO
 				// here is still groovy maybe
         // trim
-        float trimFace = DimensionUtil.micro2dtp(getTrimFace(dtoFBSP, orientation))
-        float trimFoot = DimensionUtil.micro2dtp(getTrimFoot(dtoFBSP, orientation))
-        float trimHead = DimensionUtil.micro2dtp(getTrimHead(dtoFBSP, orientation))
-        float trimSpine = DimensionUtil.micro2dtp(getTrimSpine(dtoFBSP, orientation))
+        float trimFace = DimensionUtil.micro2dtp(getTrimFace(dtoFBSP, orientation));
+        float trimFoot = DimensionUtil.micro2dtp(getTrimFoot(dtoFBSP, orientation));
+        float trimHead = DimensionUtil.micro2dtp(getTrimHead(dtoFBSP, orientation));
+        float trimSpine = DimensionUtil.micro2dtp(getTrimSpine(dtoFBSP, orientation));
 
 //        XYPair trimSize = new XYPair(
 //                DimensionUtil.micro2dtp(bsXml.trimFormat.@width.toFloat()),
@@ -699,7 +699,7 @@ class SprintOneV3Importer implements Importer {
 				final XYPair trimSize = new XYPair(
 					DimensionUtil.micro2dtp((float) bsXml.getTrimFormat().getWidth()),
 					DimensionUtil.micro2dtp((float) bsXml.getTrimFormat().getHeight())
-				)
+				);
 
 				// TODO
 				// positionXml without groovy, see all below
@@ -729,8 +729,8 @@ class SprintOneV3Importer implements Importer {
 							dtoFBSP.getSelectedPrintData().getBackPage().getPdfPageNumber() - 1
             );
         }
-        int pageIndexFront = 0
-        int pageIndexBack = 1
+        int pageIndexFront = 0;
+        int pageIndexBack = 1;
 
         // create and return object
         return new SignatureCell.Builder()
@@ -748,7 +748,7 @@ class SprintOneV3Importer implements Importer {
                 .pageFront(pageFront)
                 .pageBack(pageBack)
                 .orientation(Orientation.Rotate0)
-                .build()
+                .build();
     }
 
     /**
@@ -788,18 +788,18 @@ class SprintOneV3Importer implements Importer {
       	XYPair trimSize = new XYPair(
       		DimensionUtil.micro2dtp((float) strippingCell.getIntrinsicTrimBoxFormat().getWidth()),
       		DimensionUtil.micro2dtp((float) strippingCell.getIntrinsicTrimBoxFormat().getHeight())
-    		)
+    		);
 
         // creep compensation
 //        float creepPercent = strippingCell.@creepCompensation.toFloat()
 //				final double test = strippingCell.getCreepCompensation();
-				final float creepPercent = (float) strippingCell.getCreepCompensation();
+				final float creepPercent = strippingCell.getCreepCompensation().floatValue();
         final float creepAbsolute = trimSize.getX() * (1 - creepPercent);
 
         trimSize = new XYPair(
                 (float) (trimSize.getX() - creepAbsolute),
                 trimSize.getY()
-        )
+        );
 
         trimFace += creepAbsolute;
 
@@ -809,13 +809,13 @@ class SprintOneV3Importer implements Importer {
 					strippingCell.getFrontPage().getPrintData().getPdfUrl(),
 //                strippingCell.frontPage.printData.@pdfPageNumber.toInteger() - 1
 					strippingCell.getFrontPage().getPrintData().getPdfPageNumber() -1
-        )
+        );
         final RunList pageBack = new RunList(
 //                strippingCell.backPage.printData.@pdfUrl.toString(),
 					strippingCell.getBackPage().getPrintData().getPdfUrl(),
 //                strippingCell.backPage.printData.@pdfPageNumber.toInteger() - 1
 					strippingCell.getBackPage().getPrintData().getPdfPageNumber() - 1
-        )
+        );
 //        int pageIndexFront = strippingCell.frontPage.@index.toInteger()
 				final int pageIndexFront = strippingCell.getFrontPage().getIndex();
 //        int pageIndexBack = strippingCell.backPage.@index.toInteger()
@@ -824,7 +824,7 @@ class SprintOneV3Importer implements Importer {
         // orientation
 				// TODO
 				// groovy compiler does not allow this as final
-        Orientation orientation
+        Orientation orientation;
 
 //        if ("DOWN".equals(strippingCell.@orientation.toString())) {
 //            orientation = Orientation.Rotate180
@@ -841,13 +841,13 @@ class SprintOneV3Importer implements Importer {
 				
 				DtoOrientation test = strippingCell.getOrientation();
 				switch (strippingCell.getOrientation()) {
-					case DtoOrientation.DOWN:
+					case DOWN:
 						orientation = Orientation.Rotate180;
 						break;
-					case  DtoOrientation.LEFT:
+					case  LEFT:
 						orientation = Orientation.Rotate90;
 						break;
-					case  DtoOrientation.RIGHT:
+					case  RIGHT:
 						orientation = Orientation.Rotate270;
 						break;
 					default:
@@ -870,13 +870,13 @@ class SprintOneV3Importer implements Importer {
                 .pageFront(pageFront)
                 .pageBack(pageBack)
                 .orientation(orientation)
-                .build()
+                .build();
     }
 
     private static float getTrimFace(DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation) {
 //			DtoBinderySignature bsXml, DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation
 			
-        float trimValue = 0
+        float trimValue = 0;
 
         if (Orientation.Rotate0 == orientation) {
 //            trimValue = positionXml.trim.@right.toFloat()
@@ -900,7 +900,7 @@ class SprintOneV3Importer implements Importer {
     }
 
     private static float getTrimHead(DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation) {
-        float trimValue = 0
+        float trimValue = 0;
 
         if (Orientation.Rotate0 == orientation) {
 //            trimValue = positionXml.trim.@top.toFloat()
@@ -924,7 +924,7 @@ class SprintOneV3Importer implements Importer {
     }
 
     private static float getTrimSpine(DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation) {
-        float trimValue = 0
+        float trimValue = 0;
 
         if (Orientation.Rotate0 == orientation) {
 //            trimValue = positionXml.trim.@left.toFloat()
@@ -948,7 +948,7 @@ class SprintOneV3Importer implements Importer {
     }
 
     private static float getTrimFoot(DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation) {
-        float trimValue = 0
+        float trimValue = 0;
 
         if (Orientation.Rotate0 == orientation) {
 //            trimValue = positionXml.trim.@bottom.toFloat()

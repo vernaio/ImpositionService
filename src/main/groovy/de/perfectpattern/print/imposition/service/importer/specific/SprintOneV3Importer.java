@@ -1,44 +1,44 @@
 package de.perfectpattern.print.imposition.service.importer.specific;
 
-import de.perfectpattern.commons.api.marshalling.XmlContext
-import de.perfectpattern.commons.api.marshalling.XmlContextProvider
-import de.perfectpattern.print.imposition.model.BinderySignature
-import de.perfectpattern.print.imposition.model.CutBlock
-import de.perfectpattern.print.imposition.model.Position
-import de.perfectpattern.print.imposition.model.RunList
-import de.perfectpattern.print.imposition.model.Sheet
-import de.perfectpattern.print.imposition.model.SignatureCell
-import de.perfectpattern.print.imposition.model.type.Border
-import de.perfectpattern.print.imposition.model.type.FoldCatalog
-import de.perfectpattern.print.imposition.model.type.Orientation
-import de.perfectpattern.print.imposition.model.type.Priority
-import de.perfectpattern.print.imposition.model.type.Rectangle
-import de.perfectpattern.print.imposition.model.type.WorkStyle
-import de.perfectpattern.print.imposition.model.type.XYPair
-import de.perfectpattern.print.imposition.util.DimensionUtil
-import de.perfectpattern.sPrint.one.v3.api.format.assembler.parameters.signatureType.DtoOrientation
-import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoSignatureRef
-import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoStrippingCell
-import de.perfectpattern.sPrint.one.v3.api.format.binderySignature.DtoBinderySignature
-import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent
-import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob
-import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle
-import de.perfectpattern.sPrint.one.v3.api.format.gangJob.form.DtoFormBinderySignaturePlacement
-import de.perfectpattern.sPrint.one.v3.api.format.util.DtoBorder
-import de.perfectpattern.sPrint.one.v3.api.format.util.DtoFormat
-import de.perfectpattern.sPrint.one.v3.api.format.util.DtoRotation
-import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT
+import de.perfectpattern.commons.api.marshalling.XmlContext;
+import de.perfectpattern.commons.api.marshalling.XmlContextProvider;
+import de.perfectpattern.print.imposition.model.BinderySignature;
+import de.perfectpattern.print.imposition.model.CutBlock;
+import de.perfectpattern.print.imposition.model.Position;
+import de.perfectpattern.print.imposition.model.RunList;
+import de.perfectpattern.print.imposition.model.Sheet;
+import de.perfectpattern.print.imposition.model.SignatureCell;
+import de.perfectpattern.print.imposition.model.type.Border;
+import de.perfectpattern.print.imposition.model.type.FoldCatalog;
+import de.perfectpattern.print.imposition.model.type.Orientation;
+import de.perfectpattern.print.imposition.model.type.Priority;
+import de.perfectpattern.print.imposition.model.type.Rectangle;
+import de.perfectpattern.print.imposition.model.type.WorkStyle;
+import de.perfectpattern.print.imposition.model.type.XYPair;
+import de.perfectpattern.print.imposition.util.DimensionUtil;
+import de.perfectpattern.sPrint.one.v3.api.format.assembler.parameters.signatureType.DtoOrientation;
+import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoSignatureRef;
+import de.perfectpattern.sPrint.one.v3.api.format.assembler.result.DtoStrippingCell;
+import de.perfectpattern.sPrint.one.v3.api.format.binderySignature.DtoBinderySignature;
+import de.perfectpattern.sPrint.one.v3.api.format.event.gangJob.DtoGangJobEvent;
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoGangJob;
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.DtoWorkStyle;
+import de.perfectpattern.sPrint.one.v3.api.format.gangJob.form.DtoFormBinderySignaturePlacement;
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoBorder;
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoFormat;
+import de.perfectpattern.sPrint.one.v3.api.format.util.DtoRotation;
+import de.perfectpattern.sPrint.one.v3.api.format.workspace.DtoWorkspaces_ROOT;
 
-import javax.management.RuntimeErrorException
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.stereotype.Controller
-import org.springframework.util.StringUtils
-
-// TODO
-// change DtoWorkspaces_ROOT to gangjobevent
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 
 /**
  * The Importer for a Sprint One V3 file format.
@@ -46,22 +46,22 @@ import org.springframework.util.StringUtils
 @Controller
 class SprintOneV3Importer implements Importer {
 
-    private static final Logger log = LoggerFactory.getLogger(SprintOneV3Importer.class)
+    private static final Logger log = LoggerFactory.getLogger(SprintOneV3Importer.class);
 
-    private final static String NS_SPO_V3 = 'http://www.perfectpattern.de/sPrint.one.v3.api'
+    private final static String NS_SPO_V3 = "http://www.perfectpattern.de/sPrint.one.v3.api";
 		
 		// Alex edit
 		// private final DtoGangJobEvent hier hin, und das nutzen nachdem es accepted wurde (beim accepten auch initialisieren)
 		// entweder final ohne static oder andersrum
 		private DtoGangJobEvent dtoGJE;
 
-    @Value('${SHEET_BLEED_MM}')
+    @Value("${SHEET_BLEED_MM}")
     private String sheetBleedMm;
 
 //    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD}')
 //    private String boxMarkToFinalTrimThreshold;
 
-    @Value('${BOX_MARK_TO_FINAL_TRIM_THRESHOLD:0}')
+    @Value("${BOX_MARK_TO_FINAL_TRIM_THRESHOLD:0}")
     private int boxMarkToFinalTrimThreshold;
 
     /**
@@ -74,7 +74,7 @@ class SprintOneV3Importer implements Importer {
 		// Das hier ueberpruefen ob es ein DtoGangJobEvent ist
 		// initalisierung erwartet byte[] -> bytearrayinputstream
     @Override
-    boolean acceptDocument(byte[] bytes) {
+		public boolean acceptDocument(byte[] bytes) {
         boolean result;
 				
 				if (bytes.length < 2) {
@@ -96,7 +96,7 @@ class SprintOneV3Importer implements Importer {
 					result = true;
 				} else {
 					final String EMSG = "The provided XML file should be an instance of DtoGangJobEvent but is currently an instance of " + umo.getClass().getCanonicalName();
-					log.error(EMSG)
+					log.error(EMSG);
 					throw new IllegalArgumentException(EMSG);
 				}
 				
@@ -107,19 +107,19 @@ class SprintOneV3Importer implements Importer {
 //            result = false
 //        }
 
-        return result
+        return result;
     }
 
 		// TODO
 		// kann ohne byte bytes sein
     @Override
-    Sheet importDocument(byte[] bytes) {
-        log.info("Sheet Bleed: " + sheetBleedMm + " mm")
+    public Sheet importDocument(byte[] bytes) throws IOException {
+        log.info("Sheet Bleed: " + sheetBleedMm + " mm");
 				
 				// Newly added:
 				if (!acceptDocument(bytes)) {
 					log.error("Document was not accepted!");
-					throw new RuntimeErrorException("Document was not accepted!")
+					throw new RuntimeException("Document was not accepted!");
 				}
 
 //        // parse
@@ -153,8 +153,8 @@ class SprintOneV3Importer implements Importer {
 //        }
 //				
 				for (int i = 0; i < bsPlacements.size(); i++) {
-					positions.add(readPosition(bsPlacements[i]));
-					cuttingParams.add(readCutBlock(bsPlacements[i], i));
+					positions.add(readPosition(bsPlacements.get(i)));
+					cuttingParams.add(readCutBlock(bsPlacements.get(i), i));
 				}
 
         // create sheet id
@@ -182,7 +182,9 @@ class SprintOneV3Importer implements Importer {
 
         if(!StringUtils.isEmpty(sourceRef)) {
 //            layoutTaskId = (sourceRef =~ /[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/)[0];
-            layoutTaskId = sourceRef.split("layoutTasks/id=")[1].split("/result")[0];
+          layoutTaskId = sourceRef.split("layoutTasks/id=")[1].split("/result")[0];
+        } else {
+        	layoutTaskId = "";
         }
 
         // create sheet
@@ -233,11 +235,11 @@ class SprintOneV3Importer implements Importer {
                 .surfaceContentsBox(surfaceContentsBox)
                 .cuttingParams(cuttingParams)
                 .positions(positions)
-                .build()
+                .build();
 
 
         // return sheet
-        return sheet
+        return sheet;
     }
 
     /**
@@ -270,16 +272,16 @@ class SprintOneV3Importer implements Importer {
               DimensionUtil.micro2dtp(lly),
               DimensionUtil.micro2dtp(urx),
               DimensionUtil.micro2dtp(ury)
-      )
+      );
 
       // block name
-      final String blockName = "BLOCK-" + i.toString();
+      final String blockName = "BLOCK-" + i;
 
       // create and return cut block object
       return new CutBlock.Builder()
               .blockName(blockName)
               .box(box)
-              .build()
+              .build();
     }
 
 
@@ -299,7 +301,7 @@ class SprintOneV3Importer implements Importer {
 			// TODO
 			// Warum wird hier 4 mal trim left genutzt?
 //      final Border clip =  new Border(Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()),Math.round(placement.trim.@left.toFloat()));
-			final Border clip = new Border(Math.round((float)dtoFBSP.getTrim().left), Math.round((float)dtoFBSP.getTrim().left), Math.round((float)dtoFBSP.getTrim().left), Math.round((float)dtoFBSP.getTrim().left));
+			final Border clip = new Border(Long.valueOf(Math.round((float)dtoFBSP.getTrim().getLeft())), Long.valueOf(Math.round((float)dtoFBSP.getTrim().getLeft())), Long.valueOf(Math.round((float)dtoFBSP.getTrim().getLeft())), Long.valueOf(Math.round((float)dtoFBSP.getTrim().getLeft())));
 			
 			
 			// TODO
@@ -324,7 +326,7 @@ class SprintOneV3Importer implements Importer {
               DimensionUtil.micro2dtp(lly),
               DimensionUtil.micro2dtp(urx),
               DimensionUtil.micro2dtp(ury)
-        )
+        );
 
 //			Rectangle absoluteBox2 = new Rectangle(
 //				DimensionUtil.micro2dtp(llx2),
@@ -334,7 +336,7 @@ class SprintOneV3Importer implements Importer {
 //			  )
 				
       // orientation
-      Orientation orientation
+      Orientation orientation;
 //      String rotation = placement.@rotation.toString()
 			final DtoRotation rotation = dtoFBSP.getRotation();
 
@@ -352,16 +354,16 @@ class SprintOneV3Importer implements Importer {
 //      }
 			
 			switch (rotation) {
-				case DtoRotation.ZERO:
+				case ZERO:
 					orientation = Orientation.Rotate0;
 					break;
-				case DtoRotation.CC90:
+				case CC90:
 					orientation = Orientation.Rotate90;
 					break;
-				case DtoRotation.CC180:
+				case CC180:
 					orientation = Orientation.Rotate180;
 					break;
-				case DtoRotation.CC270:
+				case CC270:
 					orientation = Orientation.Rotate270;
 					break;
 				default:

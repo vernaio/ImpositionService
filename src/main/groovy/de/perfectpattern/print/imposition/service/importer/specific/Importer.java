@@ -1,5 +1,7 @@
 package de.perfectpattern.print.imposition.service.importer.specific;
 
+import java.io.IOException;
+
 import de.perfectpattern.print.imposition.model.Sheet;
 
 /**
@@ -18,6 +20,7 @@ public interface Importer {
      * Read an Document as byte array.
      * @param bytes The document as object object.
      * @return The Sheet object object.
+     * @throws IOException 
      */
-    Sheet importDocument(byte[] bytes);
+    Sheet importDocument(byte[] bytes) throws IOException;
 }

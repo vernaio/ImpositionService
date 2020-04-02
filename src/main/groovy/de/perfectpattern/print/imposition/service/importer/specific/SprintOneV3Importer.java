@@ -113,7 +113,7 @@ class SprintOneV3Importer implements Importer {
 		// TODO
 		// kann ohne byte bytes sein
     @Override
-    public Sheet importDocument(byte[] bytes) throws IOException {
+    public Sheet importDocument(byte[] bytes) throws Exception {
         log.info("Sheet Bleed: " + sheetBleedMm + " mm");
 				
 				// Newly added:
@@ -290,8 +290,9 @@ class SprintOneV3Importer implements Importer {
      * @param placement The position XML to be imported.
      * @param gangJobXml The GangJob XML.
      * @return The Position object.
+     * @throws Exception 
      */
-    private Position readPosition(DtoFormBinderySignaturePlacement dtoFBSP) {
+    private Position readPosition(DtoFormBinderySignaturePlacement dtoFBSP) throws Exception {
 			
 			// TODO
 			// muss aus Schleife kommen
@@ -367,7 +368,7 @@ class SprintOneV3Importer implements Importer {
 					orientation = Orientation.Rotate270;
 					break;
 				default:
-					Log.error("Rotation '" + rotation.toString() + "' is not supported.");
+					log.error("Rotation '" + rotation.toString() + "' is not supported.");
 					throw new IOException("Rotation '" + rotation.toString() + "' is not supported.");
 			}
 
@@ -392,7 +393,7 @@ class SprintOneV3Importer implements Importer {
               .binderySignature(binderySignature)
               .absoluteBox(absoluteBox)
               .allowsBoxMark(allowsBoxMark)
-              .build()
+              .build();
     }
 
     /**
@@ -400,8 +401,9 @@ class SprintOneV3Importer implements Importer {
      * @param id The identifier of the bindery signature.
      * @param gangJobXml The gangJob xml
      * @return The bindery signature as object.
+     * @throws Exception
      */
-    private BinderySignature readBinderySignature(String binderySignatureId, DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation, boolean flipped) {
+    private BinderySignature readBinderySignature(String binderySignatureId, DtoFormBinderySignaturePlacement dtoFBSP, Orientation orientation, boolean flipped) throws Exception {
         
 //			BinderySignature binderySignature = null;
 			
@@ -421,7 +423,7 @@ class SprintOneV3Importer implements Importer {
 //      def bsXml = gangJobXml.binderySignatures.binderySignature.find { it.@id == id }
 			
 
-			final DtoBinderySignature bsXml;
+			DtoBinderySignature bsXml = null;
 			final List<DtoBinderySignature> dtoBinderySignatureList = dtoGJE.getGangJob().getBinderySignatures().getBinderySignatures();
 			for (DtoBinderySignature bs : dtoBinderySignatureList) {
 				if (bs.getId() == binderySignatureId) {
@@ -521,10 +523,10 @@ class SprintOneV3Importer implements Importer {
 				bsNumberTotal = bsXml.getSignature().getRelatedSignatureRefs().size();
 
 				// validate index path for collecting only
-				boolean isValid = true
+				boolean isValid = true;
 				
 				for (DtoSignatureRef dtoSR : bsXml.getSignature().getRelatedSignatureRefs()) {
-					final String indexPath = dtoSR.getIndexPath().toString().replace('[', '').replace(']', '').replace(',', '');
+					final String indexPath = dtoSR.getIndexPath().toString().replaceAll("[", "").replaceAll("]", "").replaceAll(",", "");
 					if (!indexPath.matches("0( 0)*")) {
 						isValid = false;
 						log.warn("IndexPath '" + indexPath + "' is not supported.");
@@ -545,7 +547,7 @@ class SprintOneV3Importer implements Importer {
 //      Priority priority = Priority.findByValue(bsXml.@priority.toInteger());
 			// TODO
 			// Should not need to cast to int here
-      Priority priority = Priority.findByValue((int) bsXml.getPriority());
+      Priority priority = Priority.findByValue(bsXml.getPriority().intValue());
 
       // extract signature cells
       final List<SignatureCell> signatureCells;
@@ -591,14 +593,14 @@ class SprintOneV3Importer implements Importer {
 					
           signatureCells.add(
                   createSignatureCellF4(col_0)
-          )
+          );
 
           // row index 1
 //          def col_1 = bsXml.signature.strippingCells.strippingCell.find { it.@colIndex == "1" }
 
           signatureCells.add(
                   createSignatureCellF4(col_1)
-          )
+          );
 					
 					// TODO
 					// round still necessary when using API?
@@ -625,8 +627,8 @@ class SprintOneV3Importer implements Importer {
           	col_1.getFaceTrim());
 
       } else {
-          log.error("Fold Schema is not supported.")
-          throw new Exception("FoldSchema is not supported.")
+          log.error("Fold Schema is not supported.");
+          throw new Exception("FoldSchema is not supported.");
       }
 
       // create bindery signature object
@@ -642,11 +644,11 @@ class SprintOneV3Importer implements Importer {
               .bsNumberTotal(bsNumberTotal)
               .bsNumberCurrent(bsNumberCurrent)
               .innerContentFrame(innerContentFrame)
-              .build()
+              .build();
 //      }
 
       // return bindery signature object
-      return binderySignature
+      return binderySignature;
     }
 
     /**

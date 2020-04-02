@@ -21,6 +21,7 @@ public interface Importer {
      * @param bytes The document as object object.
      * @return The Sheet object object.
      * @throws IOException 
+     * @throws Exception 
      */
-    Sheet importDocument(byte[] bytes) throws IOException;
+    Sheet importDocument(byte[] bytes) throws IOException, Exception;
 }

@@ -47,7 +47,7 @@ dependencies {
 	implementation 'org.jolokia:jolokia-core:+'
 	implementation 'io.hawt:hawtio-springboot:+'
 
-	implementation 'org.cip4.lib.xjdf:xJdfLib:+'
+	implementation 'org.cip4.lib.xjdf:xJdfLib:0.15'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

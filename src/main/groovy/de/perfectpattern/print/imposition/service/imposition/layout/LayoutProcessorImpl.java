@@ -272,6 +272,15 @@ public class LayoutProcessorImpl implements LayoutProcessor {
                                 runList.getPage()
                         )
                 );
+            } else {
+                result.add(
+                        new ContentObject(
+                                clipBox,
+                                trimBox,
+                                orientationCell,
+                                null,
+                                0
+                        ));
             }
 
             // draw marks

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-version=dev-$(($(date +%s%N)/1000000))
+version=dev-$(($(date +%s)*1000))
 timestamp=$(date +"%Y-%m-%d %T")
 
 echo ""
@@ -28,7 +28,8 @@ else
 fi
 
 # execute
+path=$(pwd)
 docker run \
     -p 4200:4200 \
-    -v /home/stefan/Workspace/DefaultPdfIntegration/data/storage:/data \
+    -v $path/data/storage:/data \
     imposition:$version

@@ -1,4 +1,4 @@
-Just add a verison tag to git. Thats it.
+Just add a version tag to git. Thats it.
 
 !! First commit (and push) - then tag !!
 git tag -a v1.4 -m "my version 1.4"
